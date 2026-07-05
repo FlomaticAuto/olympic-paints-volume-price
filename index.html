@@ -1,0 +1,1147 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volume Price Report — Olympic Paints</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>var t=localStorage.getItem('oly-theme');if(t)document.documentElement.className=t;</script>
+<style>
+:root{
+  --_y50:#FEF9E0;--_y100:#FDF0A0;--_y200:#FAE04D;--_y400:#F5C400;--_y600:#D4A800;--_y800:#A88000;--_y900:#6A5000;
+  --_n50:#E8EFF8;--_n100:#B8CCE8;--_n300:#6B9ED0;--_n500:#2D6BA8;--_n700:#1A3D6E;--_n900:#0D2040;--_n950:#071022;
+  --_g0:#FFFFFF;--_g50:#F7F6F3;--_g100:#E8E7E2;--_g200:#C8C7C0;--_g400:#949390;--_g600:#5C5B58;--_g800:#2E2E2C;--_g900:#1A1A18;--_g950:#0D0D0B;
+  --_teal:#2D8C7A;--_teal-light:#C8EDE7;--_teal-dark:#1a5c50;
+  --_terra:#C97A3A;--_terra-light:#F7E0C8;
+  --_coral:#E86060;--_coral-light:#FDDCDC;
+  --_pink:#E87BAD;--_pink-light:#FCE4EF;
+  --_violet:#9B7DBF;--_violet-light:#EDE0F7;
+  --_sage:#7A8C55;--_ink:#5C6B7A;
+  --font-display:'Barlow Condensed',sans-serif;
+  --font-body:'Barlow',sans-serif;
+  --r-sm:4px;--r-md:8px;--r-lg:12px;--r-xl:16px;--r-pill:50px;
+}
+.theme-light{color-scheme:light;--color-surface-page:var(--_g50);--color-surface-base:var(--_g0);--color-surface-elevated:var(--_g0);--color-surface-sunken:var(--_g100);--color-surface-overlay:rgba(0,0,0,0.04);--color-surface-brand:var(--_y400);--color-surface-secondary:var(--_n700);--color-text-primary:var(--_g950);--color-text-secondary:var(--_g600);--color-text-tertiary:var(--_g400);--color-text-on-brand:var(--_g950);--color-text-on-navy:var(--_g0);--color-brand-primary:var(--_y400);--color-brand-hover:var(--_y600);--color-brand-secondary:var(--_n700);--color-brand-accent:var(--_y400);--color-border-subtle:var(--_g100);--color-border-default:var(--_g200);--color-border-strong:var(--_g400);--color-border-brand:var(--_y400);--color-success-bg:#EDF7F5;--color-success-fg:var(--_teal-dark);--color-success-bd:var(--_teal);--color-warning-bg:var(--_y50);--color-warning-fg:var(--_y900);--color-warning-bd:var(--_y600);--color-danger-bg:#FEF2F2;--color-danger-fg:#C0392B;--color-danger-bd:var(--_coral);--color-info-bg:var(--_n50);--color-info-fg:var(--_n700);--color-info-bd:var(--_n500);--color-neutral-bg:var(--_g100);--color-neutral-fg:var(--_g600);--color-neutral-bd:var(--_g400);--shadow-sm:0 1px 3px rgba(0,0,0,0.08);--shadow-md:0 4px 12px rgba(0,0,0,0.08);--shadow-lg:0 10px 30px rgba(0,0,0,0.10);--shadow-brand:0 4px 16px rgba(245,196,0,0.20);}
+.theme-dark{color-scheme:dark;--color-surface-page:var(--_g950);--color-surface-base:var(--_g900);--color-surface-elevated:var(--_g800);--color-surface-sunken:var(--_g950);--color-surface-overlay:rgba(255,255,255,0.04);--color-surface-brand:var(--_y400);--color-surface-secondary:var(--_n700);--color-text-primary:var(--_g100);--color-text-secondary:var(--_g400);--color-text-tertiary:var(--_g600);--color-text-on-brand:var(--_g950);--color-text-on-navy:var(--_g0);--color-brand-primary:var(--_y400);--color-brand-hover:var(--_y200);--color-brand-secondary:var(--_n700);--color-brand-accent:var(--_y400);--color-border-subtle:rgba(255,255,255,0.06);--color-border-default:rgba(255,255,255,0.10);--color-border-strong:rgba(255,255,255,0.20);--color-border-brand:var(--_y400);--color-success-bg:rgba(45,140,122,0.12);--color-success-fg:var(--_teal-light);--color-success-bd:rgba(45,140,122,0.30);--color-warning-bg:rgba(245,196,0,0.10);--color-warning-fg:var(--_y200);--color-warning-bd:rgba(245,196,0,0.25);--color-danger-bg:rgba(232,96,96,0.12);--color-danger-fg:var(--_coral-light);--color-danger-bd:rgba(232,96,96,0.30);--color-info-bg:rgba(26,61,110,0.30);--color-info-fg:var(--_n100);--color-info-bd:rgba(107,158,208,0.30);--color-neutral-bg:rgba(255,255,255,0.05);--color-neutral-fg:var(--_g400);--color-neutral-bd:rgba(255,255,255,0.10);--shadow-sm:0 1px 3px rgba(0,0,0,0.40);--shadow-md:0 4px 12px rgba(0,0,0,0.40);--shadow-lg:0 10px 30px rgba(0,0,0,0.50);--shadow-brand:0 4px 20px rgba(245,196,0,0.15);}
+.theme-brand{color-scheme:light;--color-surface-page:var(--_y400);--color-surface-base:var(--_y200);--color-surface-elevated:var(--_y50);--color-surface-sunken:var(--_y600);--color-surface-overlay:rgba(0,0,0,0.05);--color-surface-brand:var(--_y400);--color-surface-secondary:var(--_g950);--color-text-primary:var(--_g950);--color-text-secondary:var(--_y900);--color-text-tertiary:var(--_y800);--color-text-on-brand:var(--_g950);--color-text-on-navy:var(--_g0);--color-brand-primary:var(--_g950);--color-brand-hover:var(--_n700);--color-brand-secondary:var(--_n700);--color-brand-accent:var(--_g950);--color-border-subtle:rgba(0,0,0,0.08);--color-border-default:rgba(0,0,0,0.14);--color-border-strong:rgba(0,0,0,0.25);--color-border-brand:var(--_g950);--color-success-bg:rgba(45,140,122,0.12);--color-success-fg:var(--_teal-dark);--color-success-bd:var(--_teal);--color-warning-bg:rgba(0,0,0,0.08);--color-warning-fg:var(--_y900);--color-warning-bd:var(--_y900);--color-danger-bg:rgba(232,96,96,0.12);--color-danger-fg:#C0392B;--color-danger-bd:var(--_coral);--color-info-bg:rgba(26,61,110,0.10);--color-info-fg:var(--_n900);--color-info-bd:var(--_n700);--color-neutral-bg:rgba(0,0,0,0.06);--color-neutral-fg:var(--_y900);--color-neutral-bd:rgba(0,0,0,0.15);--shadow-sm:0 1px 3px rgba(0,0,0,0.12);--shadow-md:0 4px 12px rgba(0,0,0,0.14);--shadow-lg:0 10px 30px rgba(0,0,0,0.18);--shadow-brand:0 4px 16px rgba(0,0,0,0.15);}
+.theme-navy{color-scheme:dark;--color-surface-page:var(--_n950);--color-surface-base:var(--_n900);--color-surface-elevated:var(--_n700);--color-surface-sunken:var(--_n950);--color-surface-overlay:rgba(255,255,255,0.04);--color-surface-brand:var(--_y400);--color-surface-secondary:var(--_n700);--color-text-primary:var(--_g0);--color-text-secondary:var(--_n100);--color-text-tertiary:var(--_n300);--color-text-on-brand:var(--_g950);--color-text-on-navy:var(--_g0);--color-brand-primary:var(--_y400);--color-brand-hover:var(--_y200);--color-brand-secondary:var(--_n500);--color-brand-accent:var(--_y400);--color-border-subtle:rgba(107,158,208,0.12);--color-border-default:rgba(107,158,208,0.20);--color-border-strong:rgba(107,158,208,0.35);--color-border-brand:var(--_y400);--color-success-bg:rgba(45,140,122,0.15);--color-success-fg:var(--_teal-light);--color-success-bd:rgba(45,140,122,0.35);--color-warning-bg:rgba(245,196,0,0.12);--color-warning-fg:var(--_y200);--color-warning-bd:rgba(245,196,0,0.30);--color-danger-bg:rgba(232,96,96,0.14);--color-danger-fg:var(--_coral-light);--color-danger-bd:rgba(232,96,96,0.35);--color-info-bg:rgba(45,107,168,0.20);--color-info-fg:var(--_n100);--color-info-bd:rgba(107,158,208,0.35);--color-neutral-bg:rgba(255,255,255,0.05);--color-neutral-fg:var(--_n300);--color-neutral-bd:rgba(255,255,255,0.12);--shadow-sm:0 1px 3px rgba(0,0,0,0.50);--shadow-md:0 4px 12px rgba(0,0,0,0.50);--shadow-lg:0 10px 30px rgba(0,0,0,0.60);--shadow-brand:0 4px 20px rgba(245,196,0,0.18);}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--color-surface-page);color:var(--color-text-primary);font-family:var(--font-body);min-height:100vh}
+
+/* THEME BAR */
+.theme-bar{display:flex;gap:4px;padding:8px 16px;background:var(--color-surface-secondary);align-items:center;justify-content:space-between}
+.theme-bar button{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.6);font-size:12px;padding:5px 14px;border-radius:var(--r-pill);cursor:pointer;font-family:var(--font-body);transition:all 0.15s}
+.theme-bar button:hover{background:rgba(255,255,255,0.16);color:rgba(255,255,255,0.9)}
+.theme-bar button.active{background:var(--color-brand-primary);color:var(--color-text-on-brand);border-color:var(--color-brand-primary);font-weight:600}
+.theme-bar-title{color:rgba(255,255,255,0.5);font-size:12px;font-family:var(--font-display);letter-spacing:0.08em;text-transform:uppercase}
+
+/* HEADER */
+.page-header{background:var(--color-surface-secondary);padding:1.75rem 2.5rem 1.5rem;border-bottom:1px solid var(--color-border-default)}
+.header-inner{max-width:1400px;margin:0 auto;display:flex;align-items:flex-start;gap:1.25rem}
+.header-logo{width:48px;height:48px;border-radius:50%;overflow:hidden;flex-shrink:0}
+.header-logo img{display:block;width:100%;height:100%;object-fit:cover}
+.header-eyebrow{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-brand-primary);margin-bottom:4px}
+.header-title{font-family:var(--font-display);font-size:32px;font-weight:900;text-transform:uppercase;color:var(--color-text-on-navy);line-height:1.05;margin-bottom:3px}
+.header-sub{color:rgba(255,255,255,0.5);font-size:13px}
+
+/* FILTERS BAR */
+.filters-bar{max-width:1400px;margin:0 auto;padding:1rem 2.5rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--color-border-default)}
+.filter-group{display:flex;align-items:center;gap:8px}
+.filter-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-secondary);white-space:nowrap}
+.filter-select{background:var(--color-surface-elevated);border:1px solid var(--color-border-default);color:var(--color-text-primary);font-family:var(--font-body);font-size:13px;padding:7px 12px;border-radius:var(--r-md);outline:none;transition:border-color 0.15s;min-width:180px;cursor:pointer}
+.filter-select:focus{border-color:var(--color-brand-primary)}
+.filter-divider{width:1px;height:28px;background:var(--color-border-default)}
+.client-badge{display:flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(245,196,0,0.10);border:1px solid rgba(245,196,0,0.25);border-radius:var(--r-pill);font-size:12px;font-weight:600;color:var(--color-brand-primary)}
+.client-badge-dot{width:8px;height:8px;border-radius:50%;background:var(--color-brand-primary)}
+
+/* MAIN */
+.main{max-width:1400px;margin:0 auto;padding:2rem 2.5rem}
+
+/* NO CLIENT PROMPT */
+.no-client{text-align:center;padding:5rem 2rem;color:var(--color-text-secondary)}
+.no-client-icon{font-size:56px;margin-bottom:1.25rem}
+.no-client-title{font-family:var(--font-display);font-size:24px;font-weight:800;text-transform:uppercase;color:var(--color-text-primary);margin-bottom:0.5rem}
+.no-client-sub{font-size:14px;max-width:420px;margin:0 auto;line-height:1.6}
+
+/* SECTION HEADING */
+.section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:0.875rem}
+.section-title{font-family:var(--font-display);font-size:18px;font-weight:800;text-transform:uppercase;letter-spacing:0.04em;color:var(--color-text-primary)}
+.section-meta{font-size:12px;color:var(--color-text-secondary)}
+
+/* CLIENT SUMMARY STRIP */
+.client-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:0.875rem;margin-bottom:2rem}
+.cs-card{background:var(--color-surface-base);border:1px solid var(--color-border-default);border-radius:var(--r-lg);padding:1rem 1.25rem}
+.cs-card.accent{border-color:var(--color-brand-primary);background:rgba(245,196,0,0.05)}
+.cs-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-secondary);margin-bottom:5px}
+.cs-value{font-family:var(--font-display);font-size:26px;font-weight:900;color:var(--color-brand-primary);line-height:1}
+.cs-value.neutral{color:var(--color-text-primary)}
+.cs-sub{font-size:11px;color:var(--color-text-secondary);margin-top:3px}
+
+/* PRICE TABLE */
+.price-table-wrap{background:var(--color-surface-base);border:1px solid var(--color-border-default);border-radius:var(--r-xl);overflow:hidden;margin-bottom:2.5rem}
+.pt-category-row{background:var(--color-surface-elevated);padding:10px 20px;font-family:var(--font-display);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-secondary);border-bottom:1px solid var(--color-border-default)}
+table.price-table{width:100%;border-collapse:collapse}
+table.price-table thead th{background:var(--color-surface-sunken);font-family:var(--font-display);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-secondary);padding:10px 16px;text-align:left;border-bottom:2px solid var(--color-border-default);white-space:nowrap;position:sticky;top:0;z-index:2}
+table.price-table thead th.right{text-align:right}
+table.price-table thead th.center{text-align:center}
+table.price-table thead th.col-client{color:var(--color-brand-primary);border-bottom-color:var(--color-brand-primary)}
+table.price-table thead th.col-t1{color:var(--_teal-light)}
+table.price-table thead th.col-t2{color:var(--_y200)}
+table.price-table thead th.col-t3{color:var(--_coral-light)}
+.theme-light table.price-table thead th.col-t1{color:var(--_teal-dark)}
+.theme-light table.price-table thead th.col-t2{color:var(--_y900)}
+.theme-light table.price-table thead th.col-t3{color:#C0392B}
+table.price-table tbody tr{transition:background 0.1s}
+table.price-table tbody tr:hover{background:var(--color-surface-overlay)}
+table.price-table tbody tr:not(:last-child) td{border-bottom:1px solid var(--color-border-subtle)}
+table.price-table td{padding:12px 16px;font-size:13px;vertical-align:middle}
+table.price-table td.right{text-align:right}
+table.price-table td.center{text-align:center}
+.prod-name{font-weight:500;color:var(--color-text-primary)}
+.prod-cat{font-size:11px;color:var(--color-text-secondary);margin-top:1px}
+
+/* PRICE CELL */
+.price-cell{text-align:right}
+.price-main{font-family:var(--font-display);font-size:16px;font-weight:800;color:var(--color-text-primary)}
+.price-qty{font-size:10px;color:var(--color-text-tertiary);margin-top:2px}
+.price-disc{font-size:10px;font-weight:700;margin-top:2px}
+.price-disc.step{color:var(--color-success-fg)}
+.price-disc.total{color:var(--color-warning-fg)}
+
+/* CLIENT PRICE CELL */
+.client-price-cell{text-align:right}
+.cp-main{font-family:var(--font-display);font-size:16px;font-weight:900;color:var(--color-brand-primary)}
+.cp-diff{font-size:10px;font-weight:700;margin-top:2px}
+.cp-diff.above{color:var(--color-danger-fg)}
+.cp-diff.below{color:var(--color-success-fg)}
+.cp-diff.equal{color:var(--color-text-tertiary)}
+.cp-nodata{font-size:12px;color:var(--color-text-tertiary);font-style:italic}
+
+/* TIER HEADER CELLS */
+.th-tier{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.th-tier-name{font-size:11px;font-weight:800;letter-spacing:0.06em}
+.th-tier-qty{font-size:9px;font-weight:400;opacity:0.7;text-transform:none;letter-spacing:0}
+
+/* BEST TIER HIGHLIGHT */
+table.price-table tbody tr td.best-col{background:rgba(45,140,122,0.08);position:relative}
+table.price-table tbody tr td.best-col .price-main{color:var(--color-success-fg)}
+
+/* TAB BAR */
+.tab-bar{max-width:1400px;margin:0 auto;padding:0 2.5rem;display:flex;gap:0.25rem;border-bottom:1px solid var(--color-border-default)}
+.tab-btn{background:none;border:none;border-bottom:2px solid transparent;color:var(--color-text-secondary);font-family:var(--font-display);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.9rem 0.25rem;margin-right:1.75rem;cursor:pointer;transition:color 0.15s,border-color 0.15s}
+.tab-btn:hover{color:var(--color-text-primary)}
+.tab-btn.active{color:var(--color-brand-primary);border-bottom-color:var(--color-brand-primary)}
+
+/* OVERVIEW — VOLUME DISCOUNT TRACKER */
+.ov-legend{display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center;margin-bottom:1.1rem;padding:0.6rem 1.1rem;background:var(--color-surface-base);border:1px solid var(--color-border-default);border-radius:var(--r-lg)}
+.ov-legend-item{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:500;color:var(--color-text-secondary)}
+.ov-legend-dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+.ov-month-nav{margin-left:auto;display:flex;align-items:center;gap:0.6rem}
+.ov-month-btn{width:24px;height:24px;border-radius:50%;border:1px solid var(--color-border-default);background:var(--color-surface-elevated);color:var(--color-text-primary);font-size:15px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.15s}
+.ov-month-btn:hover:not(:disabled){background:var(--color-surface-overlay)}
+.ov-month-btn:disabled{opacity:0.3;cursor:default}
+.ov-month-label{font-family:var(--font-display);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-brand-primary);white-space:nowrap}
+.ov-month-factor{font-weight:500;color:var(--color-text-secondary);text-transform:none;letter-spacing:normal}
+.ov-cat{margin:0.85rem 0 0.3rem}
+.ov-cat:first-child{margin-top:0}
+.ov-row{display:grid;grid-template-columns:210px 1fr;gap:1rem;align-items:start;padding:0.2rem 0}
+.ov-row:not(:last-child){border-bottom:1px solid var(--color-border-subtle)}
+.ov-label{padding-top:2px}
+.ov-label-name{font-weight:600;font-size:12px;color:var(--color-text-primary);line-height:1.25}
+.ov-label-sub{font-size:10px;color:var(--color-text-secondary);margin-top:1px}
+.ov-track-wrap{position:relative;margin-top:24px;padding-bottom:42px}
+.ov-track{position:relative;height:18px;background:var(--color-surface-sunken);border:1px solid var(--color-border-default);border-radius:5px}
+.ov-seg{position:absolute;top:-1px;bottom:-1px;opacity:0.92}
+.ov-seg:first-of-type{border-radius:4px 0 0 4px}
+.ov-marker-line{position:absolute;top:-3px;bottom:-3px;border-left:2px dashed var(--_n300);opacity:0.85}
+.ov-marker-label{position:absolute;top:100%;margin-top:4px;transform:translateX(-50%);text-align:center;font-size:9px;line-height:1.3;white-space:nowrap;color:var(--color-text-secondary)}
+.ov-marker-label b{display:block;font-family:var(--font-display);font-size:11px;font-weight:800;color:var(--color-text-primary)}
+.ov-marker-label--low{margin-top:18px}
+.ov-avg-flag{position:absolute;top:-21px;transform:translateX(-2px);display:flex;flex-direction:column;align-items:flex-start;white-space:nowrap;line-height:1.1}
+.ov-avg-flag .ov-avg-price{font-family:var(--font-display);font-weight:800;font-size:12px;color:var(--color-brand-primary)}
+.ov-avg-flag .ov-avg-caption{font-size:8px;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:0.05em}
+.ov-nodata{position:absolute;left:10px;top:2px;font-size:10px;font-style:italic;color:var(--color-text-tertiary)}
+.ov-footnote{font-size:11px;color:var(--color-text-secondary);margin-top:1.25rem;line-height:1.6}
+
+/* FOOTER */
+footer{max-width:1400px;margin:0 auto;padding:1.5rem 2.5rem 3rem;font-size:12px;color:var(--color-text-tertiary);border-top:1px solid var(--color-border-subtle);display:flex;justify-content:space-between;align-items:center}
+</style>
+</head>
+<body>
+
+<div class="theme-bar">
+  <span class="theme-bar-title">Olympic Paints — Volume Price Report</span>
+  <div style="display:flex;gap:4px">
+    <button onclick="olyTheme('theme-light',this)">Light</button>
+    <button onclick="olyTheme('theme-dark',this)" class="active">Dark</button>
+    <button onclick="olyTheme('theme-brand',this)">Brand</button>
+    <button onclick="olyTheme('theme-navy',this)">Navy</button>
+  </div>
+</div>
+
+<div class="page-header">
+  <div class="header-inner">
+    <div class="header-logo"><img src="logo.jpg" alt="Olympic Paints" width="48" height="48"></div>
+    <div>
+      <div class="header-eyebrow">Rep Portal — Pricing Tool</div>
+      <div class="header-title">Volume Price Report</div>
+      <div class="header-sub">3-Month Rebate Tiers · Enamel Range · YTD 2026 · <span id="client-count-hdr"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="overview" onclick="setTab('overview')">Overview</button>
+  <button class="tab-btn" data-tab="lookup" onclick="setTab('lookup')">Customer Lookup</button>
+</div>
+
+<div class="filters-bar" id="filters-bar" style="display:none">
+  <div class="filter-group">
+    <span class="filter-label">Rep</span>
+    <select class="filter-select" id="ctrl-rep" onchange="onRepChange()">
+      <option value="">All Reps</option>
+    </select>
+  </div>
+  <div class="filter-divider"></div>
+  <div class="filter-group">
+    <span class="filter-label">Region</span>
+    <select class="filter-select" id="ctrl-region" onchange="onRegionChange()">
+      <option value="">All Regions</option>
+    </select>
+  </div>
+  <div class="filter-divider"></div>
+  <div class="filter-group">
+    <span class="filter-label">Customer</span>
+    <select class="filter-select" id="ctrl-client" onchange="onClientChange()" style="min-width:240px">
+      <option value="">— Select Customer —</option>
+    </select>
+  </div>
+  <div id="selected-badge" style="display:none" class="client-badge">
+    <div class="client-badge-dot"></div>
+    <span id="selected-badge-name"></span>
+  </div>
+</div>
+
+<div class="main" id="main-content"></div>
+
+<footer>
+  <span>Olympic Paints — Volume Price Report · Enamel Range · <span id="footer-count"></span></span>
+  <span id="footer-date"></span>
+</footer>
+
+<script>
+const REP_NAMES = {AC:'Aboo Cassim',AP:'Amit Patel',BV:'Bhadresh Vallabh',NP:'Nikhil Panchal',BM:'Byron Minnie'};
+
+const TIERS = [
+  {id:'t1',label:'Tier 1',desc:'Entry',dotClass:'t1',products:[
+    {name:'Decor Colours 20L',        cat:'Decor',          price:285,    qty:8000},
+    {name:'Decor Colours 5L',         cat:'Decor',          price:95,     qty:1000},
+    {name:'Decor White/Cream 20L',    cat:'Decor',          price:265,    qty:3800},
+    {name:'Decor White/Cream 5L',     cat:'Decor',          price:80.5,   qty:500},
+    {name:'High Gloss Enamel Colours 1L', cat:'High Gloss', price:75,     qty:8000},
+    {name:'High Gloss Enamel Colours 5L', cat:'High Gloss', price:280,    qty:8750},
+    {name:'High Gloss Enamel W/B 1L', cat:'High Gloss',     price:75,     qty:3800},
+    {name:'High Gloss Enamel W/B 5L', cat:'High Gloss',     price:270,    qty:3500},
+    {name:'Q.D Enamel Colours 1L',    cat:'Q.D. Enamel',    price:75,     qty:5500},
+    {name:'Q.D Enamel Colours 5L',    cat:'Q.D. Enamel',    price:275,    qty:9000},
+    {name:'Lacquer Thinners 12x750ML',cat:'Thinner',        price:260.63, qty:5500},
+    {name:'Lacquer Thinners 5L',      cat:'Thinner',        price:145,    qty:4000},
+    {name:'Universal Roof Colours 20L',cat:'Roof Paint',    price:550,    qty:1200},
+    {name:'Universal Roof Colours 5L', cat:'Roof Paint',    price:160,    qty:700},
+    {name:'Varnish Copal 1L',         cat:'Wood Varnish',   price:82,     qty:1700},
+    {name:'Varnish Copal 5L',         cat:'Wood Varnish',   price:280,    qty:700},
+    {name:'Varnish Colours 1L',       cat:'Wood Varnish',   price:95,     qty:6500},
+    {name:'Varnish Colours 5L',       cat:'Wood Varnish',   price:305,    qty:2300},
+  ]},
+  {id:'t2',label:'Tier 2',desc:'Mid Volume',dotClass:'t2',products:[
+    {name:'Decor Colours 20L',        cat:'Decor',          price:270,    qty:10000},
+    {name:'Decor Colours 5L',         cat:'Decor',          price:87.5,   qty:1300},
+    {name:'Decor White/Cream 20L',    cat:'Decor',          price:250,    qty:4500},
+    {name:'Decor White/Cream 5L',     cat:'Decor',          price:75.25,  qty:600},
+    {name:'High Gloss Enamel Colours 1L', cat:'High Gloss', price:67.5,   qty:11000},
+    {name:'High Gloss Enamel Colours 5L', cat:'High Gloss', price:265,    qty:11000},
+    {name:'High Gloss Enamel W/B 1L', cat:'High Gloss',     price:70,     qty:4500},
+    {name:'High Gloss Enamel W/B 5L', cat:'High Gloss',     price:255,    qty:3800},
+    {name:'Q.D Enamel Colours 1L',    cat:'Q.D. Enamel',    price:70,     qty:7000},
+    {name:'Q.D Enamel Colours 5L',    cat:'Q.D. Enamel',    price:260,    qty:11000},
+    {name:'Lacquer Thinners 12x750ML',cat:'Thinner',        price:255.315,qty:5800},
+    {name:'Lacquer Thinners 5L',      cat:'Thinner',        price:140,    qty:4500},
+    {name:'Universal Roof Colours 20L',cat:'Roof Paint',    price:500,    qty:1500},
+    {name:'Universal Roof Colours 5L', cat:'Roof Paint',    price:140,    qty:850},
+    {name:'Varnish Copal 1L',         cat:'Wood Varnish',   price:78.5,   qty:2000},
+    {name:'Varnish Copal 5L',         cat:'Wood Varnish',   price:275,    qty:700},
+    {name:'Varnish Colours 1L',       cat:'Wood Varnish',   price:92.5,   qty:7000},
+    {name:'Varnish Colours 5L',       cat:'Wood Varnish',   price:300,    qty:2500},
+  ]},
+  {id:'t3',label:'Tier 3',desc:'High Volume',dotClass:'t3',products:[
+    {name:'Decor Colours 20L',        cat:'Decor',          price:255,    qty:14000},
+    {name:'Decor Colours 5L',         cat:'Decor',          price:80,     qty:1700},
+    {name:'Decor White/Cream 20L',    cat:'Decor',          price:235,    qty:5500},
+    {name:'Decor White/Cream 5L',     cat:'Decor',          price:70,     qty:750},
+    {name:'High Gloss Enamel Colours 1L', cat:'High Gloss', price:60,     qty:18000},
+    {name:'High Gloss Enamel Colours 5L', cat:'High Gloss', price:250,    qty:14500},
+    {name:'High Gloss Enamel W/B 1L', cat:'High Gloss',     price:65,     qty:5000},
+    {name:'High Gloss Enamel W/B 5L', cat:'High Gloss',     price:240,    qty:4500},
+    {name:'Q.D Enamel Colours 1L',    cat:'Q.D. Enamel',    price:65,     qty:9000},
+    {name:'Q.D Enamel Colours 5L',    cat:'Q.D. Enamel',    price:250,    qty:12500},
+    {name:'Lacquer Thinners 12x750ML',cat:'Thinner',        price:250,    qty:6150},
+    {name:'Lacquer Thinners 5L',      cat:'Thinner',        price:135,    qty:5000},
+    {name:'Universal Roof Colours 20L',cat:'Roof Paint',    price:450,    qty:1700},
+    {name:'Universal Roof Colours 5L', cat:'Roof Paint',    price:120,    qty:1000},
+    {name:'Varnish Copal 1L',         cat:'Wood Varnish',   price:75,     qty:2150},
+    {name:'Varnish Copal 5L',         cat:'Wood Varnish',   price:270,    qty:800},
+    {name:'Varnish Colours 1L',       cat:'Wood Varnish',   price:90,     qty:7300},
+    {name:'Varnish Colours 5L',       cat:'Wood Varnish',   price:295,    qty:2500},
+  ]}
+];
+
+/* vol-key → T1 product name */
+function tierNameToVolKey(name){
+  const n=name.toLowerCase();
+  if(n.includes('decor')&&n.includes('20'))   return 'Decor 20L';
+  if(n.includes('decor')&&n.includes('5'))    return 'Decor 5L';
+  if((n.includes('gloss'))&&n.includes('1'))  return 'High Gloss 1L';
+  if((n.includes('gloss'))&&n.includes('5'))  return 'High Gloss 5L';
+  if((n.includes('q.d')||n.includes('qd')||n.includes('enamel'))&&n.includes('1')) return 'QD Enamel 1L';
+  if((n.includes('q.d')||n.includes('qd')||n.includes('enamel'))&&n.includes('5')) return 'QD Enamel 5L';
+  if((n.includes('thinner')||n.includes('lacquer'))&&n.includes('750')) return 'Thinner 750ml';
+  if((n.includes('thinner')||n.includes('lacquer'))&&n.includes('5'))   return 'Thinner 5L';
+  if(n.includes('roof')&&n.includes('20'))    return 'Roof 20L';
+  if(n.includes('roof')&&n.includes('5'))     return 'Roof 5L';
+  if(n.includes('varnish')&&n.includes('1'))  return 'Varnish 1L';
+  if(n.includes('varnish')&&n.includes('5'))  return 'Varnish 5L';
+  return name;
+}
+
+function fmt(n){return 'R '+Number(n).toLocaleString('en-ZA',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function fmtQty(n){return Number(n).toLocaleString('en-ZA')}
+
+let calcClient = null;
+
+const CLIENTS = [
+  {id:"KA057",name:"Abies Security Gates",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KA100",name:"Absolute Hardware And Tools",rep:"AC",region:"East Rand",volumes:{"Decor 5L":6,"High Gloss 1L":26,"High Gloss 5L":24,"Varnish 1L":24,"QD Enamel 1L":21,"QD Enamel 5L":23,"Varnish 5L":1,"Roof 5L":1},lastPrices:{"Decor 5L":126.15,"High Gloss 1L":85.0,"High Gloss 5L":298.0,"Varnish 1L":90.5,"QD Enamel 1L":92.0,"QD Enamel 5L":302.5,"Varnish 5L":310.0,"Roof 5L":468.01}},
+  {id:"KM027/4",name:"Active Build",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KA111",name:"Akoob Group PTY (LTD)",rep:"AC",region:"Johannesburg South",volumes:{"Decor 20L":61,"High Gloss 1L":192,"High Gloss 5L":134,"QD Enamel 1L":18,"Varnish 1L":84,"Decor 5L":30,"QD Enamel 5L":8},lastPrices:{"Decor 20L":423.0,"High Gloss 1L":79.0,"High Gloss 5L":270.0,"QD Enamel 1L":80.5,"Varnish 1L":104.5,"Decor 5L":124.5,"QD Enamel 5L":305.0}},
+  {id:"KA103",name:"Al Madinah Hardware",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KB035",name:"Amoriscape Pty Ltd",rep:"AC",region:"Johannesburg South",volumes:{"Varnish 5L":5,"Decor 20L":20,"Roof 5L":13,"Thinner 750ml":2,"Thinner 5L":30},lastPrices:{"Varnish 5L":310.0,"Decor 20L":420.0,"Roof 5L":110.0,"Thinner 750ml":315.0,"Thinner 5L":159.5}},
+  {id:"KA109",name:"Arham @ Melrose Hardware",rep:"AC",region:"East Rand",volumes:{"Decor 5L":10,"Decor 20L":3,"High Gloss 1L":19,"Thinner 750ml":1},lastPrices:{"Decor 5L":126.15,"Decor 20L":428.95,"High Gloss 1L":90.0,"Thinner 750ml":315.0}},
+  {id:"KS127/1",name:"Auto Paint Centre Westonarea",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KB025",name:"Balkan Trading CC",rep:"AC",region:"West Rand",volumes:{"Decor 20L":118,"High Gloss 1L":173,"High Gloss 5L":120,"Varnish 5L":2,"QD Enamel 5L":10,"Decor 5L":48,"Roof 20L":6},lastPrices:{"Decor 20L":265.0,"High Gloss 1L":75.0,"High Gloss 5L":275.0,"Varnish 5L":295.0,"QD Enamel 5L":288.0,"Decor 5L":80.5,"Roof 20L":577.8}},
+  {id:"KB085",name:"Best Build Hardware",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KB098",name:"Bismillah Hardware",rep:"AC",region:"Johannesburg Central",volumes:{"Decor 20L":92,"High Gloss 1L":62,"Decor 5L":51,"High Gloss 5L":39,"Roof 5L":62,"Varnish 1L":27,"QD Enamel 1L":10,"QD Enamel 5L":12},lastPrices:{"Decor 20L":349.6,"High Gloss 1L":86.55,"Decor 5L":91.16,"High Gloss 5L":277.22,"Roof 5L":115.73,"Varnish 1L":89.03,"QD Enamel 1L":77.08,"QD Enamel 5L":308.34}},
+  {id:"KB062",name:"Board City",rep:"AC",region:"Johannesburg South",volumes:{"Varnish 5L":19,"Decor 20L":61,"Decor 5L":20,"High Gloss 1L":16,"High Gloss 5L":35,"Varnish 1L":54,"Roof 20L":14,"QD Enamel 5L":11},lastPrices:{"Decor 20L":430.0,"Decor 5L":92.0,"High Gloss 1L":82.5,"High Gloss 5L":298.08,"Varnish 1L":84.7,"Varnish 5L":320.5,"Roof 20L":659.0,"QD Enamel 5L":300.0}},
+  {id:"KB038",name:"Bob's Hardware C.C.",rep:"AC",region:"East Rand",volumes:{"Roof 5L":43,"Decor 20L":112,"Decor 5L":63,"High Gloss 1L":50,"High Gloss 5L":34,"Roof 20L":18,"QD Enamel 1L":23,"Varnish 1L":14,"QD Enamel 5L":12},lastPrices:{"Decor 20L":422.91,"Decor 5L":124.43,"High Gloss 1L":79.05,"High Gloss 5L":289.85,"Roof 20L":605.0,"Roof 5L":110.0,"QD Enamel 1L":86.25,"Varnish 1L":113.85,"QD Enamel 5L":345.0}},
+  {id:"KB094",name:"Builders Den Pty Ltd",rep:"AC",region:"East Rand",volumes:{"Varnish 1L":45},lastPrices:{"Varnish 1L":90.5}},
+  {id:"KB064",name:"Builders Hyper C.C.",rep:"AC",region:"East Rand",volumes:{"Roof 5L":3,"Decor 20L":13,"High Gloss 5L":1067,"Varnish 5L":61,"High Gloss 1L":80,"Varnish 1L":151,"Decor 5L":7,"QD Enamel 1L":11,"QD Enamel 5L":12},lastPrices:{"High Gloss 5L":247.16,"Varnish 5L":280.0,"Decor 20L":285.0,"High Gloss 1L":75.0,"Varnish 1L":82.0,"Roof 5L":327.38,"Decor 5L":62.73,"QD Enamel 1L":80.5,"QD Enamel 5L":275.0}},
+  {id:"KC041",name:"Central Build It",rep:"AC",region:"East Rand",volumes:{"QD Enamel 5L":32,"QD Enamel 1L":17},lastPrices:{"QD Enamel 5L":322.0,"QD Enamel 1L":80.5}},
+  {id:"KD062",name:"Deanans Auto Paints",rep:"AC",region:"Johannesburg South",volumes:{},lastPrices:{}},
+  {id:"KD030",name:"Desai Hardware",rep:"AC",region:"East Rand",volumes:{"High Gloss 1L":15,"High Gloss 5L":7,"Varnish 1L":21,"Varnish 5L":6},lastPrices:{"High Gloss 1L":79.5,"High Gloss 5L":308.0,"Varnish 1L":104.5,"Varnish 5L":335.5}},
+  {id:"KH021/1",name:"Ebrahim Abramjee Traders CC",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KH021/2",name:"Ebrahim Abramjee Traders CC",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KH021",name:"Ebrahim Abramjee Traders CC",rep:"AC",region:"Johannesburg South",volumes:{"Roof 5L":135,"Roof 20L":68,"QD Enamel 1L":40,"QD Enamel 5L":5},lastPrices:{"Roof 5L":110.0,"Roof 20L":550.0,"QD Enamel 1L":70.0,"QD Enamel 5L":250.0}},
+  {id:"KE016",name:"Eeezee Foam (Pty) Ltd",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KE037",name:"Epic Foods (Pty) Ltd",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KE040",name:"Exclusive Wholesalers",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KE030",name:"Express Mall @ 85",rep:"AC",region:"Johannesburg South",volumes:{"Decor 20L":143,"High Gloss 1L":45,"High Gloss 5L":76,"Roof 5L":72,"Varnish 1L":23,"Varnish 5L":48,"QD Enamel 1L":31,"QD Enamel 5L":38,"Decor 5L":37,"Roof 20L":18},lastPrices:{"Decor 20L":224.25,"High Gloss 1L":75.0,"High Gloss 5L":275.0,"Roof 5L":110.0,"Varnish 1L":82.0,"Varnish 5L":280.0,"QD Enamel 1L":77.0,"QD Enamel 5L":275.0,"Decor 5L":78.35,"Roof 20L":550.0}},
+  {id:"KF034",name:"Faeez Cassim",rep:"AC",region:"West Rand",volumes:{},lastPrices:{}},
+  {id:"KA050",name:"Fountain Square Trading 129cc",rep:"AC",region:"Johannesburg Central",volumes:{"Roof 5L":81,"Decor 20L":155,"Decor 5L":47,"High Gloss 1L":76,"High Gloss 5L":105,"Roof 20L":38,"Varnish 5L":5,"Varnish 1L":10},lastPrices:{"Decor 20L":386.86,"Decor 5L":115.85,"High Gloss 1L":63.75,"High Gloss 5L":207.88,"Roof 20L":549.45,"Roof 5L":139.95,"Varnish 5L":308.95,"Varnish 1L":87.45}},
+  {id:"KA060",name:"Golden Hardware and Paint",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KH048",name:"Hardware City",rep:"AC",region:"East Rand",volumes:{"High Gloss 1L":5,"Varnish 1L":30,"Varnish 5L":4},lastPrices:{"High Gloss 1L":76.1,"Varnish 1L":78.97,"Varnish 5L":320.0}},
+  {id:"KA030",name:"Hassan & Sons Hardware",rep:"AC",region:"Johannesburg Central",volumes:{"Decor 5L":18},lastPrices:{"Decor 5L":184.5}},
+  {id:"KH018",name:"Help U Build (Pty) Ltd",rep:"AC",region:"East Rand",volumes:{"High Gloss 1L":13,"Varnish 5L":6,"QD Enamel 5L":115,"QD Enamel 1L":30,"Roof 5L":200,"Varnish 1L":3},lastPrices:{"High Gloss 1L":74.25,"Varnish 5L":291.5,"QD Enamel 5L":288.0,"QD Enamel 1L":72.0,"Roof 5L":99.0,"Varnish 1L":90.0}},
+  {id:"KE031",name:"IL Molino (PTY) Ltd",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KL028",name:"Ilanga Hardware",rep:"AC",region:"East Rand",volumes:{"High Gloss 1L":122,"High Gloss 5L":71,"Varnish 1L":42,"Varnish 5L":17},lastPrices:{"High Gloss 1L":79.05,"High Gloss 5L":299.19,"Varnish 1L":99.62,"Varnish 5L":390.97}},
+  {id:"KM027/1",name:"IMFA HARDWARE",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KJ037",name:"Jad Doors (PTY) LTD",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KJ019",name:"Jiva Auto Paints",rep:"AC",region:"Johannesburg Central",volumes:{"Decor 20L":6,"High Gloss 5L":16,"Varnish 5L":6,"Varnish 1L":12},lastPrices:{"Decor 20L":409.55,"High Gloss 5L":207.88,"Varnish 5L":308.95,"Varnish 1L":95.0}},
+  {id:"KM027",name:"Maliks TA Power Build",rep:"AC",region:"Johannesburg Central",volumes:{"Decor 5L":317,"High Gloss 1L":2373,"High Gloss 5L":1783,"Roof 5L":74,"QD Enamel 5L":89,"Decor 20L":501,"Roof 20L":33,"Varnish 1L":268,"Varnish 5L":64,"Thinner 5L":114,"QD Enamel 1L":127,"Thinner 750ml":7},lastPrices:{"High Gloss 1L":77.42,"High Gloss 5L":259.59,"Decor 20L":330.0,"Decor 5L":155.07,"Roof 20L":560.0,"Roof 5L":453.48,"Varnish 1L":92.0,"Varnish 5L":330.0,"Thinner 5L":158.33,"QD Enamel 1L":84.0,"QD Enamel 5L":316.5,"Thinner 750ml":304.78}},
+  {id:"KM061",name:"Manish Naran",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KM007",name:"Marshall Hardware & Furniture",rep:"AC",region:"Johannesburg Central",volumes:{"Roof 20L":97,"High Gloss 1L":282,"High Gloss 5L":109,"Roof 5L":81,"Varnish 1L":270,"Varnish 5L":30},lastPrices:{"High Gloss 1L":65.0,"High Gloss 5L":260.0,"Roof 20L":475.0,"Roof 5L":150.0,"Varnish 1L":75.0,"Varnish 5L":295.0}},
+  {id:"KM025",name:"Masons Hardware",rep:"AC",region:"East Rand",volumes:{"High Gloss 1L":18,"Varnish 1L":40,"Varnish 5L":6,"QD Enamel 1L":6,"QD Enamel 5L":5,"High Gloss 5L":26},lastPrices:{"High Gloss 1L":82.5,"Varnish 1L":98.5,"Varnish 5L":295.0,"QD Enamel 1L":80.5,"QD Enamel 5L":295.0,"High Gloss 5L":270.0}},
+  {id:"KM064",name:"Masons Home Hardware",rep:"AC",region:"East Rand",volumes:{"High Gloss 1L":78,"Decor 20L":2,"High Gloss 5L":61,"Varnish 1L":37,"Varnish 5L":21,"Roof 5L":9},lastPrices:{"High Gloss 1L":78.75,"Decor 20L":540.8,"High Gloss 5L":303.0,"Varnish 1L":98.5,"Varnish 5L":320.0,"Roof 5L":175.0}},
+  {id:"KM001",name:"Mega Doors and Paint  Hardware",rep:"AC",region:"Johannesburg Central",volumes:{"Decor 20L":3,"Varnish 5L":7,"High Gloss 1L":7,"Varnish 1L":19,"Roof 5L":5,"QD Enamel 1L":10,"QD Enamel 5L":7,"Decor 5L":12,"Roof 20L":1,"High Gloss 5L":3},lastPrices:{"Decor 20L":495.0,"High Gloss 1L":78.56,"Varnish 1L":113.85,"Varnish 5L":390.97,"Roof 5L":256.8,"QD Enamel 1L":103.5,"QD Enamel 5L":345.0,"Decor 5L":89.0,"Roof 20L":599.0,"High Gloss 5L":359.83}},
+  {id:"KT014/1",name:"MOTALAS HARDWARE",rep:"AC",region:"Johannesburg South",volumes:{},lastPrices:{}},
+  {id:"KM159",name:"MTS Hardware",rep:"AC",region:"East Rand",volumes:{"Varnish 1L":139,"Varnish 5L":80,"High Gloss 1L":9,"High Gloss 5L":12,"Roof 5L":3,"Roof 20L":3},lastPrices:{"Varnish 1L":95.65,"Varnish 5L":320.8,"High Gloss 1L":78.56,"High Gloss 5L":341.57,"Roof 5L":238.19,"Roof 20L":615.0}},
+  {id:"KM109",name:"Mullas  Hardware",rep:"AC",region:"East Rand",volumes:{"High Gloss 5L":14,"Varnish 1L":10,"Varnish 5L":1,"QD Enamel 5L":4,"QD Enamel 1L":6},lastPrices:{"High Gloss 5L":298.0,"Varnish 1L":104.5,"Varnish 5L":295.0,"QD Enamel 5L":320.0,"QD Enamel 1L":82.8}},
+  {id:"KN026",name:"New South Building Supplies",rep:"AC",region:"Johannesburg South",volumes:{},lastPrices:{}},
+  {id:"KN014",name:"Norman Building Material",rep:"AC",region:"Johannesburg Central",volumes:{"Thinner 5L":20,"Thinner 750ml":5},lastPrices:{"Thinner 5L":128.84,"Thinner 750ml":442.75}},
+  {id:"KN034",name:"Nu Shop hardware",rep:"AC",region:"Johannesburg Central",volumes:{"Decor 20L":8,"High Gloss 1L":7,"High Gloss 5L":5,"Varnish 1L":4,"Decor 5L":3},lastPrices:{"Decor 20L":270.64,"High Gloss 1L":67.32,"High Gloss 5L":225.73,"Varnish 1L":90.0,"Decor 5L":91.95}},
+  {id:"KP053/2",name:"Paint Mart (Benoni)",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KP053/7",name:"Paint Mart (Lenasia South)",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KP053/4",name:"Paint Mart (Lenasia)",rep:"AC",region:"Johannesburg South",volumes:{},lastPrices:{}},
+  {id:"KP053/3",name:"Paint Mart (Vereeniging)",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KP061",name:"Paint Mart Moe (Benoni)",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KP061/3",name:"Paint Mart Moe (Lenasia South)",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KP061/2",name:"Paint Mart Moe (Lenasia)",rep:"AC",region:"Johannesburg South",volumes:{},lastPrices:{}},
+  {id:"KP058",name:"Paint Max",rep:"AC",region:"Johannesburg Central",volumes:{"Decor 20L":240,"Decor 5L":43,"High Gloss 1L":64,"High Gloss 5L":100},lastPrices:{"Decor 20L":479.0,"Decor 5L":149.0,"High Gloss 1L":75.0,"High Gloss 5L":249.0}},
+  {id:"KP058/1",name:"Paint Max",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KP025/1",name:"Platinum Auto Paints",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KP025",name:"Platinum Auto Paints",rep:"AC",region:"Johannesburg South",volumes:{"Decor 20L":193,"Decor 5L":64,"High Gloss 1L":206,"High Gloss 5L":523,"Roof 5L":82,"Roof 20L":1},lastPrices:{"Decor 20L":207.9,"Decor 5L":127.8,"High Gloss 1L":75.0,"High Gloss 5L":249.0,"Roof 5L":149.7,"Roof 20L":549.45}},
+  {id:"KM027/5",name:"POWER BUILD",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KM027/7",name:"POWER BUILD",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KM027/6",name:"POWER BUILD",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KM027/21",name:"Power Build",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KS127/2",name:"Prestige Auto Paint",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KP059",name:"Prime Build",rep:"AC",region:"Johannesburg Central",volumes:{"High Gloss 5L":10,"Thinner 750ml":20},lastPrices:{"High Gloss 5L":260.0,"Thinner 750ml":127.68}},
+  {id:"KQ011",name:"Quick Solutions",rep:"AC",region:"West Rand",volumes:{},lastPrices:{}},
+  {id:"KM027/3",name:"Randfontein Hardware",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KM027/9",name:"RANK HARDWARE",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KB109",name:"S.R. Mullas Hardware & Superma",rep:"AC",region:"East Rand",volumes:{"Decor 20L":6,"Decor 5L":14,"High Gloss 1L":14,"High Gloss 5L":6,"Varnish 1L":36},lastPrices:{"Decor 20L":422.97,"Decor 5L":126.15,"High Gloss 1L":85.0,"High Gloss 5L":298.0,"Varnish 1L":90.5}},
+  {id:"KS038",name:"Sams Hardware",rep:"AC",region:"Johannesburg Central",volumes:{"Decor 20L":13,"Decor 5L":10,"High Gloss 1L":28,"High Gloss 5L":35,"Varnish 1L":20},lastPrices:{"Decor 20L":389.28,"Decor 5L":123.61,"High Gloss 1L":78.43,"High Gloss 5L":278.3,"Varnish 1L":90.28}},
+  {id:"KS044",name:"Sayed's Ind Supplies Pty Ltd",rep:"AC",region:"Johannesburg Central",volumes:{"Decor 5L":5,"High Gloss 1L":5,"High Gloss 5L":11,"Varnish 1L":6,"Varnish 5L":6,"QD Enamel 1L":10},lastPrices:{"Decor 5L":156.45,"High Gloss 1L":84.81,"High Gloss 5L":290.1,"Varnish 1L":86.62,"Varnish 5L":290.57,"QD Enamel 1L":75.0}},
+  {id:"KS050",name:"Sheffield Paints & Hardware",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KS127",name:"Star Auto Paint Kliptown",rep:"AC",region:"Johannesburg Central",volumes:{"Decor 20L":85,"High Gloss 5L":131,"High Gloss 1L":132,"Roof 20L":26},lastPrices:{"High Gloss 1L":75.0,"High Gloss 5L":270.0,"Roof 20L":550.0,"Decor 20L":495.0}},
+  {id:"KS016",name:"Super Stores Hardware & Elec",rep:"AC",region:"East Rand",volumes:{},lastPrices:{}},
+  {id:"KT057",name:"Takolias Hardware Devland",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KE018",name:"Thamarah Pty Ltd",rep:"AC",region:"Johannesburg Central",volumes:{"Decor 20L":336,"Varnish 1L":42,"Decor 5L":69,"Varnish 5L":5,"High Gloss 5L":1},lastPrices:{"Decor 20L":291.5,"Decor 5L":104.5,"Varnish 1L":84.8,"Varnish 5L":306.21,"High Gloss 5L":262.15}},
+  {id:"KT014",name:"Timber City",rep:"AC",region:"Johannesburg Central",volumes:{"Thinner 750ml":12,"Thinner 5L":44,"QD Enamel 1L":19,"QD Enamel 5L":13},lastPrices:{"Thinner 750ml":320.0,"Thinner 5L":150.0,"QD Enamel 1L":82.8,"QD Enamel 5L":331.5}},
+  {id:"KU009",name:"Unibiz Exports Trading",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KV021",name:"Vaal Auto Paints",rep:"AC",region:"East Rand",volumes:{"Decor 20L":192},lastPrices:{"Decor 20L":265.0}},
+  {id:"KV018",name:"Vantis Gift Centre CC",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KV002",name:"Vereeniging Builders Supplies",rep:"AC",region:"East Rand",volumes:{"Roof 20L":4,"Decor 20L":10,"Decor 5L":17,"High Gloss 1L":62,"High Gloss 5L":22,"Roof 5L":108,"Varnish 1L":33,"Varnish 5L":10,"QD Enamel 1L":13,"QD Enamel 5L":27},lastPrices:{"Roof 20L":1391.5,"Decor 20L":428.64,"Decor 5L":147.55,"High Gloss 1L":82.5,"High Gloss 5L":293.42,"Roof 5L":402.06,"Varnish 1L":113.85,"Varnish 5L":334.15,"QD Enamel 1L":80.5,"QD Enamel 5L":302.5}},
+  {id:"KW014",name:"Walwati Properties (PTY) LTD",rep:"AC",region:"Johannesburg Central",volumes:{},lastPrices:{}},
+  {id:"KM048",name:"A A Hardware 2",rep:"AP",region:"Pretoria North",volumes:{},lastPrices:{}},
+  {id:"KA090",name:"A A Owaish Maize Depot Pty Ltd",rep:"AP",region:"Pretoria North",volumes:{"High Gloss 1L":24,"High Gloss 5L":17,"Decor 20L":14,"Roof 20L":8,"Roof 5L":57,"Thinner 750ml":3,"Thinner 5L":6},lastPrices:{"High Gloss 1L":82.5,"High Gloss 5L":295.81,"Decor 20L":280.0,"Roof 20L":580.0,"Roof 5L":109.25,"Thinner 750ml":304.75,"Thinner 5L":135.0}},
+  {id:"KA056",name:"A N Hardware",rep:"AP",region:"Pretoria West",volumes:{},lastPrices:{}},
+  {id:"KA008/2",name:"AA Hardware 2",rep:"AP",region:"Pretoria North",volumes:{},lastPrices:{}},
+  {id:"KA008/1",name:"AA Hardware 3",rep:"AP",region:"Pretoria North",volumes:{},lastPrices:{}},
+  {id:"KA038",name:"Ace Hardware & Furniture",rep:"AP",region:"Pretoria West",volumes:{"Decor 20L":369,"Roof 5L":188,"High Gloss 5L":129,"QD Enamel 1L":2,"High Gloss 1L":73,"Varnish 1L":55,"Roof 20L":62,"Varnish 5L":2},lastPrices:{"Decor 20L":329.13,"High Gloss 1L":84.67,"Roof 5L":122.96,"Varnish 1L":109.0,"High Gloss 5L":270.25,"Roof 20L":713.0,"Varnish 5L":366.0,"QD Enamel 1L":94.3}},
+  {id:"KA117",name:"African Hardware",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":50,"QD Enamel 1L":30},lastPrices:{"Decor 20L":275.0,"QD Enamel 1L":80.0}},
+  {id:"KA054",name:"Al Soud Traders",rep:"AP",region:"Pretoria West",volumes:{"Decor 20L":270,"High Gloss 1L":115,"High Gloss 5L":49,"Roof 5L":370,"Thinner 750ml":31,"Thinner 5L":50,"QD Enamel 1L":47,"Varnish 1L":110,"QD Enamel 5L":45},lastPrices:{"Decor 20L":294.0,"High Gloss 1L":78.64,"High Gloss 5L":275.0,"Roof 5L":90.0,"Thinner 750ml":285.0,"Thinner 5L":130.0,"QD Enamel 1L":85.0,"Varnish 1L":82.53,"QD Enamel 5L":320.0}},
+  {id:"KM094",name:"Al-Kauthar Inv TA Mas HW",rep:"AP",region:"Pretoria East",volumes:{},lastPrices:{}},
+  {id:"KA115",name:"Amin Supermarket T/A Ayat HW",rep:"AP",region:"AP?",volumes:{},lastPrices:{}},
+  {id:"KA072",name:"Amods Electrical & Plumbing",rep:"AP",region:"Pretoria West",volumes:{},lastPrices:{}},
+  {id:"KA108",name:"Azhari Auto Spares",rep:"AP",region:"Pretoria North",volumes:{},lastPrices:{}},
+  {id:"KB086",name:"Best Build Hardware  Elim",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":63},lastPrices:{"Decor 20L":316.25}},
+  {id:"KB046",name:"Bhana and Shikh General Dealer",rep:"AP",region:"Pretoria West",volumes:{"Decor 20L":204,"QD Enamel 1L":40,"QD Enamel 5L":70,"High Gloss 5L":65,"Roof 20L":28,"Roof 5L":112,"Varnish 1L":60,"Thinner 750ml":10,"Thinner 5L":10},lastPrices:{"Decor 20L":285.0,"High Gloss 5L":293.39,"Roof 20L":561.6,"Roof 5L":200.0,"Varnish 1L":83.82,"Thinner 750ml":270.84,"Thinner 5L":127.68,"QD Enamel 1L":80.0,"QD Enamel 5L":320.0}},
+  {id:"KB082",name:"Bobras Hardware",rep:"AP",region:"Pretoria North",volumes:{},lastPrices:{}},
+  {id:"KB032",name:"Bonanza Plumbing & Electrical",rep:"AP",region:"Pretoria East",volumes:{"Decor 20L":8,"Decor 5L":3,"High Gloss 1L":41,"High Gloss 5L":62,"Roof 20L":4,"Roof 5L":46,"Varnish 1L":22,"Varnish 5L":7,"Thinner 750ml":1,"QD Enamel 1L":3},lastPrices:{"Decor 20L":280.0,"Decor 5L":85.0,"High Gloss 1L":72.7,"High Gloss 5L":240.5,"Roof 20L":540.0,"Roof 5L":174.96,"Varnish 1L":84.0,"Varnish 5L":309.94,"Thinner 750ml":271.89,"QD Enamel 1L":80.0}},
+  {id:"KB036",name:"BRM Investments",rep:"AP",region:"Pretoria East",volumes:{},lastPrices:{}},
+  {id:"KB084",name:"Builders at Bloem Pty Ltd",rep:"AP",region:"Pretoria East",volumes:{},lastPrices:{}},
+  {id:"KB114",name:"Builderstown Hyper (PTY) LTD",rep:"AP",region:"Centurion",volumes:{"Decor 20L":194,"Decor 5L":94,"Roof 20L":40,"QD Enamel 1L":92,"QD Enamel 5L":88},lastPrices:{"Decor 20L":280.0,"Decor 5L":82.5,"Roof 20L":550.0,"QD Enamel 1L":80.0,"QD Enamel 5L":280.0}},
+  {id:"KB075",name:"Burgersfort Wood Centre",rep:"AP",region:"Pretoria West",volumes:{},lastPrices:{}},
+  {id:"KU005",name:"Candyland General Trading",rep:"AP",region:"Pretoria East",volumes:{"High Gloss 1L":56,"High Gloss 5L":17,"Roof 20L":7,"QD Enamel 1L":8,"QD Enamel 5L":4},lastPrices:{"High Gloss 1L":90.08,"High Gloss 5L":303.21,"Roof 20L":695.52,"QD Enamel 1L":95.0,"QD Enamel 5L":368.0}},
+  {id:"KC056",name:"Cheap Cheap Hardware",rep:"AP",region:"Pretoria East",volumes:{"Decor 20L":77,"High Gloss 5L":8,"Roof 20L":10,"QD Enamel 1L":20,"QD Enamel 5L":4,"Thinner 5L":10},lastPrices:{"Decor 20L":299.0,"High Gloss 5L":275.0,"Roof 20L":550.0,"QD Enamel 1L":85.0,"QD Enamel 5L":290.0,"Thinner 5L":128.0}},
+  {id:"KC029",name:"Choice Build Hardware",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":133,"Decor 5L":72,"High Gloss 1L":50,"High Gloss 5L":66,"Roof 20L":60,"Roof 5L":72,"Varnish 1L":57,"Varnish 5L":61,"QD Enamel 1L":112,"QD Enamel 5L":121,"Thinner 750ml":10,"Thinner 5L":75},lastPrices:{"Decor 20L":250.0,"Decor 5L":84.67,"High Gloss 1L":69.91,"High Gloss 5L":244.69,"Roof 20L":540.0,"Roof 5L":174.96,"Varnish 1L":83.5,"Varnish 5L":279.87,"QD Enamel 1L":76.0,"QD Enamel 5L":317.19,"Thinner 750ml":274.5,"Thinner 5L":130.0}},
+  {id:"KC053",name:"Choice Build Hardware Siloam",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":33,"High Gloss 1L":28,"High Gloss 5L":16,"Varnish 1L":18,"Varnish 5L":15,"QD Enamel 1L":12,"QD Enamel 5L":8},lastPrices:{"Decor 20L":265.47,"High Gloss 1L":72.99,"High Gloss 5L":251.68,"Varnish 1L":83.5,"Varnish 5L":279.87,"QD Enamel 1L":76.0,"QD Enamel 5L":323.0}},
+  {id:"KC054",name:"Choice Build Matanda",rep:"AP",region:"Pretoria North",volumes:{"High Gloss 1L":36,"Varnish 1L":44,"Thinner 750ml":6,"QD Enamel 1L":16,"High Gloss 5L":13,"Thinner 5L":15,"QD Enamel 5L":8,"Decor 20L":14,"Roof 20L":22},lastPrices:{"High Gloss 1L":83.95,"Varnish 1L":94.3,"Thinner 750ml":322.0,"QD Enamel 1L":95.0,"High Gloss 5L":289.43,"Thinner 5L":149.5,"QD Enamel 5L":330.0,"Decor 20L":322.0,"Roof 20L":598.0}},
+  {id:"KC021",name:"Choice Hardware & Electrical",rep:"AP",region:"Pretoria West",volumes:{"Decor 20L":20,"High Gloss 1L":100,"Varnish 1L":70,"QD Enamel 1L":20},lastPrices:{"Decor 20L":316.25,"High Gloss 1L":85.1,"Varnish 1L":105.8,"QD Enamel 1L":89.04}},
+  {id:"KT005",name:"Delli 786 TATshaulu HW",rep:"AP",region:"Pretoria North",volumes:{"Varnish 1L":11,"Roof 5L":57,"High Gloss 1L":47,"High Gloss 5L":6,"Decor 20L":10,"Thinner 750ml":3,"QD Enamel 1L":6},lastPrices:{"Decor 20L":360.0,"High Gloss 1L":84.25,"Roof 5L":113.85,"Thinner 750ml":270.0,"QD Enamel 1L":80.0,"High Gloss 5L":303.01,"Varnish 1L":98.9}},
+  {id:"KD017",name:"Discount Hardware",rep:"AP",region:"Pretoria West",volumes:{"Decor 20L":14,"High Gloss 1L":20,"High Gloss 5L":29,"Varnish 1L":25,"Thinner 750ml":4,"QD Enamel 1L":18,"QD Enamel 5L":40},lastPrices:{"Decor 20L":330.0,"High Gloss 1L":77.42,"High Gloss 5L":259.59,"Varnish 1L":92.0,"Thinner 750ml":350.5,"QD Enamel 1L":84.0,"QD Enamel 5L":316.5}},
+  {id:"KM027/19",name:"Discount HW",rep:"AP",region:"Pretoria West",volumes:{},lastPrices:{}},
+  {id:"KD033",name:"DIY Depo ( Petrus Styne)",rep:"AP",region:"Pretoria East",volumes:{},lastPrices:{}},
+  {id:"KR027",name:"Easy Hardware",rep:"AP",region:"Pretoria North",volumes:{"Decor 5L":6,"Roof 5L":25,"Varnish 1L":6,"QD Enamel 5L":24,"High Gloss 1L":8,"High Gloss 5L":2,"Thinner 5L":16,"Thinner 750ml":3,"QD Enamel 1L":3},lastPrices:{"Roof 5L":108.0,"Varnish 1L":98.17,"QD Enamel 5L":320.0,"Decor 5L":83.44,"High Gloss 1L":86.68,"High Gloss 5L":270.35,"Thinner 5L":149.5,"Thinner 750ml":299.0,"QD Enamel 1L":95.0}},
+  {id:"KF011",name:"Family Hardware",rep:"AP",region:"Pretoria East",volumes:{},lastPrices:{}},
+  {id:"KF028",name:"Fayaz and Brother 891 Pty Ltd",rep:"AP",region:"Pretoria North",volumes:{"Roof 5L":43,"QD Enamel 5L":64,"High Gloss 1L":3,"Varnish 1L":4,"Thinner 750ml":4,"Thinner 5L":32,"QD Enamel 1L":91,"High Gloss 5L":2},lastPrices:{"High Gloss 1L":78.56,"Roof 5L":120.0,"Varnish 1L":92.4,"Thinner 750ml":322.0,"Thinner 5L":149.5,"QD Enamel 1L":92.0,"High Gloss 5L":383.82,"QD Enamel 5L":320.0}},
+  {id:"KM043",name:"Goldville SM  ta Meem H/War",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":6,"High Gloss 1L":24,"Varnish 1L":28,"Thinner 5L":11,"QD Enamel 1L":43,"Thinner 750ml":3,"QD Enamel 5L":18},lastPrices:{"Decor 20L":402.41,"High Gloss 1L":78.44,"Varnish 1L":100.2,"Thinner 5L":149.5,"QD Enamel 1L":95.0,"Thinner 750ml":322.0,"QD Enamel 5L":320.0}},
+  {id:"KH029",name:"Hadid Hardware & Furniture",rep:"AP",region:"Pretoria West",volumes:{"High Gloss 1L":15,"High Gloss 5L":30,"Varnish 1L":10},lastPrices:{"High Gloss 1L":84.94,"High Gloss 5L":303.21,"Varnish 1L":92.0}},
+  {id:"KH005",name:"HMG Wholesalers",rep:"AP",region:"Pretoria West",volumes:{"Decor 20L":3,"Varnish 1L":4,"Thinner 750ml":4,"Thinner 5L":20},lastPrices:{"Decor 20L":299.0,"Varnish 1L":105.6,"Thinner 750ml":322.0,"Thinner 5L":130.0}},
+  {id:"KI016",name:"Iconic Hardware",rep:"AP",region:"Pretoria North",volumes:{},lastPrices:{}},
+  {id:"KJ022",name:"Jane Furse Building Supply",rep:"AP",region:"Pretoria West",volumes:{},lastPrices:{}},
+  {id:"KR034",name:"Jeelani Investment TA Matanda",rep:"AP",region:"Pretoria North",volumes:{"Decor 5L":8,"High Gloss 1L":104,"High Gloss 5L":52,"Roof 5L":80,"Varnish 1L":38,"Thinner 5L":35,"QD Enamel 1L":35,"Decor 20L":25,"Thinner 750ml":10,"QD Enamel 5L":15},lastPrices:{"Decor 20L":273.0,"High Gloss 1L":75.6,"High Gloss 5L":265.42,"Roof 5L":100.99,"Varnish 1L":105.6,"Thinner 750ml":274.34,"Thinner 5L":130.0,"QD Enamel 1L":90.0,"QD Enamel 5L":300.0,"Decor 5L":85.0}},
+  {id:"KP018",name:"Khotawala 786 Traders CC",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":21,"High Gloss 1L":51,"High Gloss 5L":27,"Roof 5L":84,"Varnish 1L":36,"QD Enamel 5L":6,"Thinner 750ml":4,"QD Enamel 1L":12,"Varnish 5L":2,"Thinner 5L":6},lastPrices:{"Decor 20L":300.0,"High Gloss 1L":82.5,"High Gloss 5L":257.23,"Roof 5L":109.25,"Varnish 1L":95.0,"QD Enamel 5L":300.0,"Thinner 750ml":304.75,"QD Enamel 1L":80.0,"Varnish 5L":430.07,"Thinner 5L":155.25}},
+  {id:"KP018/1",name:"Khotawala 786 Traders TA",rep:"AP",region:"Pretoria North",volumes:{},lastPrices:{}},
+  {id:"KL020",name:"Light Centre",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":19,"High Gloss 5L":5,"Roof 20L":15,"Roof 5L":81,"High Gloss 1L":31,"Varnish 1L":29,"Thinner 750ml":3},lastPrices:{"High Gloss 5L":258.68,"Roof 20L":580.0,"Roof 5L":114.01,"High Gloss 1L":86.89,"Varnish 1L":121.44,"Thinner 750ml":313.56,"Decor 20L":202.81}},
+  {id:"KL034",name:"Lucky Save 2",rep:"AP",region:"Pretoria West",volumes:{"High Gloss 1L":35,"High Gloss 5L":81,"Thinner 5L":60,"Decor 20L":145,"QD Enamel 5L":45,"Roof 20L":5,"Varnish 1L":40,"Varnish 5L":9,"Thinner 750ml":15,"Roof 5L":100,"Decor 5L":5,"QD Enamel 1L":10},lastPrices:{"High Gloss 1L":79.9,"High Gloss 5L":318.61,"Thinner 5L":130.0,"Decor 20L":300.0,"QD Enamel 5L":320.0,"Roof 20L":560.0,"Varnish 1L":90.0,"Varnish 5L":362.64,"Thinner 750ml":280.0,"Roof 5L":111.78,"Decor 5L":149.04,"QD Enamel 1L":92.0}},
+  {id:"KL022",name:"Lucky Save Hardware",rep:"AP",region:"Pretoria West",volumes:{"Decor 5L":14,"High Gloss 1L":90,"Roof 5L":48,"Thinner 5L":15,"Decor 20L":73,"High Gloss 5L":54,"Roof 20L":18,"Varnish 1L":34,"Varnish 5L":2,"Thinner 750ml":12,"QD Enamel 1L":34,"QD Enamel 5L":23},lastPrices:{"Decor 20L":320.0,"Decor 5L":92.1,"High Gloss 1L":88.0,"High Gloss 5L":277.05,"Roof 20L":599.0,"Varnish 1L":90.0,"Varnish 5L":362.64,"Thinner 750ml":322.0,"Thinner 5L":130.0,"QD Enamel 1L":80.0,"QD Enamel 5L":323.0,"Roof 5L":90.0}},
+  {id:"KL023",name:"MA Hardware",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":10,"Decor 5L":5,"High Gloss 1L":65,"High Gloss 5L":29,"Thinner 750ml":10,"QD Enamel 1L":43,"QD Enamel 5L":20,"Roof 5L":80,"Thinner 5L":10},lastPrices:{"Decor 20L":294.0,"Decor 5L":85.0,"High Gloss 1L":75.6,"High Gloss 5L":265.42,"Thinner 750ml":274.34,"QD Enamel 1L":90.0,"QD Enamel 5L":300.0,"Roof 5L":116.13,"Thinner 5L":149.5}},
+  {id:"KM004",name:"Magezi Hardware",rep:"AP",region:"Pretoria North",volumes:{"High Gloss 1L":145,"High Gloss 5L":28,"Varnish 1L":18,"Varnish 5L":4,"Thinner 750ml":11,"Thinner 5L":50,"QD Enamel 1L":194,"QD Enamel 5L":150,"Roof 20L":30,"Decor 20L":40},lastPrices:{"High Gloss 1L":83.95,"High Gloss 5L":303.01,"Varnish 1L":113.9,"Varnish 5L":362.64,"Thinner 750ml":298.08,"Thinner 5L":142.83,"QD Enamel 1L":95.0,"QD Enamel 5L":320.0,"Roof 20L":650.0,"Decor 20L":204.85}},
+  {id:"KM004/1",name:"MAGEZI HW WHOLESALE VILLAGE",rep:"AP",region:"Pretoria North",volumes:{},lastPrices:{}},
+  {id:"KM098",name:"Mahriya General Trading CC",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":8,"High Gloss 1L":22,"High Gloss 5L":2,"Roof 20L":4,"Roof 5L":10},lastPrices:{"High Gloss 1L":76.19,"High Gloss 5L":271.25,"Roof 20L":560.0,"Roof 5L":99.0,"Decor 20L":180.0}},
+  {id:"KM022",name:"Makhumi S Market TA Mambose H",rep:"AP",region:"Pretoria North",volumes:{"QD Enamel 5L":6,"Thinner 750ml":5,"Thinner 5L":20},lastPrices:{"High Gloss 1L":78.56,"High Gloss 5L":288.02,"Roof 5L":238.19,"Varnish 1L":92.4,"Thinner 750ml":225.77,"Thinner 5L":102.14,"QD Enamel 5L":320.0}},
+  {id:"KM087",name:"Mangera's Hardware City",rep:"AP",region:"Pretoria West",volumes:{"Decor 20L":42,"High Gloss 1L":120,"High Gloss 5L":40,"Thinner 5L":40,"QD Enamel 1L":65,"QD Enamel 5L":70,"Thinner 750ml":7},lastPrices:{"Decor 20L":437.0,"High Gloss 1L":86.64,"High Gloss 5L":310.9,"Thinner 5L":149.5,"QD Enamel 1L":90.0,"QD Enamel 5L":320.0,"Thinner 750ml":322.0}},
+  {id:"KM077",name:"Manglasi Hardware",rep:"AP",region:"Pretoria North",volumes:{"High Gloss 5L":5,"Varnish 1L":10,"Thinner 750ml":2,"Thinner 5L":10,"QD Enamel 1L":10},lastPrices:{"High Gloss 5L":311.83,"Varnish 1L":121.44,"Thinner 750ml":322.0,"Thinner 5L":149.5,"QD Enamel 1L":95.0}},
+  {id:"KM164",name:"Mas Hardware",rep:"AP",region:"Pretoria East",volumes:{},lastPrices:{}},
+  {id:"KM116",name:"Maserumo Xpress",rep:"AP",region:"Pretoria West",volumes:{},lastPrices:{}},
+  {id:"KC031",name:"Masiqhame Trading 1629",rep:"AP",region:"Pretoria West",volumes:{"Thinner 750ml":49,"Thinner 5L":449},lastPrices:{"Thinner 5L":138.0,"Thinner 750ml":251.94}},
+  {id:"KM070",name:"Max Hardware",rep:"AP",region:"Pretoria North",volumes:{"High Gloss 1L":15,"High Gloss 5L":10,"Roof 5L":45,"Thinner 750ml":2,"Thinner 5L":10,"QD Enamel 1L":5},lastPrices:{"High Gloss 1L":75.6,"High Gloss 5L":270.34,"Roof 5L":99.75,"Thinner 750ml":259.2,"Thinner 5L":127.68,"QD Enamel 1L":80.0}},
+  {id:"KB053",name:"Mekka Hardware",rep:"AP",region:"Pretoria East",volumes:{},lastPrices:{}},
+  {id:"KM141",name:"Memel Hardware",rep:"AP",region:"Pretoria East",volumes:{"Decor 20L":70},lastPrices:{"Decor 20L":310.5}},
+  {id:"KM101",name:"Mevish Cash & Carry",rep:"AP",region:"Pretoria West",volumes:{},lastPrices:{}},
+  {id:"KM105",name:"Monyakeng Hardware",rep:"AP",region:"Pretoria East",volumes:{},lastPrices:{}},
+  {id:"KM076",name:"Moosas Supermarket",rep:"AP",region:"Pretoria West",volumes:{},lastPrices:{}},
+  {id:"KM160",name:"Mr Build Musina (PTY) LTD",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":23,"High Gloss 1L":451,"High Gloss 5L":330,"Roof 20L":45,"Roof 5L":175,"Varnish 1L":130,"Varnish 5L":30,"Thinner 750ml":30,"Thinner 5L":140,"QD Enamel 5L":360,"QD Enamel 1L":50},lastPrices:{"Decor 20L":285.0,"High Gloss 1L":77.63,"High Gloss 5L":273.36,"Roof 20L":550.0,"Roof 5L":178.25,"Varnish 1L":95.0,"Varnish 5L":305.0,"Thinner 750ml":264.5,"Thinner 5L":145.0,"QD Enamel 5L":275.0,"QD Enamel 1L":75.0}},
+  {id:"KM096",name:"Mykatrade 510 (Pty) Ltd",rep:"AP",region:"Pretoria East",volumes:{},lastPrices:{}},
+  {id:"KN018",name:"Naaz Hardware & Furniture",rep:"AP",region:"Pretoria East",volumes:{},lastPrices:{}},
+  {id:"KB013",name:"New Bafana Bafana H Ware",rep:"AP",region:"Pretoria North",volumes:{"High Gloss 5L":20,"QD Enamel 1L":10,"QD Enamel 5L":49,"Varnish 1L":10,"Thinner 750ml":2,"Thinner 5L":5},lastPrices:{"High Gloss 5L":270.0,"QD Enamel 1L":80.0,"QD Enamel 5L":300.0,"Varnish 1L":105.6,"Thinner 750ml":270.0,"Thinner 5L":134.7}},
+  {id:"KB013/2",name:"New Bafana Bafana H Ware",rep:"AP",region:"Pretoria North",volumes:{},lastPrices:{}},
+  {id:"KB003",name:"New Best Build Hardware",rep:"AP",region:"Pretoria North",volumes:{"High Gloss 1L":76,"High Gloss 5L":37,"Thinner 750ml":4,"Thinner 5L":24,"Decor 20L":17,"QD Enamel 1L":6,"Roof 5L":12,"Varnish 1L":20,"QD Enamel 5L":14},lastPrices:{"High Gloss 1L":83.95,"High Gloss 5L":310.12,"Thinner 750ml":322.0,"Thinner 5L":149.5,"Decor 20L":226.8,"QD Enamel 1L":99.66,"Roof 5L":119.1,"Varnish 1L":109.25,"QD Enamel 5L":322.0}},
+  {id:"KS052",name:"Oriant Invest TA Smart Build",rep:"AP",region:"Pretoria North",volumes:{},lastPrices:{}},
+  {id:"KP002",name:"Power Hardware",rep:"AP",region:"Pretoria West",volumes:{"Thinner 750ml":29,"Thinner 5L":229,"Decor 20L":410,"High Gloss 5L":189,"QD Enamel 1L":10,"High Gloss 1L":387,"Roof 20L":5,"Roof 5L":100,"Varnish 1L":190,"QD Enamel 5L":235,"Varnish 5L":33},lastPrices:{"Decor 20L":295.55,"High Gloss 1L":83.12,"High Gloss 5L":291.87,"Roof 20L":495.0,"Roof 5L":85.0,"Varnish 1L":90.02,"Thinner 750ml":264.5,"Thinner 5L":132.25,"QD Enamel 5L":304.75,"Varnish 5L":270.0,"QD Enamel 1L":86.62}},
+  {id:"KB046/1",name:"Powerbuild Express",rep:"AP",region:"Pretoria West",volumes:{},lastPrices:{}},
+  {id:"KR044",name:"Raj Wholesalers",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":28,"Decor 5L":9,"High Gloss 1L":27,"Roof 5L":42,"Varnish 1L":30,"Thinner 750ml":1,"QD Enamel 5L":15},lastPrices:{"Decor 20L":280.0,"Decor 5L":90.0,"High Gloss 1L":80.0,"Roof 5L":95.0,"Varnish 1L":90.0,"Thinner 750ml":270.0,"QD Enamel 5L":299.0}},
+  {id:"KG022",name:"Rosendal Hardware & Building M",rep:"AP",region:"Pretoria East",volumes:{"Varnish 5L":7,"Decor 20L":5},lastPrices:{"Varnish 5L":356.43,"Decor 20L":199.0}},
+  {id:"KS089",name:"S.A. Hardware (Makhado)",rep:"AP",region:"N2",volumes:{},lastPrices:{}},
+  {id:"KS061/1",name:"SAFARI HARDWARE",rep:"AP",region:"Pretoria North",volumes:{},lastPrices:{}},
+  {id:"KS061",name:"Safari Hardware & Glass",rep:"AP",region:"Pretoria North",volumes:{"High Gloss 1L":42,"Roof 5L":75,"Thinner 5L":12,"High Gloss 5L":6,"Varnish 1L":18,"Thinner 750ml":2,"QD Enamel 1L":6},lastPrices:{"High Gloss 1L":86.94,"Roof 5L":96.0,"Thinner 5L":161.66,"High Gloss 5L":310.5,"Varnish 1L":89.02,"Thinner 750ml":330.0,"QD Enamel 1L":95.0}},
+  {id:"KA008",name:"Safu Building Material",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":71,"High Gloss 5L":20,"Varnish 1L":36,"Thinner 750ml":9,"Thinner 5L":42,"QD Enamel 1L":22,"QD Enamel 5L":10,"High Gloss 1L":74,"Varnish 5L":6,"Decor 5L":12},lastPrices:{"High Gloss 5L":295.81,"Varnish 1L":95.0,"Thinner 750ml":304.75,"Thinner 5L":155.25,"Decor 20L":300.0,"QD Enamel 1L":87.5,"QD Enamel 5L":300.0,"High Gloss 1L":82.5,"Varnish 5L":319.63,"Decor 5L":76.74}},
+  {id:"KS080",name:"Sehlware (Pty) Ltd",rep:"AP",region:"Pretoria West",volumes:{"Decor 20L":15,"High Gloss 1L":143,"High Gloss 5L":39,"Roof 5L":170,"Varnish 1L":120,"Thinner 750ml":2,"Thinner 5L":40,"QD Enamel 1L":70,"QD Enamel 5L":20},lastPrices:{"Decor 20L":438.17,"High Gloss 1L":84.8,"High Gloss 5L":301.47,"Roof 5L":110.0,"Varnish 1L":90.0,"Thinner 750ml":320.0,"Thinner 5L":155.0,"QD Enamel 1L":92.0,"QD Enamel 5L":330.0}},
+  {id:"KS021",name:"Shalom Hardware",rep:"AP",region:"Pretoria East",volumes:{"High Gloss 5L":60,"Varnish 1L":32,"Varnish 5L":2,"QD Enamel 1L":10,"QD Enamel 5L":7},lastPrices:{"High Gloss 5L":244.7,"Varnish 1L":95.29,"Varnish 5L":373.97,"QD Enamel 1L":82.5,"QD Enamel 5L":330.0}},
+  {id:"KS045",name:"Siloam Hardware",rep:"AP",region:"Pretoria North",volumes:{"High Gloss 5L":36,"Varnish 1L":42,"Thinner 5L":120,"QD Enamel 5L":63,"High Gloss 1L":56,"Roof 5L":200,"Thinner 750ml":10,"QD Enamel 1L":16},lastPrices:{"High Gloss 5L":303.01,"Varnish 1L":111.22,"Thinner 5L":149.5,"QD Enamel 5L":330.0,"High Gloss 1L":84.27,"Roof 5L":90.0,"Thinner 750ml":322.0,"QD Enamel 1L":89.34}},
+  {id:"KS007",name:"Star Hardware",rep:"AP",region:"Pretoria North",volumes:{},lastPrices:{}},
+  {id:"KS131",name:"Strong Build",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":97,"High Gloss 1L":30,"High Gloss 5L":30,"Varnish 1L":5,"Thinner 750ml":3,"Thinner 5L":20,"QD Enamel 1L":5,"QD Enamel 5L":5},lastPrices:{"Decor 20L":280.0,"High Gloss 1L":80.0,"High Gloss 5L":280.0,"Varnish 1L":85.0,"Thinner 750ml":280.0,"Thinner 5L":130.0,"QD Enamel 1L":92.0,"QD Enamel 5L":368.0}},
+  {id:"KA095/1",name:"Sure Build",rep:"AP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KT036",name:"Tshino Hardware",rep:"AP",region:"Pretoria North",volumes:{"Roof 5L":40,"Decor 20L":38,"High Gloss 1L":18,"High Gloss 5L":22,"Varnish 1L":6,"Thinner 750ml":4,"Thinner 5L":40,"QD Enamel 5L":6,"QD Enamel 1L":10},lastPrices:{"Roof 5L":99.0,"Decor 20L":485.0,"High Gloss 1L":75.6,"High Gloss 5L":310.98,"Varnish 1L":112.2,"Thinner 750ml":270.0,"Thinner 5L":149.5,"QD Enamel 5L":320.0,"QD Enamel 1L":95.0}},
+  {id:"KU006",name:"U Save Glass and Hardware",rep:"AP",region:"Pretoria East",volumes:{},lastPrices:{}},
+  {id:"KV010",name:"V S General  Dealers",rep:"AP",region:"Witbank",volumes:{"High Gloss 1L":7,"Decor 20L":10,"Decor 5L":5},lastPrices:{"High Gloss 1L":84.79,"Decor 20L":220.0,"Decor 5L":101.2}},
+  {id:"KV007",name:"Vendaland H W & Furniture",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":15,"Varnish 1L":9,"Thinner 750ml":2,"Thinner 5L":5},lastPrices:{"Decor 20L":303.42,"Varnish 1L":112.2,"Thinner 750ml":280.0,"Thinner 5L":130.0}},
+  {id:"KV001",name:"Vuwani Hardware & Furniture cc",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":15,"High Gloss 5L":10,"Thinner 750ml":2},lastPrices:{"Decor 20L":320.0,"High Gloss 5L":311.83,"Thinner 750ml":322.0}},
+  {id:"KL004",name:"World Focus 1932 CC",rep:"AP",region:"Pretoria North",volumes:{"Varnish 5L":1,"Decor 20L":18,"High Gloss 1L":55,"High Gloss 5L":24,"Roof 5L":70,"Thinner 750ml":4,"Decor 5L":5,"QD Enamel 1L":76,"Thinner 5L":41,"QD Enamel 5L":27,"Varnish 1L":27},lastPrices:{"Decor 20L":275.0,"High Gloss 1L":84.21,"High Gloss 5L":303.2,"Roof 5L":111.55,"Thinner 750ml":322.0,"Decor 5L":89.78,"QD Enamel 1L":95.0,"Thinner 5L":149.5,"QD Enamel 5L":320.0,"Varnish 1L":109.25,"Varnish 5L":356.43}},
+  {id:"KL004/1",name:"World Focus 1932 CC",rep:"AP",region:"Pretoria North",volumes:{},lastPrices:{}},
+  {id:"KZ011",name:"Z Build Khubvi",rep:"AP",region:"Pretoria North",volumes:{"Decor 20L":43,"High Gloss 1L":10,"High Gloss 5L":5,"Roof 5L":10,"Thinner 750ml":3,"Thinner 5L":15,"QD Enamel 5L":35},lastPrices:{"Decor 20L":320.0,"High Gloss 1L":90.0,"High Gloss 5L":316.25,"Roof 5L":113.85,"Thinner 750ml":310.5,"Thinner 5L":149.5,"QD Enamel 5L":320.0}},
+  {id:"KF033",name:"241 Fairview",rep:"BM",region:"Z1",volumes:{},lastPrices:{}},
+  {id:"KA116",name:"Allandale Trading CC",rep:"BM",region:"Durban North",volumes:{"Decor 20L":5,"Decor 5L":6,"Varnish 1L":17,"QD Enamel 1L":5,"QD Enamel 5L":2,"Roof 20L":1,"High Gloss 1L":3,"Thinner 5L":5},lastPrices:{"Decor 20L":211.45,"Decor 5L":81.12,"Varnish 1L":106.26,"QD Enamel 1L":70.0,"QD Enamel 5L":280.0,"Roof 20L":812.89,"High Gloss 1L":91.11,"Thinner 5L":177.1}},
+  {id:"KB115",name:"Build Africa Hardware",rep:"BM",region:"Durban North",volumes:{"Varnish 1L":26,"Varnish 5L":23,"High Gloss 1L":36,"High Gloss 5L":28,"QD Enamel 1L":12,"QD Enamel 5L":12,"Decor 20L":30,"Decor 5L":19},lastPrices:{"Varnish 1L":106.26,"Varnish 5L":364.91,"High Gloss 1L":79.05,"High Gloss 5L":252.02,"QD Enamel 1L":70.0,"QD Enamel 5L":280.0,"Decor 20L":348.28,"Decor 5L":93.29}},
+  {id:"KC055",name:"CKW life Style (PTY) LTD",rep:"BM",region:"Durban North",volumes:{},lastPrices:{}},
+  {id:"KL048",name:"Living Inspired Interiors",rep:"BM",region:"Z1",volumes:{},lastPrices:{}},
+  {id:"KO013",name:"Olive Urban",rep:"BM",region:"BM",volumes:{},lastPrices:{}},
+  {id:"KP060",name:"Pepper Tree Lane Body Corporat",rep:"BM",region:"Durban North",volumes:{"Roof 5L":1,"High Gloss 1L":1},lastPrices:{"Roof 5L":188.85,"High Gloss 1L":130.0}},
+  {id:"KP063",name:"Projo Projects",rep:"BM",region:"Durban North",volumes:{},lastPrices:{}},
+  {id:"KA055",name:"A K Distributors (Pty) Ltd",rep:"BV",region:"Polokwane Central",volumes:{"Roof 20L":5,"High Gloss 5L":42,"Decor 20L":50,"QD Enamel 5L":55,"Decor 5L":27,"Roof 5L":15,"High Gloss 1L":20,"Varnish 1L":28,"QD Enamel 1L":20},lastPrices:{"High Gloss 5L":296.77,"Decor 20L":440.0,"QD Enamel 5L":370.0,"Decor 5L":144.87,"Roof 20L":560.0,"Roof 5L":199.99,"High Gloss 1L":96.6,"Varnish 1L":103.5,"QD Enamel 1L":87.0,"Varnish 5L":304.29}},
+  {id:"KA058",name:"Acornhoek Hardware",rep:"BV",region:"Tzaneen",volumes:{"Decor 20L":46,"High Gloss 5L":237,"Roof 5L":366,"QD Enamel 5L":62,"QD Enamel 1L":82,"High Gloss 1L":428,"Varnish 1L":296,"Decor 5L":39,"Thinner 750ml":40,"Thinner 5L":131},lastPrices:{"High Gloss 1L":83.12,"High Gloss 5L":269.92,"Roof 5L":114.26,"Varnish 1L":85.0,"Decor 5L":83.32,"Thinner 750ml":287.5,"Thinner 5L":150.0,"QD Enamel 1L":88.1,"QD Enamel 5L":317.0,"Decor 20L":290.79}},
+  {id:"KA101",name:"AD Fancy Goods TA",rep:"BV",region:"Polokwane Central",volumes:{"Decor 20L":25,"High Gloss 1L":12,"High Gloss 5L":28,"Thinner 750ml":5},lastPrices:{"Decor 20L":290.0,"High Gloss 1L":82.0,"High Gloss 5L":292.0,"Thinner 750ml":299.0}},
+  {id:"KA104",name:"All in One Hardware",rep:"BV",region:"Phalaborwa",volumes:{"Decor 20L":216,"Thinner 5L":150,"QD Enamel 1L":184,"QD Enamel 5L":252,"High Gloss 1L":12,"High Gloss 5L":40,"Roof 5L":15,"Thinner 750ml":5},lastPrices:{"Decor 20L":275.0,"Thinner 5L":115.0,"QD Enamel 1L":80.0,"QD Enamel 5L":275.0,"High Gloss 1L":71.69,"High Gloss 5L":239.52,"Roof 5L":174.96,"Thinner 750ml":230.0}},
+  {id:"KA114",name:"AMK Hardware",rep:"BV",region:"Louis Trichardt",volumes:{},lastPrices:{}},
+  {id:"KA002",name:"Angamia Building Material",rep:"BV",region:"Polokwane Central",volumes:{"High Gloss 5L":11,"Decor 20L":26,"Decor 5L":17,"High Gloss 1L":16,"Varnish 1L":14,"Thinner 750ml":1,"QD Enamel 1L":4},lastPrices:{"Decor 20L":356.5,"Decor 5L":160.0,"High Gloss 1L":90.34,"Varnish 1L":121.44,"High Gloss 5L":310.0,"Thinner 750ml":442.75,"QD Enamel 1L":92.0}},
+  {id:"KA107",name:"Applemint Properties 91 Pty Lt",rep:"BV",region:"Centurion",volumes:{},lastPrices:{}},
+  {id:"KA031",name:"Ash Building Supplies",rep:"BV",region:"Polokwane Central",volumes:{"Decor 20L":83,"High Gloss 1L":62,"High Gloss 5L":30,"Varnish 1L":122,"QD Enamel 5L":45,"Roof 20L":20,"Varnish 5L":3,"Roof 5L":30,"QD Enamel 1L":30},lastPrices:{"High Gloss 1L":82.79,"High Gloss 5L":291.5,"Varnish 1L":101.75,"Decor 20L":185.0,"QD Enamel 5L":280.0,"Roof 20L":565.0,"Varnish 5L":292.82,"Roof 5L":406.96,"QD Enamel 1L":72.1}},
+  {id:"KA014",name:"Ayob's Hardware",rep:"BV",region:"Polokwane Central",volumes:{"High Gloss 1L":25,"High Gloss 5L":33,"Roof 20L":25,"Roof 5L":31,"Varnish 1L":60,"Varnish 5L":30,"QD Enamel 1L":40,"QD Enamel 5L":90,"Thinner 750ml":6,"Thinner 5L":100},lastPrices:{"High Gloss 1L":79.57,"High Gloss 5L":282.0,"Roof 20L":556.2,"Roof 5L":190.0,"Varnish 1L":105.99,"Varnish 5L":299.0,"QD Enamel 1L":88.0,"QD Enamel 5L":325.0,"Thinner 750ml":282.21,"Thinner 5L":127.68}},
+  {id:"KB066",name:"Bala & Sons ta BNS Supermark",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KB101",name:"Berario Hardware & Tool",rep:"BV",region:"Louis Trichardt",volumes:{"High Gloss 1L":4,"Varnish 1L":2,"Decor 5L":2,"Thinner 750ml":1,"QD Enamel 1L":2},lastPrices:{"High Gloss 1L":94.0,"Varnish 1L":83.0,"Decor 5L":172.5,"Thinner 750ml":288.0,"QD Enamel 1L":92.0}},
+  {id:"KB010",name:"Beras Hardware Wholesaler",rep:"BV",region:"Phalaborwa",volumes:{"High Gloss 1L":100,"High Gloss 5L":59,"Varnish 1L":48,"Varnish 5L":14,"QD Enamel 1L":21,"QD Enamel 5L":4},lastPrices:{"High Gloss 1L":84.25,"High Gloss 5L":290.0,"Varnish 1L":106.26,"Varnish 5L":417.04,"QD Enamel 1L":92.0,"QD Enamel 5L":368.0}},
+  {id:"KB022",name:"Bethani Hardware",rep:"BV",region:"Polokwane Central",volumes:{"QD Enamel 5L":40},lastPrices:{"QD Enamel 5L":277.42}},
+  {id:"KB044",name:"Border Plumbing & Hardware",rep:"BV",region:"Polokwane Central",volumes:{},lastPrices:{}},
+  {id:"KB002",name:"Bright Build",rep:"BV",region:"Phalaborwa",volumes:{"High Gloss 1L":30,"High Gloss 5L":8,"QD Enamel 1L":36,"QD Enamel 5L":10,"Decor 20L":275,"Decor 5L":10,"Roof 20L":22,"Thinner 750ml":5,"Thinner 5L":78,"Roof 5L":35},lastPrices:{"Decor 20L":270.0,"Decor 5L":84.25,"High Gloss 1L":73.0,"High Gloss 5L":263.49,"Roof 20L":599.0,"Thinner 750ml":250.0,"Thinner 5L":135.0,"QD Enamel 1L":80.0,"QD Enamel 5L":300.0,"Roof 5L":195.5}},
+  {id:"KB011",name:"Brits Hardware & Glass",rep:"BV",region:"Polokwane Central",volumes:{"High Gloss 5L":6005,"Roof 5L":11,"Varnish 5L":894,"QD Enamel 5L":1580,"High Gloss 1L":7308,"Roof 20L":8,"Varnish 1L":3672,"QD Enamel 1L":1044},lastPrices:{"High Gloss 1L":65.15,"High Gloss 5L":218.0,"Roof 20L":545.0,"Roof 5L":160.09,"Varnish 1L":86.5,"QD Enamel 1L":74.75,"QD Enamel 5L":284.97,"Varnish 5L":266.0}},
+  {id:"KW004",name:"Buildware ta Siam Trading",rep:"BV",region:"Louis Trichardt",volumes:{"High Gloss 1L":2611,"High Gloss 5L":1215,"Varnish 1L":1380,"Varnish 5L":120,"Roof 5L":317,"QD Enamel 1L":205,"QD Enamel 5L":60},lastPrices:{"High Gloss 1L":65.78,"High Gloss 5L":258.75,"Varnish 1L":79.93,"Varnish 5L":310.0,"Roof 5L":113.85,"QD Enamel 1L":87.4,"QD Enamel 5L":325.0}},
+  {id:"KC032",name:"Cheers Supermarket",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KM027/12",name:"Chief Steel & Hardware",rep:"BV",region:"Louis Trichardt",volumes:{},lastPrices:{}},
+  {id:"KM027/15",name:"Chief Steel & Hardware",rep:"BV",region:"Louis Trichardt",volumes:{},lastPrices:{}},
+  {id:"KM027/14",name:"Chief Steel & HW",rep:"BV",region:"Louis Trichardt",volumes:{},lastPrices:{}},
+  {id:"KM027/13",name:"Chief Steel & HW",rep:"BV",region:"Louis Trichardt",volumes:{},lastPrices:{}},
+  {id:"KC023",name:"Choice Hardware & Electrical",rep:"BV",region:"Tzaneen",volumes:{"Decor 5L":84,"High Gloss 5L":27,"Decor 20L":245,"High Gloss 1L":95,"Roof 20L":9,"Varnish 1L":60,"Varnish 5L":10,"Thinner 750ml":1,"Thinner 5L":5,"QD Enamel 5L":10},lastPrices:{"Decor 20L":293.5,"High Gloss 1L":86.0,"High Gloss 5L":289.06,"Decor 5L":96.6,"Roof 20L":550.0,"Varnish 1L":105.99,"Varnish 5L":263.49,"Thinner 750ml":245.0,"Thinner 5L":128.96,"QD Enamel 5L":305.0}},
+  {id:"KD008",name:"Dada's World of Hardware CC",rep:"BV",region:"Phalaborwa",volumes:{"Decor 20L":765,"Varnish 1L":740,"QD Enamel 5L":184,"Roof 5L":106,"High Gloss 1L":1110,"High Gloss 5L":695,"Varnish 5L":250,"QD Enamel 1L":290,"Decor 5L":90,"Roof 20L":26},lastPrices:{"Decor 20L":254.23,"High Gloss 1L":63.0,"High Gloss 5L":236.25,"Varnish 1L":60.18,"Varnish 5L":235.62,"QD Enamel 1L":77.0,"QD Enamel 5L":262.96,"Decor 5L":83.02,"Roof 20L":515.0,"Roof 5L":304.33}},
+  {id:"KD001",name:"Dainty's Wholesale Hardware",rep:"BV",region:"Polokwane Central",volumes:{"Decor 20L":687,"Roof 20L":25,"Roof 5L":387,"Decor 5L":141,"High Gloss 5L":369,"Thinner 5L":80,"QD Enamel 5L":90,"High Gloss 1L":434,"Varnish 1L":264,"QD Enamel 1L":90,"Thinner 750ml":20},lastPrices:{"Decor 20L":367.0,"Decor 5L":98.85,"High Gloss 5L":251.15,"Roof 20L":599.0,"Thinner 5L":133.0,"QD Enamel 5L":345.0,"High Gloss 1L":69.77,"Roof 5L":125.41,"Varnish 1L":65.12,"QD Enamel 1L":68.64,"Thinner 750ml":285.0}},
+  {id:"KD028",name:"Del Piero Trading CC",rep:"BV",region:"Phalaborwa",volumes:{"Decor 20L":219,"High Gloss 5L":109,"QD Enamel 5L":358,"Roof 20L":74,"QD Enamel 1L":212,"Roof 5L":30,"Thinner 750ml":20,"Thinner 5L":160},lastPrices:{"QD Enamel 5L":265.0,"Decor 20L":243.35,"Roof 20L":550.0,"QD Enamel 1L":75.0,"High Gloss 5L":247.0,"Roof 5L":146.0,"Thinner 750ml":285.66,"Thinner 5L":132.25}},
+  {id:"KD002",name:"Dhaval Patel Ent",rep:"BV",region:"Polokwane Central",volumes:{"Decor 20L":58,"Decor 5L":20,"Roof 5L":65,"QD Enamel 5L":85},lastPrices:{"Decor 20L":280.0,"Decor 5L":84.0,"Roof 5L":99.0,"QD Enamel 5L":280.0}},
+  {id:"KN011",name:"Discount  HW TA Best Build",rep:"BV",region:"Tzaneen",volumes:{"Decor 20L":52,"High Gloss 1L":90,"High Gloss 5L":51,"Varnish 1L":18,"QD Enamel 1L":50,"QD Enamel 5L":23},lastPrices:{"Decor 20L":295.0,"High Gloss 1L":72.3,"High Gloss 5L":227.37,"Varnish 1L":102.5,"QD Enamel 1L":79.02,"QD Enamel 5L":275.18}},
+  {id:"KD058",name:"Discount Build Hardware",rep:"BV",region:"B3",volumes:{},lastPrices:{}},
+  {id:"KD054",name:"Discount Builders",rep:"BV",region:"Tzaneen",volumes:{},lastPrices:{}},
+  {id:"KM027/20",name:"Discount Hardware",rep:"BV",region:"Tzaneen",volumes:{},lastPrices:{}},
+  {id:"KD004",name:"Discount Hardware",rep:"BV",region:"Phalaborwa",volumes:{"High Gloss 1L":23,"Roof 5L":14,"Varnish 1L":10,"Thinner 750ml":5,"Decor 5L":8,"QD Enamel 5L":2},lastPrices:{"High Gloss 1L":84.44,"Roof 5L":99.0,"Varnish 1L":121.44,"Thinner 750ml":270.0,"Decor 5L":75.0,"QD Enamel 5L":299.0,"Roof 20L":625.0}},
+  {id:"KD015",name:"Discount Hardware Kanyamazane",rep:"BV",region:"Tzaneen",volumes:{"Decor 20L":4,"High Gloss 1L":18,"Decor 5L":12,"Varnish 1L":30,"Thinner 750ml":2,"QD Enamel 1L":24},lastPrices:{"Decor 20L":320.0,"Decor 5L":97.75,"High Gloss 1L":77.42,"High Gloss 5L":282.39,"Varnish 1L":92.0,"Thinner 750ml":290.0,"QD Enamel 1L":84.0}},
+  {id:"KM027/17",name:"Discount Hardware Kanyamazane",rep:"BV",region:"Tzaneen",volumes:{},lastPrices:{}},
+  {id:"KD014",name:"Discount HW Homebuild",rep:"BV",region:"Tzaneen",volumes:{"Thinner 750ml":6,"Thinner 5L":20},lastPrices:{"Thinner 750ml":290.0,"Thinner 5L":150.0}},
+  {id:"KM027/18",name:"Discount HW Homebuild",rep:"BV",region:"Tzaneen",volumes:{},lastPrices:{}},
+  {id:"KS029/1",name:"Duro Build",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KE024",name:"East End General Dealer",rep:"BV",region:"Polokwane Central",volumes:{"Decor 5L":20,"High Gloss 1L":35,"High Gloss 5L":18,"Varnish 1L":20,"QD Enamel 1L":22},lastPrices:{"Decor 5L":101.0,"High Gloss 1L":86.0,"High Gloss 5L":310.9,"Varnish 1L":90.5,"QD Enamel 1L":95.0}},
+  {id:"KG027",name:"Emgwenya Investments Pty Ltd",rep:"BV",region:"Tzaneen",volumes:{"High Gloss 1L":75,"Roof 5L":7,"Decor 20L":25,"Thinner 750ml":4,"QD Enamel 1L":17,"High Gloss 5L":11,"Decor 5L":4,"Thinner 5L":8,"Varnish 1L":17,"Roof 20L":2,"QD Enamel 5L":2},lastPrices:{"High Gloss 1L":93.0,"Roof 5L":468.01,"Decor 20L":430.0,"Thinner 750ml":288.0,"QD Enamel 1L":92.0,"High Gloss 5L":310.0,"Decor 5L":155.0,"Thinner 5L":150.0,"Varnish 1L":106.26,"Roof 20L":1300.0,"QD Enamel 5L":368.0}},
+  {id:"KX003",name:"Exclusive Paint & Hardware",rep:"BV",region:"Louis Trichardt",volumes:{"Decor 20L":8},lastPrices:{"Decor 20L":605.0}},
+  {id:"KB007",name:"F.Bham & Co",rep:"BV",region:"Polokwane Central",volumes:{"Decor 20L":9},lastPrices:{"Decor 20L":295.0}},
+  {id:"KF030",name:"Fairplay Hardware (Mabopane)",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KF018",name:"Fairplay Hardware Bochum",rep:"BV",region:"Phalaborwa",volumes:{"High Gloss 1L":415,"High Gloss 5L":310,"Roof 5L":840,"QD Enamel 1L":60,"QD Enamel 5L":132},lastPrices:{"High Gloss 1L":82.5,"High Gloss 5L":299.0,"Roof 5L":105.0,"QD Enamel 1L":86.9,"QD Enamel 5L":305.0}},
+  {id:"KF018/3",name:"Fairplay Hardware Jane Furse",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KF018/5",name:"Fairplay Hardware Kwamhlanga",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KF018/1",name:"Fairplay Hardware Lebowakgomo",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KF031",name:"Fairplay Kwamhlange (PTY) Ltd",rep:"BV",region:"Louis Trichardt",volumes:{"Roof 5L":83,"High Gloss 1L":15,"High Gloss 5L":4,"QD Enamel 1L":2},lastPrices:{"High Gloss 1L":76.09,"High Gloss 5L":247.77,"Roof 5L":89.0,"QD Enamel 1L":84.29}},
+  {id:"KF009",name:"Fairplay Store",rep:"BV",region:"Phalaborwa",volumes:{"High Gloss 1L":128,"High Gloss 5L":109,"Roof 5L":192,"QD Enamel 1L":18,"QD Enamel 5L":8},lastPrices:{"High Gloss 1L":82.5,"High Gloss 5L":310.0,"Roof 5L":105.0,"QD Enamel 1L":86.9,"QD Enamel 5L":305.0}},
+  {id:"KK016",name:"Faiz Hardware (Pty) Ltd",rep:"BV",region:"Tzaneen",volumes:{"High Gloss 1L":31,"High Gloss 5L":11,"Varnish 1L":16,"Varnish 5L":5,"Decor 5L":10,"Roof 20L":19,"Roof 5L":125,"Thinner 750ml":7,"Thinner 5L":16,"QD Enamel 1L":23,"QD Enamel 5L":11,"Decor 20L":10},lastPrices:{"Decor 5L":149.5,"High Gloss 1L":88.44,"High Gloss 5L":287.5,"Roof 20L":615.0,"Varnish 1L":102.35,"Varnish 5L":322.0,"Roof 5L":101.0,"Thinner 750ml":276.0,"Thinner 5L":138.0,"QD Enamel 1L":80.5,"QD Enamel 5L":299.0,"Decor 20L":440.0}},
+  {id:"KF008",name:"Faroque General Trading PL",rep:"BV",region:"Louis Trichardt",volumes:{"Varnish 5L":6,"QD Enamel 5L":20,"Roof 5L":15},lastPrices:{"Varnish 5L":329.0,"QD Enamel 5L":280.0,"Roof 5L":99.0}},
+  {id:"KG011",name:"Gani's Mining Services CC",rep:"BV",region:"Louis Trichardt",volumes:{"High Gloss 1L":4,"QD Enamel 5L":12,"High Gloss 5L":92,"Decor 20L":6},lastPrices:{"High Gloss 1L":78.6,"QD Enamel 5L":320.0,"High Gloss 5L":299.0,"Decor 20L":455.0}},
+  {id:"KG010",name:"Gardees (Pty) Ltd",rep:"BV",region:"Tzaneen",volumes:{"High Gloss 5L":6,"Varnish 1L":7},lastPrices:{"High Gloss 5L":315.94,"Varnish 1L":112.45}},
+  {id:"KL011/1",name:"GIGAS SUPERMARKET",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KH002",name:"Handy Joes Hardware",rep:"BV",region:"Louis Trichardt",volumes:{"High Gloss 5L":57,"Decor 20L":128,"Decor 5L":62,"High Gloss 1L":69,"Roof 5L":27,"Varnish 1L":58,"QD Enamel 1L":60,"QD Enamel 5L":32,"Roof 20L":35,"Varnish 5L":11},lastPrices:{"Decor 20L":311.0,"Decor 5L":110.0,"High Gloss 1L":86.5,"High Gloss 5L":287.5,"Roof 5L":162.0,"Varnish 1L":104.5,"QD Enamel 1L":81.5,"QD Enamel 5L":299.0,"Roof 20L":599.0,"Varnish 5L":344.66}},
+  {id:"KM012/1",name:"Hardware City",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KH023",name:"Hassim's Hyper",rep:"BV",region:"Phalaborwa",volumes:{"Roof 5L":82,"Varnish 1L":22,"Thinner 750ml":7,"Thinner 5L":10,"Decor 20L":32,"QD Enamel 1L":17,"QD Enamel 5L":5,"Varnish 5L":3},lastPrices:{"Roof 5L":105.0,"Varnish 1L":116.0,"Thinner 750ml":310.0,"Thinner 5L":155.0,"Decor 20L":550.0,"QD Enamel 1L":92.0,"QD Enamel 5L":368.0,"Varnish 5L":320.85}},
+  {id:"KW011",name:"Hassims Supply Store",rep:"BV",region:"Phalaborwa",volumes:{"Varnish 1L":37,"Varnish 5L":8,"High Gloss 1L":14},lastPrices:{"Varnish 1L":74.5,"Varnish 5L":269.0,"High Gloss 1L":78.6}},
+  {id:"KH013/1",name:"Henque 3481 Builders Mecca",rep:"BV",region:"Polokwane Central",volumes:{},lastPrices:{}},
+  {id:"KH013",name:"Henque 3481 CC",rep:"BV",region:"Polokwane Central",volumes:{"High Gloss 1L":105,"High Gloss 5L":76,"Roof 20L":60,"Varnish 5L":10,"QD Enamel 1L":56,"QD Enamel 5L":26,"Decor 20L":40,"Varnish 1L":15},lastPrices:{"High Gloss 1L":82.79,"High Gloss 5L":291.5,"Roof 20L":560.0,"Varnish 5L":309.99,"QD Enamel 1L":72.1,"QD Enamel 5L":290.0,"Decor 20L":195.0,"Varnish 1L":92.5}},
+  {id:"KH035",name:"HGM Steelboys CC",rep:"BV",region:"Phalaborwa",volumes:{"Decor 20L":1755,"High Gloss 5L":600,"Varnish 5L":300},lastPrices:{"Decor 20L":250.0,"High Gloss 5L":235.0,"Varnish 5L":289.0}},
+  {id:"KH050",name:"Hope and Harmony Projects",rep:"BV",region:"Louis Trichardt",volumes:{},lastPrices:{}},
+  {id:"KM027/25",name:"Jane Furse Cash & Carry",rep:"BV",region:"Louis Trichardt",volumes:{},lastPrices:{}},
+  {id:"KK040",name:"Kareena Traders",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KK031",name:"Kazi Hardware & Tool",rep:"BV",region:"Louis Trichardt",volumes:{"Decor 20L":14,"Decor 5L":20,"High Gloss 1L":10,"QD Enamel 1L":8},lastPrices:{"Decor 20L":265.0,"Decor 5L":88.37,"High Gloss 1L":76.0,"QD Enamel 1L":74.77}},
+  {id:"KK038",name:"Kelly's Hardware",rep:"BV",region:"Tzaneen",volumes:{"High Gloss 5L":10,"Thinner 5L":27,"QD Enamel 5L":44,"High Gloss 1L":18,"Thinner 750ml":3,"QD Enamel 1L":36},lastPrices:{"High Gloss 1L":72.35,"High Gloss 5L":246.0,"Thinner 750ml":240.0,"Thinner 5L":125.0,"QD Enamel 1L":87.5,"QD Enamel 5L":285.0}},
+  {id:"KK028",name:"Kgapane Hardware Pty Ltd",rep:"BV",region:"Louis Trichardt",volumes:{"High Gloss 5L":170,"Roof 20L":122,"Roof 5L":328,"Varnish 1L":105,"Decor 20L":50,"Varnish 5L":31,"Decor 5L":11,"QD Enamel 1L":30},lastPrices:{"High Gloss 5L":291.0,"Roof 20L":599.0,"Roof 5L":193.0,"Varnish 1L":95.0,"Decor 20L":225.0,"Varnish 5L":366.0,"Decor 5L":87.99,"QD Enamel 1L":80.0}},
+  {id:"KM027/22",name:"Khutsong Hardware & Steel",rep:"BV",region:"Louis Trichardt",volumes:{},lastPrices:{}},
+  {id:"KL011",name:"Lalita Supermarket& Hardware",rep:"BV",region:"Phalaborwa",volumes:{"High Gloss 1L":12,"High Gloss 5L":13,"Roof 5L":30,"Thinner 5L":5,"QD Enamel 1L":3},lastPrices:{"High Gloss 1L":72.25,"High Gloss 5L":263.5,"Roof 5L":99.0,"Thinner 5L":136.0,"QD Enamel 1L":80.0}},
+  {id:"KN022",name:"M H I Hardware (Nkambako H/W",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KN022/1",name:"M H I Hardware (Nkambako H/W)",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KM037",name:"Maphalle Hardware",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KM060",name:"Maponya Hyper Rama",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KS130",name:"Mashaole General Dealer",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KM163",name:"Maxi Hardware",rep:"BV",region:"Tzaneen",volumes:{"Decor 20L":135,"High Gloss 1L":22,"High Gloss 5L":20,"Varnish 1L":43,"QD Enamel 5L":13,"QD Enamel 1L":24},lastPrices:{"Decor 20L":277.07,"High Gloss 1L":68.99,"High Gloss 5L":234.2,"Varnish 1L":95.0,"QD Enamel 5L":307.97,"QD Enamel 1L":100.0}},
+  {id:"KM065",name:"Mega Hardware",rep:"BV",region:"Louis Trichardt",volumes:{"Roof 5L":10},lastPrices:{"Roof 5L":406.96}},
+  {id:"KM035",name:"Mikes Hardware",rep:"BV",region:"Tzaneen",volumes:{"High Gloss 1L":164,"High Gloss 5L":152,"Varnish 1L":104,"Varnish 5L":9,"QD Enamel 1L":130,"QD Enamel 5L":172,"Decor 20L":45,"Roof 5L":150,"Decor 5L":2},lastPrices:{"High Gloss 1L":83.0,"High Gloss 5L":303.0,"Varnish 1L":90.0,"Varnish 5L":310.0,"QD Enamel 1L":82.5,"QD Enamel 5L":305.0,"Decor 20L":300.0,"Roof 5L":99.0,"Decor 5L":160.0}},
+  {id:"KM079",name:"Mohamedys Hardware",rep:"BV",region:"Phalaborwa",volumes:{"Varnish 5L":4,"Decor 20L":36,"Decor 5L":18},lastPrices:{"Varnish 5L":362.64,"Decor 20L":483.32,"Decor 5L":142.15}},
+  {id:"KC011",name:"Molepo Coal Centre Pty Ltd",rep:"BV",region:"Phalaborwa",volumes:{"Decor 20L":6,"Decor 5L":6,"QD Enamel 1L":10,"QD Enamel 5L":2},lastPrices:{"Decor 20L":390.0,"Decor 5L":120.0,"QD Enamel 1L":85.0,"QD Enamel 5L":340.0}},
+  {id:"KM046",name:"Motala Building Supply",rep:"BV",region:"Phalaborwa",volumes:{"Decor 20L":24,"High Gloss 1L":275,"High Gloss 5L":31,"Roof 20L":36,"Roof 5L":410,"QD Enamel 1L":36,"QD Enamel 5L":62,"Varnish 1L":135,"Thinner 750ml":5},lastPrices:{"Decor 20L":325.0,"High Gloss 1L":84.27,"High Gloss 5L":303.01,"Roof 20L":596.16,"Roof 5L":99.0,"QD Enamel 1L":100.0,"QD Enamel 5L":330.0,"Varnish 1L":90.69,"Thinner 750ml":264.0}},
+  {id:"KM120",name:"Mr Build Pty Ltd",rep:"BV",region:"Phalaborwa",volumes:{"Decor 20L":5,"High Gloss 1L":177,"High Gloss 5L":109,"Roof 5L":50,"Varnish 1L":70,"Varnish 5L":14,"Thinner 750ml":25,"Thinner 5L":50,"QD Enamel 5L":40,"QD Enamel 1L":25},lastPrices:{"Decor 20L":259.2,"High Gloss 1L":77.63,"High Gloss 5L":280.0,"Roof 5L":90.0,"Varnish 1L":95.0,"Varnish 5L":280.0,"Thinner 750ml":264.5,"Thinner 5L":145.0,"QD Enamel 5L":275.0,"QD Enamel 1L":75.0}},
+  {id:"KM127",name:"Myka Trade 2  Mankweng",rep:"BV",region:"Phalaborwa",volumes:{"Decor 20L":655,"Varnish 5L":99,"High Gloss 1L":393,"High Gloss 5L":406,"Varnish 1L":319,"Thinner 750ml":65,"Thinner 5L":400,"QD Enamel 1L":284,"Roof 5L":85,"QD Enamel 5L":430,"Roof 20L":3},lastPrices:{"Decor 20L":275.0,"High Gloss 1L":77.0,"High Gloss 5L":280.0,"Varnish 1L":85.0,"Thinner 750ml":230.0,"Thinner 5L":132.25,"QD Enamel 1L":75.0,"Roof 5L":103.5,"Varnish 5L":265.0,"QD Enamel 5L":275.0,"Roof 20L":550.0}},
+  {id:"KM127/1",name:"Myka Trade 2 T A New Builders",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KG024",name:"New Galaxy Hardware",rep:"BV",region:"B4",volumes:{},lastPrices:{}},
+  {id:"KS071",name:"Nimeshkumar General Dealers",rep:"BV",region:"Phalaborwa",volumes:{"Decor 20L":118,"Roof 5L":53,"Varnish 5L":1,"High Gloss 1L":122,"High Gloss 5L":50,"Thinner 750ml":15,"Thinner 5L":70,"QD Enamel 1L":122,"QD Enamel 5L":98,"Decor 5L":23,"Roof 20L":50,"Varnish 1L":60},lastPrices:{"Decor 20L":297.0,"High Gloss 1L":82.8,"High Gloss 5L":299.0,"Thinner 750ml":287.5,"Thinner 5L":143.75,"QD Enamel 1L":80.0,"QD Enamel 5L":322.0,"Decor 5L":95.0,"Roof 20L":592.25,"Roof 5L":192.5,"Varnish 1L":106.95,"Varnish 5L":299.0}},
+  {id:"KN033",name:"Nimmi Investment",rep:"BV",region:"Louis Trichardt",volumes:{"Roof 20L":2},lastPrices:{"Roof 20L":1399.0}},
+  {id:"KN010",name:"Northam Hardware",rep:"BV",region:"Polokwane Central",volumes:{"Decor 5L":10},lastPrices:{"Decor 5L":135.0}},
+  {id:"KA022",name:"NSR Hardware C.C.",rep:"BV",region:"Polokwane Central",volumes:{},lastPrices:{}},
+  {id:"KH028",name:"OMELA DHABI & SON CC",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KK012",name:"Pacfic Beach Trading 8cc",rep:"BV",region:"Phalaborwa",volumes:{"Decor 20L":73,"Decor 5L":11,"High Gloss 1L":47,"High Gloss 5L":21,"Varnish 1L":18,"Thinner 750ml":3,"QD Enamel 1L":22,"QD Enamel 5L":8,"Roof 20L":11},lastPrices:{"Decor 20L":310.5,"Decor 5L":80.5,"High Gloss 1L":82.8,"High Gloss 5L":304.75,"Varnish 1L":106.26,"Thinner 750ml":276.0,"QD Enamel 1L":87.25,"QD Enamel 5L":325.0,"Roof 20L":598.0,"Thinner 5L":253.0}},
+  {id:"KP005",name:"Patel (Nkomazi Imp. & Exp. CC)",rep:"BV",region:"Tzaneen",volumes:{"QD Enamel 5L":1621,"Varnish 1L":471,"QD Enamel 1L":969,"Roof 5L":943,"Decor 20L":266,"Thinner 750ml":185,"Thinner 5L":1095,"Decor 5L":78,"High Gloss 1L":100,"High Gloss 5L":38,"Roof 20L":14,"Varnish 5L":59},lastPrices:{"Thinner 750ml":287.5,"Thinner 5L":155.25,"QD Enamel 1L":80.0,"QD Enamel 5L":299.0,"Decor 5L":100.0,"Decor 20L":305.0,"High Gloss 1L":76.42,"High Gloss 5L":290.0,"Roof 20L":600.0,"Roof 5L":113.85,"Varnish 1L":97.74,"Varnish 5L":285.0}},
+  {id:"KP005/1",name:"Patel (Nkomazi Imp. & Exp. CC)",rep:"BV",region:"Tzaneen",volumes:{},lastPrices:{}},
+  {id:"KP005/4",name:"Patel (Nkomazi Imp. & Exp. CC)",rep:"BV",region:"Tzaneen",volumes:{},lastPrices:{}},
+  {id:"KP005/2",name:"Patel (Nkomazi Imp. & Exp. CC)",rep:"BV",region:"Tzaneen",volumes:{},lastPrices:{}},
+  {id:"KP005/3",name:"Patel (Nkomazi Imp. & Exp. CC)",rep:"BV",region:"Tzaneen",volumes:{},lastPrices:{}},
+  {id:"KP013",name:"Patels Hardware",rep:"BV",region:"Tzaneen",volumes:{"Decor 20L":106,"Decor 5L":7,"Thinner 750ml":1},lastPrices:{"Decor 20L":286.34,"Decor 5L":89.99,"Thinner 750ml":282.21}},
+  {id:"KS029",name:"Patels Hardware",rep:"BV",region:"Phalaborwa",volumes:{"Roof 5L":174,"Thinner 5L":44,"QD Enamel 1L":733,"Decor 20L":25,"High Gloss 5L":161,"QD Enamel 5L":668,"High Gloss 1L":417,"Varnish 1L":344,"Thinner 750ml":8,"Decor 5L":13,"Varnish 5L":25},lastPrices:{"High Gloss 1L":69.0,"High Gloss 5L":245.0,"Roof 5L":89.0,"Varnish 1L":61.5,"Thinner 750ml":234.96,"QD Enamel 1L":70.0,"QD Enamel 5L":275.0,"Thinner 5L":116.0,"Decor 20L":225.0,"Decor 5L":80.5,"Varnish 5L":290.0}},
+  {id:"KP009",name:"Payless Hardware",rep:"BV",region:"Tzaneen",volumes:{"Roof 5L":6,"Thinner 750ml":10,"Thinner 5L":37,"Decor 20L":169,"High Gloss 1L":89,"High Gloss 5L":37,"Varnish 1L":63,"Varnish 5L":8,"QD Enamel 1L":103,"QD Enamel 5L":78,"Roof 20L":17,"Decor 5L":32},lastPrices:{"Decor 20L":330.0,"High Gloss 1L":94.99,"High Gloss 5L":316.22,"Varnish 1L":121.44,"Varnish 5L":417.04,"Thinner 750ml":354.2,"QD Enamel 1L":92.0,"QD Enamel 5L":368.0,"Roof 20L":560.0,"Thinner 5L":202.4,"Decor 5L":80.5,"Roof 5L":468.01}},
+  {id:"KK006",name:"Pir and Sons Trd (Kalamazoo)",rep:"BV",region:"Phalaborwa",volumes:{"Roof 5L":164,"Roof 20L":17,"Decor 5L":5,"Varnish 1L":96,"QD Enamel 1L":107,"QD Enamel 5L":103,"High Gloss 1L":101,"High Gloss 5L":34,"Thinner 5L":30},lastPrices:{"Decor 5L":89.0,"Roof 20L":510.0,"Roof 5L":196.79,"Varnish 1L":61.5,"QD Enamel 1L":73.5,"QD Enamel 5L":275.0,"High Gloss 1L":69.0,"High Gloss 5L":245.0,"Thinner 5L":116.0}},
+  {id:"KP030",name:"Platinum Rainbow Hardware",rep:"BV",region:"Polokwane Central",volumes:{"Roof 5L":119,"QD Enamel 5L":303,"Thinner 750ml":17,"Varnish 1L":5,"Decor 20L":33,"Varnish 5L":16,"Thinner 5L":15,"QD Enamel 1L":60,"Decor 5L":4},lastPrices:{"QD Enamel 5L":290.0,"Roof 5L":89.0,"Thinner 750ml":276.0,"Varnish 1L":90.09,"Decor 20L":550.0,"Varnish 5L":356.04,"Thinner 5L":143.75,"QD Enamel 1L":80.0,"Decor 5L":135.0}},
+  {id:"KP030/1",name:"Platinum Rainbow Hardware",rep:"BV",region:"Polokwane Central",volumes:{},lastPrices:{}},
+  {id:"KP046",name:"Pride Pak Packaging",rep:"BV",region:"Louis Trichardt",volumes:{},lastPrices:{}},
+  {id:"KP057",name:"Priyanka Supermarket",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KR041",name:"Raza Auto Spares",rep:"BV",region:"Louis Trichardt",volumes:{"Thinner 750ml":4,"Thinner 5L":150},lastPrices:{"Thinner 750ml":298.08,"Thinner 5L":142.83}},
+  {id:"KR045",name:"Rohaan Hardware",rep:"BV",region:"Tzaneen",volumes:{"Decor 20L":50,"High Gloss 1L":42,"High Gloss 5L":18,"Varnish 1L":21,"QD Enamel 1L":12,"QD Enamel 5L":19},lastPrices:{"Decor 20L":275.0,"High Gloss 1L":68.74,"High Gloss 5L":252.02,"Varnish 1L":86.62,"QD Enamel 1L":80.0,"QD Enamel 5L":320.0}},
+  {id:"KS004",name:"S.E.Z. Superette",rep:"BV",region:"Polokwane Central",volumes:{"Decor 20L":592,"Decor 5L":145,"High Gloss 1L":384,"High Gloss 5L":275,"Roof 20L":57,"Varnish 1L":180,"QD Enamel 1L":72,"QD Enamel 5L":60,"Roof 5L":380,"Varnish 5L":60},lastPrices:{"Decor 5L":142.15,"High Gloss 1L":78.43,"High Gloss 5L":278.3,"Roof 20L":599.0,"Varnish 1L":78.5,"Decor 20L":389.28,"QD Enamel 1L":92.0,"QD Enamel 5L":368.0,"Roof 5L":197.39,"Varnish 5L":310.1}},
+  {id:"KS046",name:"Scenic Route Trading 580 cc",rep:"BV",region:"Polokwane Central",volumes:{},lastPrices:{}},
+  {id:"KS005",name:"Skeerpoort Handelhuis",rep:"BV",region:"Polokwane Central",volumes:{"High Gloss 5L":5,"QD Enamel 1L":12,"QD Enamel 5L":4},lastPrices:{"High Gloss 5L":306.94,"QD Enamel 1L":89.55,"QD Enamel 5L":330.0}},
+  {id:"KS012",name:"Solly's Hardware (Oxford)",rep:"BV",region:"Tzaneen",volumes:{"Varnish 1L":38,"Varnish 5L":22,"QD Enamel 1L":24,"QD Enamel 5L":39},lastPrices:{"Varnish 1L":79.99,"Varnish 5L":295.49,"QD Enamel 1L":80.67,"QD Enamel 5L":310.0}},
+  {id:"KR018",name:"Sonu Supermarket (Raj)",rep:"BV",region:"Phalaborwa",volumes:{"Decor 20L":45,"Decor 5L":8,"Roof 20L":19,"Thinner 750ml":10,"Thinner 5L":40,"High Gloss 1L":102,"High Gloss 5L":22,"Varnish 1L":48,"Varnish 5L":3,"QD Enamel 1L":30,"Roof 5L":60},lastPrices:{"Decor 20L":322.0,"Decor 5L":92.0,"Roof 20L":598.0,"Thinner 750ml":270.0,"Thinner 5L":132.25,"High Gloss 1L":82.79,"High Gloss 5L":311.65,"Varnish 1L":89.7,"Varnish 5L":299.0,"QD Enamel 1L":92.0,"Roof 5L":113.85}},
+  {id:"KP015",name:"Steel Hub",rep:"BV",region:"Tzaneen",volumes:{"QD Enamel 5L":1327,"Thinner 5L":706,"High Gloss 5L":134,"Thinner 750ml":50,"QD Enamel 1L":744,"High Gloss 1L":51},lastPrices:{"High Gloss 5L":295.35,"Thinner 750ml":250.0,"Thinner 5L":135.0,"QD Enamel 1L":80.0,"QD Enamel 5L":275.0,"High Gloss 1L":85.91}},
+  {id:"KS022",name:"Super Blue Supermarket",rep:"BV",region:"Phalaborwa",volumes:{"Decor 20L":52,"Decor 5L":13,"High Gloss 1L":87,"High Gloss 5L":19,"Roof 20L":18,"Roof 5L":36,"Varnish 1L":27,"Thinner 750ml":4,"Thinner 5L":4,"QD Enamel 1L":33,"QD Enamel 5L":5},lastPrices:{"Decor 20L":325.0,"Decor 5L":92.0,"High Gloss 1L":82.8,"High Gloss 5L":304.75,"Roof 20L":840.0,"Roof 5L":99.0,"Varnish 1L":106.26,"Thinner 750ml":276.0,"Thinner 5L":127.68,"QD Enamel 1L":87.25,"QD Enamel 5L":325.0}},
+  {id:"KT003",name:"Thanda Bantu Masakhane",rep:"BV",region:"Tzaneen",volumes:{"Decor 20L":29,"High Gloss 5L":2,"Roof 5L":4},lastPrices:{"Decor 20L":550.0,"High Gloss 5L":275.0,"Roof 5L":110.0}},
+  {id:"KT061",name:"Total Hardware & Tiles",rep:"BV",region:"Polokwane Central",volumes:{"Decor 20L":130,"High Gloss 1L":25,"High Gloss 5L":10},lastPrices:{"Decor 20L":310.0,"High Gloss 1L":83.0,"High Gloss 5L":308.51}},
+  {id:"KT007",name:"Tourist Bazaar",rep:"BV",region:"Tzaneen",volumes:{"High Gloss 1L":8,"High Gloss 5L":2,"Roof 5L":2,"Decor 5L":6,"Thinner 750ml":3,"Decor 20L":24,"QD Enamel 1L":4,"QD Enamel 5L":7},lastPrices:{"High Gloss 1L":90.34,"High Gloss 5L":383.82,"Roof 5L":256.06,"Decor 5L":160.0,"Thinner 750ml":354.2,"Decor 20L":210.0,"QD Enamel 1L":92.0,"QD Enamel 5L":368.0}},
+  {id:"KU008",name:"Uzzi Hardware PTY LTD",rep:"BV",region:"Tzaneen",volumes:{"Roof 20L":11,"Decor 20L":18,"High Gloss 1L":18,"High Gloss 5L":24,"Roof 5L":3,"Varnish 1L":21,"Varnish 5L":6,"Decor 5L":3,"Thinner 750ml":2,"QD Enamel 1L":6,"QD Enamel 5L":11},lastPrices:{"Decor 20L":293.87,"High Gloss 1L":73.0,"High Gloss 5L":257.99,"Roof 20L":550.0,"Roof 5L":183.0,"Varnish 1L":81.92,"Varnish 5L":293.41,"Decor 5L":130.0,"Thinner 750ml":240.0,"QD Enamel 1L":83.0,"QD Enamel 5L":290.0}},
+  {id:"KV005",name:"Valencia Hardware",rep:"BV",region:"Tzaneen",volumes:{"Varnish 1L":6,"Thinner 750ml":1,"Thinner 5L":12,"Roof 20L":2,"Roof 5L":11,"Decor 20L":4,"Decor 5L":5,"QD Enamel 1L":3,"QD Enamel 5L":3},lastPrices:{"Varnish 1L":97.49,"Thinner 750ml":282.21,"Thinner 5L":143.75,"Roof 20L":599.0,"Roof 5L":113.85,"Decor 20L":460.0,"Decor 5L":149.5,"QD Enamel 1L":80.5,"QD Enamel 5L":325.0}},
+  {id:"KV016",name:"Vendeco Trading",rep:"BV",region:"Phalaborwa",volumes:{},lastPrices:{}},
+  {id:"KM012",name:"Vendeco Trading 53CC",rep:"BV",region:"Phalaborwa",volumes:{"Decor 20L":10,"High Gloss 1L":120,"High Gloss 5L":30,"QD Enamel 1L":120,"QD Enamel 5L":154},lastPrices:{"Decor 20L":325.0,"High Gloss 1L":84.6,"High Gloss 5L":303.01,"QD Enamel 1L":92.0,"QD Enamel 5L":299.99}},
+  {id:"KW003",name:"Wolhuterskop Trading",rep:"BV",region:"Polokwane Central",volumes:{"Decor 20L":86,"High Gloss 1L":24,"High Gloss 5L":43,"Decor 5L":6,"QD Enamel 5L":4,"Varnish 1L":8,"QD Enamel 1L":5,"Varnish 5L":2},lastPrices:{"Decor 20L":320.0,"High Gloss 1L":87.39,"High Gloss 5L":303.03,"Decor 5L":80.49,"QD Enamel 5L":368.0,"Varnish 1L":100.45,"QD Enamel 1L":96.0,"Varnish 5L":377.95}},
+  {id:"KW013",name:"Wood Corner Pty Ltd",rep:"BV",region:"Phalaborwa",volumes:{"Decor 5L":4,"High Gloss 1L":6,"Varnish 1L":18,"Varnish 5L":15},lastPrices:{"Decor 5L":82.5,"High Gloss 1L":69.92,"Varnish 1L":74.5,"Varnish 5L":320.0}},
+  {id:"KA040",name:"A & S Enterprises (Pty) Ltd",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KA090/1",name:"A A Owaish Maize Depot Pty Ltd",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KM148",name:"Aaliya Hardware",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KA110",name:"Ace Steel And Roofing",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KA106",name:"Afia PTY (LTD) t/a",rep:"NP",region:"Standerton",volumes:{"Thinner 5L":50},lastPrices:{"High Gloss 1L":98.2,"High Gloss 5L":360.03,"Roof 5L":297.74,"Thinner 750ml":282.21,"Thinner 5L":127.68,"QD Enamel 1L":100.0,"QD Enamel 5L":400.0}},
+  {id:"KA095",name:"Akay Build And Save TA",rep:"NP",region:"Standerton",volumes:{"Roof 5L":45,"High Gloss 1L":38,"High Gloss 5L":21,"Thinner 750ml":5,"QD Enamel 1L":11,"QD Enamel 5L":21,"Thinner 5L":20,"Varnish 1L":8},lastPrices:{"High Gloss 1L":82.5,"High Gloss 5L":257.23,"Roof 5L":109.25,"Thinner 750ml":304.75,"QD Enamel 1L":87.5,"QD Enamel 5L":300.0,"Thinner 5L":155.25,"Varnish 1L":105.0}},
+  {id:"KF032",name:"Alex Hardware",rep:"NP",region:"Middelburg",volumes:{},lastPrices:{}},
+  {id:"KM110",name:"Alex Hardware",rep:"NP",region:"Middelburg",volumes:{"Decor 20L":4,"Decor 5L":4,"High Gloss 1L":18,"High Gloss 5L":29,"Roof 20L":4,"QD Enamel 1L":5,"QD Enamel 5L":6},lastPrices:{"Decor 20L":377.91,"Decor 5L":104.0,"High Gloss 1L":78.3,"High Gloss 5L":251.69,"Roof 20L":554.04,"QD Enamel 1L":99.26,"QD Enamel 5L":352.72}},
+  {id:"KA113",name:"Alex Hardware Devon",rep:"NP",region:"Middelburg",volumes:{"High Gloss 1L":67,"High Gloss 5L":13,"Varnish 1L":18,"QD Enamel 1L":13},lastPrices:{"High Gloss 1L":72.5,"High Gloss 5L":250.0,"Varnish 1L":97.2,"QD Enamel 1L":99.26}},
+  {id:"KA096",name:"Alston Trading t/a Vhembe H/W",rep:"NP",region:"Standerton",volumes:{"Thinner 5L":50,"Varnish 5L":11,"Thinner 750ml":6},lastPrices:{"Thinner 5L":120.0,"Varnish 5L":335.29,"Thinner 750ml":300.0}},
+  {id:"KR003",name:"Ammo Distributors (PTY) LTD",rep:"NP",region:"Standerton",volumes:{"High Gloss 1L":100,"High Gloss 5L":40,"Varnish 1L":80,"Varnish 5L":20,"QD Enamel 1L":20,"QD Enamel 5L":10},lastPrices:{"High Gloss 1L":79.32,"High Gloss 5L":290.0,"Varnish 1L":82.14,"Varnish 5L":310.0,"QD Enamel 1L":82.0,"QD Enamel 5L":290.0}},
+  {id:"KA053",name:"Archies Furniture & Hardware",rep:"NP",region:"Middelburg",volumes:{"Thinner 5L":31,"Decor 20L":114,"High Gloss 5L":6,"Varnish 1L":50,"Thinner 750ml":8,"QD Enamel 1L":64,"QD Enamel 5L":58,"Roof 20L":30,"Roof 5L":25,"Decor 5L":10,"Varnish 5L":4},lastPrices:{"Decor 20L":550.0,"High Gloss 5L":263.48,"Varnish 1L":95.0,"Thinner 750ml":275.0,"Thinner 5L":160.0,"QD Enamel 1L":75.0,"QD Enamel 5L":285.0,"Roof 20L":550.0,"Roof 5L":110.0,"Decor 5L":85.72,"Varnish 5L":335.0}},
+  {id:"KA078",name:"Asif Cash & Carry & Hardware",rep:"NP",region:"Middelburg",volumes:{},lastPrices:{}},
+  {id:"KB093/1",name:"Baskid Nondabuya General Trd",rep:"NP",region:"Middelburg",volumes:{},lastPrices:{}},
+  {id:"KB110",name:"Best Build HW Giyani",rep:"NP",region:"Standerton",volumes:{"High Gloss 1L":5,"High Gloss 5L":6,"Varnish 1L":4,"QD Enamel 1L":2},lastPrices:{"High Gloss 1L":82.5,"High Gloss 5L":295.81,"Varnish 1L":95.0,"QD Enamel 1L":87.5}},
+  {id:"KA080",name:"Bhambanana Park",rep:"NP",region:"Middelburg",volumes:{"High Gloss 1L":27,"Roof 5L":12,"Varnish 1L":16},lastPrices:{"High Gloss 1L":80.0,"Roof 5L":176.36,"Varnish 1L":112.2}},
+  {id:"KB112",name:"Big On HW ta Phutas Mica Pain",rep:"NP",region:"Nelspruit",volumes:{"High Gloss 1L":15,"High Gloss 5L":14,"Varnish 1L":10,"Thinner 750ml":2,"Thinner 5L":12,"QD Enamel 1L":43,"QD Enamel 5L":43},lastPrices:{"High Gloss 1L":82.8,"High Gloss 5L":300.0,"Varnish 1L":101.2,"Thinner 750ml":285.0,"Thinner 5L":149.5,"QD Enamel 1L":85.0,"QD Enamel 5L":300.0}},
+  {id:"KB108",name:"Boxer Hardware",rep:"NP",region:"Standerton",volumes:{"Thinner 5L":21,"Decor 20L":102,"High Gloss 1L":73,"Roof 20L":69,"Roof 5L":214,"Varnish 1L":58,"Varnish 5L":1,"Thinner 750ml":4,"QD Enamel 1L":59,"QD Enamel 5L":42,"High Gloss 5L":21,"Decor 5L":9},lastPrices:{"Decor 20L":295.0,"High Gloss 1L":80.0,"Roof 20L":550.0,"Roof 5L":200.0,"Varnish 1L":100.0,"Varnish 5L":300.0,"Thinner 750ml":300.0,"QD Enamel 1L":80.0,"QD Enamel 5L":290.0,"High Gloss 5L":290.0,"Thinner 5L":128.3,"Decor 5L":86.92}},
+  {id:"KR008/1",name:"BUDGET HARDWARE",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KB100",name:"Builders Direct Depot Pty Ltd",rep:"NP",region:"Witbank",volumes:{"QD Enamel 5L":69,"Decor 20L":222,"Decor 5L":35,"High Gloss 1L":1400,"High Gloss 5L":1031,"Roof 5L":685,"Varnish 1L":390,"QD Enamel 1L":140,"Varnish 5L":10},lastPrices:{"Decor 20L":235.0,"Decor 5L":86.0,"High Gloss 1L":67.5,"High Gloss 5L":233.15,"Roof 5L":100.0,"Varnish 1L":63.54,"QD Enamel 1L":75.0,"QD Enamel 5L":275.6,"Varnish 5L":300.0}},
+  {id:"KB012",name:"Buy-Rite",rep:"NP",region:"Middelburg",volumes:{"Decor 5L":27,"High Gloss 5L":19,"Decor 20L":59,"High Gloss 1L":21,"Roof 5L":18,"Varnish 1L":17,"Roof 20L":2,"QD Enamel 1L":5,"Thinner 750ml":7,"Thinner 5L":16,"QD Enamel 5L":13},lastPrices:{"High Gloss 5L":300.0,"Decor 5L":145.07,"Decor 20L":590.0,"High Gloss 1L":82.5,"Roof 20L":580.0,"Roof 5L":185.0,"Varnish 1L":100.0,"Thinner 750ml":280.0,"Thinner 5L":145.0,"QD Enamel 1L":80.5,"QD Enamel 5L":300.0}},
+  {id:"KC008",name:"C G Industrial Equipment P L",rep:"NP",region:"Standerton",volumes:{"High Gloss 1L":180,"High Gloss 5L":126,"QD Enamel 1L":48,"QD Enamel 5L":72},lastPrices:{"High Gloss 1L":75.0,"High Gloss 5L":270.0,"QD Enamel 1L":81.0,"QD Enamel 5L":290.0}},
+  {id:"KC012",name:"Cassim Tayob",rep:"NP",region:"Middelburg",volumes:{"High Gloss 5L":349,"Decor 20L":299,"Decor 5L":60,"High Gloss 1L":22,"Roof 5L":80,"QD Enamel 5L":252,"Roof 20L":53,"Varnish 1L":78,"QD Enamel 1L":60},lastPrices:{"Decor 20L":397.33,"Decor 5L":89.49,"High Gloss 1L":58.48,"High Gloss 5L":184.69,"Roof 5L":134.87,"QD Enamel 5L":294.25,"Roof 20L":532.2,"Varnish 1L":78.98,"QD Enamel 1L":68.04}},
+  {id:"KC013",name:"Central Building Supplies",rep:"NP",region:"Nelspruit",volumes:{"Decor 20L":152,"Decor 5L":70,"High Gloss 1L":25,"High Gloss 5L":35,"Roof 20L":11,"Roof 5L":17,"Varnish 1L":23,"QD Enamel 1L":4,"QD Enamel 5L":4,"Varnish 5L":3},lastPrices:{"Decor 20L":551.54,"Decor 5L":78.25,"High Gloss 1L":69.66,"High Gloss 5L":274.79,"Roof 20L":1566.42,"Roof 5L":194.24,"Varnish 1L":84.7,"QD Enamel 1L":92.76,"QD Enamel 5L":317.38,"Varnish 5L":375.71}},
+  {id:"KD003",name:"Del Piero Trading CC",rep:"NP",region:"Standerton",volumes:{"High Gloss 5L":316,"Roof 5L":210,"High Gloss 1L":276,"Roof 20L":300,"Varnish 1L":132,"Varnish 5L":43,"Thinner 5L":600,"QD Enamel 1L":504,"QD Enamel 5L":700,"Thinner 750ml":35},lastPrices:{"High Gloss 1L":68.0,"High Gloss 5L":245.0,"Roof 20L":450.0,"Varnish 1L":82.0,"Varnish 5L":280.0,"Thinner 5L":132.25,"QD Enamel 1L":72.0,"QD Enamel 5L":260.0,"Roof 5L":99.0,"Thinner 750ml":250.0}},
+  {id:"KD016",name:"Dinal Enterprices",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KD029",name:"Door to Door Trade 1005 CC",rep:"NP",region:"Standerton",volumes:{"High Gloss 1L":12,"High Gloss 5L":10,"Roof 5L":52,"Varnish 1L":10,"QD Enamel 1L":6,"QD Enamel 5L":6},lastPrices:{"High Gloss 1L":78.3,"High Gloss 5L":267.06,"Roof 5L":110.0,"Varnish 1L":105.0,"QD Enamel 1L":91.07,"QD Enamel 5L":361.77}},
+  {id:"KE009",name:"Easy Build",rep:"NP",region:"Nelspruit",volumes:{"Decor 20L":74,"High Gloss 1L":68,"High Gloss 5L":61,"Varnish 5L":6,"Decor 5L":65,"QD Enamel 1L":30,"QD Enamel 5L":8,"Varnish 1L":90},lastPrices:{"Decor 20L":276.0,"Decor 5L":85.96,"High Gloss 1L":80.5,"High Gloss 5L":271.38,"QD Enamel 1L":70.0,"QD Enamel 5L":300.44,"Varnish 1L":82.59,"Varnish 5L":311.36}},
+  {id:"KE008",name:"Easy Build",rep:"NP",region:"Nelspruit",volumes:{"High Gloss 5L":196,"Decor 20L":143,"High Gloss 1L":155,"Roof 5L":21,"QD Enamel 1L":69,"Varnish 1L":90,"Varnish 5L":45,"QD Enamel 5L":61},lastPrices:{"Decor 20L":705.0,"High Gloss 1L":75.0,"High Gloss 5L":270.0,"Roof 5L":415.32,"QD Enamel 1L":75.0,"Varnish 1L":92.0,"Varnish 5L":327.75,"QD Enamel 5L":290.0}},
+  {id:"KE005",name:"Easy Build Hardware",rep:"NP",region:"Nelspruit",volumes:{"Decor 20L":1135,"Decor 5L":321,"High Gloss 5L":335,"High Gloss 1L":517,"Varnish 1L":261,"Varnish 5L":50,"Roof 5L":31,"QD Enamel 1L":153,"QD Enamel 5L":93},lastPrices:{"Decor 20L":299.0,"Decor 5L":92.81,"High Gloss 1L":80.5,"High Gloss 5L":283.18,"Varnish 1L":97.93,"Varnish 5L":311.36,"Roof 5L":415.32,"QD Enamel 1L":100.0,"QD Enamel 5L":316.25}},
+  {id:"KE005/1",name:"Easy Build Hardware",rep:"NP",region:"Nelspruit",volumes:{},lastPrices:{}},
+  {id:"KE012",name:"Easy Build Hardware",rep:"NP",region:"Nelspruit",volumes:{"Decor 20L":117,"Decor 5L":10,"High Gloss 1L":24,"High Gloss 5L":35,"Varnish 1L":21,"Varnish 5L":1,"QD Enamel 5L":12,"QD Enamel 1L":15},lastPrices:{"Decor 20L":250.0,"Decor 5L":85.96,"High Gloss 1L":70.0,"High Gloss 5L":255.0,"Varnish 1L":95.0,"QD Enamel 5L":275.0,"QD Enamel 1L":75.0,"Varnish 5L":285.0}},
+  {id:"KE023",name:"Easy Build Hardware Jubilee",rep:"NP",region:"Nelspruit",volumes:{"Decor 20L":393,"Decor 5L":87,"High Gloss 5L":78,"Varnish 1L":64,"Varnish 5L":2,"High Gloss 1L":176,"QD Enamel 1L":60,"QD Enamel 5L":50},lastPrices:{"Decor 20L":285.0,"Decor 5L":85.96,"High Gloss 1L":75.0,"High Gloss 5L":270.0,"QD Enamel 1L":80.5,"QD Enamel 5L":300.44,"Varnish 1L":78.0,"Varnish 5L":327.75}},
+  {id:"KE010",name:"Easy Build Soweto",rep:"NP",region:"Nelspruit",volumes:{"Decor 20L":109,"Decor 5L":71,"High Gloss 1L":128,"High Gloss 5L":86,"Varnish 1L":116,"Varnish 5L":3,"QD Enamel 1L":5,"QD Enamel 5L":12},lastPrices:{"Decor 20L":285.0,"Decor 5L":85.96,"High Gloss 1L":75.0,"High Gloss 5L":270.0,"Varnish 1L":82.59,"Varnish 5L":285.0,"QD Enamel 1L":80.5,"QD Enamel 5L":316.25}},
+  {id:"KE035",name:"Easytile & Sanware",rep:"NP",region:"Nelspruit",volumes:{"Decor 20L":188,"QD Enamel 1L":13,"QD Enamel 5L":3,"High Gloss 1L":40,"High Gloss 5L":37,"Decor 5L":29,"Varnish 1L":21},lastPrices:{"Decor 20L":665.87,"High Gloss 1L":70.0,"High Gloss 5L":235.98,"Decor 5L":121.89,"QD Enamel 1L":70.0,"QD Enamel 5L":275.0,"Varnish 1L":71.82}},
+  {id:"KF022",name:"F A P Holdings Pty Ltd ta KGN",rep:"NP",region:"Middelburg",volumes:{},lastPrices:{}},
+  {id:"KF020",name:"Fast Build Hardware",rep:"NP",region:"Standerton",volumes:{"Decor 20L":118,"High Gloss 1L":63,"Thinner 750ml":3,"QD Enamel 5L":72,"Decor 5L":23,"High Gloss 5L":69,"Roof 5L":50,"Varnish 1L":35,"Varnish 5L":9,"Thinner 5L":10,"QD Enamel 1L":39,"Roof 20L":3},lastPrices:{"Decor 20L":270.0,"High Gloss 1L":81.0,"Thinner 750ml":286.06,"QD Enamel 5L":300.0,"Decor 5L":92.79,"High Gloss 5L":290.0,"Roof 5L":100.0,"Varnish 1L":77.11,"Varnish 5L":301.54,"Thinner 5L":140.56,"QD Enamel 1L":80.0,"Roof 20L":550.0}},
+  {id:"KS017/1",name:"Femac Hyper CC  ta Spaza Hyper",rep:"NP",region:"Nelspruit",volumes:{},lastPrices:{}},
+  {id:"KS017",name:"Femac Hyper CC ta Spaza Hyper",rep:"NP",region:"Nelspruit",volumes:{"Decor 20L":97,"Decor 5L":54,"High Gloss 1L":160,"High Gloss 5L":147,"Varnish 1L":98,"Varnish 5L":68,"Thinner 750ml":5,"Thinner 5L":44,"QD Enamel 5L":48,"Roof 5L":29,"QD Enamel 1L":54},lastPrices:{"Decor 20L":185.0,"Decor 5L":200.0,"High Gloss 1L":75.0,"High Gloss 5L":265.0,"Varnish 1L":85.0,"Varnish 5L":290.0,"Thinner 750ml":282.27,"Thinner 5L":145.0,"QD Enamel 5L":275.0,"Roof 5L":100.0,"QD Enamel 1L":75.0}},
+  {id:"KF035",name:"Fix It Hardware",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KG012",name:"Galaxy Hardware",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KG004",name:"Gani Osman Hardware (Pty) Ltd",rep:"NP",region:"Nelspruit",volumes:{"Decor 20L":10,"Decor 5L":6,"High Gloss 5L":26,"Roof 5L":6,"Roof 20L":4},lastPrices:{"Decor 20L":545.29,"Decor 5L":157.02,"High Gloss 5L":265.0,"Roof 5L":322.16,"Roof 20L":811.52}},
+  {id:"KG030",name:"Grootvlei Hardware",rep:"NP",region:"Nelspruit",volumes:{},lastPrices:{}},
+  {id:"KG006",name:"Gulmohur Building Supplies P L",rep:"NP",region:"Witbank",volumes:{"Decor 20L":49,"High Gloss 1L":219,"High Gloss 5L":201,"Varnish 1L":135,"Varnish 5L":47,"Roof 5L":31,"QD Enamel 5L":10},lastPrices:{"Decor 20L":300.0,"High Gloss 1L":82.5,"High Gloss 5L":290.0,"Varnish 1L":90.0,"Varnish 5L":300.0,"Roof 5L":105.0,"QD Enamel 5L":305.0}},
+  {id:"KH032",name:"Hardware Hub",rep:"NP",region:"Nelspruit",volumes:{},lastPrices:{}},
+  {id:"KH034",name:"HOME BUILD",rep:"NP",region:"Standerton",volumes:{"High Gloss 5L":3,"High Gloss 1L":10,"Roof 5L":5,"QD Enamel 1L":2},lastPrices:{"High Gloss 1L":82.5,"High Gloss 5L":250.0,"Roof 5L":110.0,"QD Enamel 1L":87.5,"Varnish 1L":106.26}},
+  {id:"KH049",name:"Home Build Hardware",rep:"NP",region:"Standerton",volumes:{"Decor 20L":16,"High Gloss 1L":21,"Roof 20L":5,"Roof 5L":32,"Varnish 1L":8,"Thinner 750ml":2,"Thinner 5L":14,"QD Enamel 5L":8,"Decor 5L":3,"High Gloss 5L":2,"QD Enamel 1L":11},lastPrices:{"Decor 20L":300.0,"High Gloss 1L":72.0,"Roof 20L":510.0,"Roof 5L":95.0,"Varnish 1L":105.0,"Thinner 750ml":300.0,"Thinner 5L":160.0,"QD Enamel 5L":300.0,"Decor 5L":80.0,"High Gloss 5L":265.0,"QD Enamel 1L":87.5}},
+  {id:"KM123",name:"Honest Electrial and Plumbing",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KH008",name:"Honest Electrical & Plumbing",rep:"NP",region:"Standerton",volumes:{"High Gloss 1L":11,"High Gloss 5L":4,"Thinner 750ml":5,"Varnish 1L":6},lastPrices:{"High Gloss 1L":75.6,"High Gloss 5L":270.35,"Thinner 750ml":280.8,"Varnish 1L":112.2}},
+  {id:"KI010",name:"I.Build Hardware",rep:"NP",region:"Nelspruit",volumes:{"High Gloss 5L":72,"QD Enamel 5L":19,"Roof 20L":19,"Decor 20L":73,"High Gloss 1L":91,"Varnish 1L":53,"QD Enamel 1L":28,"Varnish 5L":18,"Decor 5L":40,"Roof 5L":13},lastPrices:{"QD Enamel 5L":300.0,"Roof 20L":625.0,"Decor 20L":752.0,"High Gloss 1L":80.0,"High Gloss 5L":287.0,"Varnish 1L":100.0,"QD Enamel 1L":90.0,"Varnish 5L":295.0,"Decor 5L":179.54,"Roof 5L":185.0}},
+  {id:"KB071",name:"Inshebe Props 216 Pty Ltd",rep:"NP",region:"Standerton",volumes:{"Decor 20L":442,"Roof 20L":55,"Roof 5L":790,"Varnish 1L":263,"Varnish 5L":22,"Thinner 750ml":48,"Thinner 5L":160,"QD Enamel 5L":140,"High Gloss 5L":151,"Decor 5L":40,"QD Enamel 1L":126,"High Gloss 1L":328},lastPrices:{"Decor 20L":235.0,"Roof 20L":550.0,"Roof 5L":103.5,"Varnish 1L":85.0,"Varnish 5L":305.0,"Thinner 750ml":250.0,"Thinner 5L":145.0,"QD Enamel 5L":275.0,"High Gloss 5L":255.0,"Decor 5L":138.0,"QD Enamel 1L":75.0,"High Gloss 1L":63.0}},
+  {id:"KB071/1",name:"Intshebe Props 216 Pty Ltd",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KM071",name:"Inyameko Trading 1605",rep:"NP",region:"Standerton",volumes:{"High Gloss 5L":180,"QD Enamel 5L":1643,"High Gloss 1L":308,"Thinner 750ml":80,"Thinner 5L":960,"QD Enamel 1L":1289},lastPrices:{"QD Enamel 5L":275.0,"High Gloss 1L":77.0,"High Gloss 5L":255.0,"Thinner 750ml":250.0,"Thinner 5L":142.83,"QD Enamel 1L":75.0}},
+  {id:"KM071/1",name:"Inyameko Trading 1605cc",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KI015",name:"Iskcon Steel",rep:"NP",region:"Standerton",volumes:{"QD Enamel 5L":1704,"High Gloss 5L":15,"QD Enamel 1L":896,"Thinner 5L":1000,"Thinner 750ml":38,"High Gloss 1L":8},lastPrices:{"High Gloss 5L":248.4,"QD Enamel 1L":75.0,"QD Enamel 5L":275.0,"Thinner 5L":142.83,"Thinner 750ml":250.0,"High Gloss 1L":77.0}},
+  {id:"KI015/1",name:"Iskcon Steel",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KJ039",name:"Jabula HW",rep:"NP",region:"Nelspruit",volumes:{"High Gloss 1L":36,"High Gloss 5L":7,"Roof 5L":60,"Decor 20L":40,"Decor 5L":50,"QD Enamel 1L":30,"QD Enamel 5L":9},lastPrices:{"High Gloss 1L":72.0,"High Gloss 5L":265.0,"Roof 5L":95.0,"Decor 20L":180.0,"Decor 5L":70.0,"QD Enamel 1L":80.0,"QD Enamel 5L":285.0}},
+  {id:"KJ038",name:"Jamwaria & Son's T/A Alm Spare",rep:"NP",region:"Witbank",volumes:{"High Gloss 1L":75,"Decor 20L":129,"Decor 5L":18,"High Gloss 5L":67,"Roof 20L":36,"Roof 5L":140,"Varnish 1L":64,"Varnish 5L":25,"Thinner 750ml":5,"Thinner 5L":30,"QD Enamel 1L":60,"QD Enamel 5L":58},lastPrices:{"Decor 20L":240.0,"Decor 5L":80.0,"High Gloss 1L":70.0,"High Gloss 5L":260.0,"Roof 20L":515.0,"Roof 5L":165.0,"Varnish 1L":80.0,"Varnish 5L":285.0,"Thinner 750ml":250.0,"Thinner 5L":125.0,"QD Enamel 1L":78.0,"QD Enamel 5L":270.0}},
+  {id:"KQ009",name:"Keystone Diy (PTY) LTD",rep:"NP",region:"Nelspruit",volumes:{"Thinner 5L":180,"QD Enamel 1L":388,"QD Enamel 5L":336,"High Gloss 1L":201,"High Gloss 5L":231,"Varnish 1L":111,"Varnish 5L":20,"Thinner 750ml":41,"Decor 20L":48},lastPrices:{"High Gloss 1L":72.0,"High Gloss 5L":265.0,"Varnish 1L":80.0,"Varnish 5L":305.0,"Thinner 750ml":285.0,"Thinner 5L":150.0,"QD Enamel 1L":80.0,"QD Enamel 5L":275.0,"Decor 20L":163.3,"Decor 5L":97.34}},
+  {id:"KQ001",name:"Khavhande Trading store",rep:"NP",region:"Standerton",volumes:{"High Gloss 1L":8,"High Gloss 5L":4,"Varnish 5L":2,"Thinner 750ml":3,"Thinner 5L":6,"QD Enamel 1L":12,"QD Enamel 5L":4},lastPrices:{"High Gloss 1L":75.6,"High Gloss 5L":269.87,"Varnish 5L":302.26,"Thinner 750ml":275.4,"Thinner 5L":140.4,"QD Enamel 1L":80.0,"QD Enamel 5L":280.0}},
+  {id:"KK036",name:"Khotawala Hardware",rep:"NP",region:"Standerton",volumes:{"High Gloss 1L":12,"High Gloss 5L":11,"Varnish 1L":4},lastPrices:{"High Gloss 1L":82.5,"High Gloss 5L":295.81,"Varnish 1L":105.0}},
+  {id:"KK021",name:"Kit Kat Group (Pty) Ltd",rep:"NP",region:"Nelspruit",volumes:{"Decor 20L":3675,"High Gloss 1L":573,"Varnish 5L":238,"Decor 5L":834,"QD Enamel 5L":724,"QD Enamel 1L":705,"Varnish 1L":401,"Roof 5L":1546,"High Gloss 5L":1005,"Roof 20L":160,"Thinner 750ml":75,"Thinner 5L":182},lastPrices:{"Decor 20L":185.0,"High Gloss 1L":86.0,"High Gloss 5L":275.0,"QD Enamel 1L":80.0,"QD Enamel 5L":280.0,"Decor 5L":110.0,"Roof 20L":520.0,"Roof 5L":420.0,"Varnish 1L":105.0,"Varnish 5L":305.0,"Thinner 750ml":304.92,"Thinner 5L":135.0}},
+  {id:"KK021/1",name:"Kit Kat Group (Pty) Ltd",rep:"NP",region:"Nelspruit",volumes:{},lastPrices:{}},
+  {id:"KK021/2",name:"Kit Kat Group (Pty) Ltd",rep:"NP",region:"Nelspruit",volumes:{},lastPrices:{}},
+  {id:"KK022",name:"Kit Kat Group (Pty) Ltd",rep:"NP",region:"Nelspruit",volumes:{"High Gloss 5L":104,"QD Enamel 5L":128,"Decor 5L":117,"Thinner 5L":49,"Decor 20L":491,"Roof 5L":88,"QD Enamel 1L":118,"Varnish 1L":52,"Varnish 5L":90,"High Gloss 1L":64,"Roof 20L":23,"Thinner 750ml":14},lastPrices:{"High Gloss 5L":275.0,"QD Enamel 1L":86.0,"QD Enamel 5L":300.0,"Decor 20L":454.25,"Varnish 1L":105.0,"Varnish 5L":290.0,"Roof 5L":160.0,"Decor 5L":96.54,"High Gloss 1L":86.0,"Roof 20L":757.9,"Thinner 750ml":325.0,"Thinner 5L":135.0}},
+  {id:"KL037",name:"Lavender Moon Trading ta",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KL006",name:"LCS Wholesalers (Kanye) P L",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KL009",name:"Low Cost Hardware",rep:"NP",region:"Standerton",volumes:{"High Gloss 1L":11,"Roof 5L":12,"Decor 20L":4,"Varnish 1L":5},lastPrices:{"High Gloss 1L":74.52,"Roof 5L":95.0,"Decor 20L":300.0,"Varnish 1L":105.0}},
+  {id:"KL035",name:"Lucky Domestic Hardware",rep:"NP",region:"Standerton",volumes:{"High Gloss 1L":60,"Varnish 1L":48,"Varnish 5L":12,"Thinner 750ml":3,"QD Enamel 1L":28,"QD Enamel 5L":4,"High Gloss 5L":40,"Thinner 5L":10},lastPrices:{"High Gloss 1L":81.0,"Varnish 1L":95.0,"Varnish 5L":319.63,"Thinner 750ml":260.0,"QD Enamel 1L":85.0,"QD Enamel 5L":344.2,"High Gloss 5L":300.0,"Thinner 5L":131.76}},
+  {id:"KM165",name:"M.A. HARDWARE",rep:"NP",region:"Pretoria North",volumes:{"Decor 20L":81,"Decor 5L":5,"High Gloss 1L":108,"High Gloss 5L":82,"Roof 5L":73,"Varnish 1L":42,"Varnish 5L":18,"Thinner 750ml":10,"Thinner 5L":6,"QD Enamel 1L":30,"QD Enamel 5L":29},lastPrices:{"Decor 20L":240.0,"Decor 5L":80.0,"High Gloss 1L":70.0,"High Gloss 5L":260.0,"Roof 5L":95.0,"Varnish 1L":80.0,"Varnish 5L":285.0,"Thinner 750ml":250.0,"Thinner 5L":125.0,"QD Enamel 1L":78.0,"QD Enamel 5L":270.0}},
+  {id:"KM056",name:"Madina PropertY Trust",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KL032",name:"Mala Hardware ta Limpopo HW",rep:"NP",region:"Standerton",volumes:{"Varnish 1L":4,"Decor 20L":6,"High Gloss 1L":35,"QD Enamel 1L":16,"Thinner 5L":20},lastPrices:{"Decor 20L":750.0,"High Gloss 1L":82.5,"High Gloss 5L":268.37,"Varnish 1L":93.66,"Thinner 750ml":280.8,"QD Enamel 1L":87.5,"Thinner 5L":143.75}},
+  {id:"KF020/1",name:"Malamulele Hardware",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KM091",name:"Malebeswa Investment (Pty) Ltd",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KM078",name:"Mavambe Hardware",rep:"NP",region:"Standerton",volumes:{"Decor 20L":68,"High Gloss 1L":61,"Roof 5L":150,"Varnish 1L":44,"Thinner 750ml":3,"Decor 5L":10,"High Gloss 5L":10,"Thinner 5L":10,"QD Enamel 1L":6,"QD Enamel 5L":3},lastPrices:{"Decor 20L":280.0,"High Gloss 1L":75.6,"Roof 5L":91.8,"Varnish 1L":80.68,"Thinner 750ml":280.8,"Decor 5L":83.07,"High Gloss 5L":263.48,"Thinner 5L":140.4,"QD Enamel 1L":95.86,"QD Enamel 5L":307.44}},
+  {id:"KM008",name:"Maxi Save Hardware Corporation",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KM031",name:"Mica Hardware - Purple Rain",rep:"NP",region:"Nelspruit",volumes:{"High Gloss 5L":23,"High Gloss 1L":35,"Decor 20L":16,"Decor 5L":6},lastPrices:{"High Gloss 1L":82.5,"High Gloss 5L":295.0,"Decor 20L":187.8,"Decor 5L":81.0}},
+  {id:"KM161",name:"MKH Hardware",rep:"NP",region:"Middelburg",volumes:{"Decor 20L":169,"QD Enamel 1L":24,"QD Enamel 5L":10},lastPrices:{"Decor 20L":265.0,"QD Enamel 1L":80.0,"QD Enamel 5L":280.0}},
+  {id:"KM152",name:"Mkhwenyana Hardware",rep:"NP",region:"Middelburg",volumes:{"Decor 20L":148,"High Gloss 1L":29,"Roof 20L":2,"Roof 5L":90,"Varnish 1L":72,"Thinner 750ml":7,"Decor 5L":20,"QD Enamel 1L":20,"QD Enamel 5L":5},lastPrices:{"Decor 20L":275.0,"High Gloss 1L":72.36,"Roof 20L":550.0,"Roof 5L":97.98,"Varnish 1L":92.4,"Thinner 750ml":259.2,"Decor 5L":70.0,"QD Enamel 1L":80.0,"QD Enamel 5L":280.0}},
+  {id:"KM033",name:"Moin's Enterprises (Pty) Ltd",rep:"NP",region:"Witbank",volumes:{"Decor 20L":36,"Decor 5L":12,"High Gloss 1L":71,"High Gloss 5L":49,"Varnish 1L":18,"Varnish 5L":4,"QD Enamel 1L":10},lastPrices:{"Decor 20L":290.0,"Decor 5L":95.0,"High Gloss 1L":85.0,"High Gloss 5L":300.0,"Varnish 1L":105.0,"Varnish 5L":350.0,"QD Enamel 1L":90.0}},
+  {id:"KM013",name:"Moollas Hardware & Furniture",rep:"NP",region:"Middelburg",volumes:{"Decor 20L":10,"High Gloss 1L":28,"High Gloss 5L":5},lastPrices:{"Decor 20L":220.28,"High Gloss 1L":83.0,"High Gloss 5L":303.0}},
+  {id:"KM155",name:"Mr Build LTT (PTY) LTD",rep:"NP",region:"Standerton",volumes:{"Roof 5L":579,"Decor 20L":158,"High Gloss 1L":152,"High Gloss 5L":57,"Varnish 1L":97,"Varnish 5L":89,"Thinner 750ml":50,"Thinner 5L":145,"QD Enamel 1L":47,"QD Enamel 5L":47},lastPrices:{"Roof 5L":103.5,"Decor 20L":255.0,"High Gloss 1L":68.0,"High Gloss 5L":255.0,"Varnish 1L":95.0,"Varnish 5L":280.0,"Thinner 750ml":230.0,"Thinner 5L":145.0,"QD Enamel 1L":90.0,"QD Enamel 5L":275.0}},
+  {id:"KN024",name:"Navisha Investments Pty Ltd",rep:"NP",region:"Witbank",volumes:{"High Gloss 5L":465,"Decor 20L":235,"Decor 5L":61,"High Gloss 1L":552,"Roof 5L":725,"Varnish 1L":295,"Varnish 5L":54},lastPrices:{"Decor 20L":295.0,"Decor 5L":95.0,"High Gloss 1L":80.0,"High Gloss 5L":285.0,"Roof 5L":105.0,"Varnish 1L":95.0,"Varnish 5L":325.0}},
+  {id:"KN024/8",name:"Navisha Investments Pty Ltd",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KN024/1",name:"Navisha Investments Pty Ltd",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KN024/2",name:"Navisha Investments Pty Ltd",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KN024/4",name:"Navisha Investments Pty Ltd",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KN024/6",name:"Navisha Investments Pty Ltd",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KN024/5",name:"Navisha Investments Pty Ltd",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KN024/7",name:"Navisha Investments Pty Ltd",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KN024/3",name:"Navisha Investments Pty Ltd",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KN024/9",name:"Navisha Investments Pty Ltd Ka",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KN024/10",name:"Navisha Investments Pty Ltd Oo",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KN004",name:"Neha HW & Bldg. Mat.",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KD027",name:"New Discount Build",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KO002",name:"Omega Hardware And Supermarket",rep:"NP",region:"Standerton",volumes:{"High Gloss 5L":21,"Decor 20L":76,"High Gloss 1L":32,"Roof 20L":32,"Roof 5L":48,"Varnish 5L":3,"Decor 5L":12,"QD Enamel 5L":18},lastPrices:{"Decor 20L":290.0,"High Gloss 1L":79.0,"Roof 20L":600.0,"Roof 5L":95.0,"Varnish 5L":338.04,"Decor 5L":90.0,"High Gloss 5L":287.5,"QD Enamel 5L":285.0,"Varnish 1L":105.8}},
+  {id:"KO009",name:"One Price Store",rep:"NP",region:"Witbank",volumes:{"High Gloss 5L":14,"Roof 5L":57,"Decor 20L":64,"Decor 5L":16,"High Gloss 1L":18},lastPrices:{"High Gloss 5L":296.39,"Roof 5L":108.33,"Decor 20L":195.57,"Decor 5L":74.11,"High Gloss 1L":85.0}},
+  {id:"KM011",name:"Quick Save Hardware",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KQ005",name:"Qwa Qwa HW - TA Mica HWare",rep:"NP",region:"Nelspruit",volumes:{},lastPrices:{}},
+  {id:"KR008/3",name:"RANK HARDWARE & FURNITURE",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KR036",name:"Royal Water Pty Ltd",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KS026",name:"S.A. Hardware",rep:"NP",region:"Standerton",volumes:{"High Gloss 1L":9,"Roof 5L":21,"Varnish 1L":9,"High Gloss 5L":8},lastPrices:{"High Gloss 1L":75.0,"Roof 5L":105.0,"Varnish 1L":105.0,"High Gloss 5L":270.0}},
+  {id:"KS019",name:"S.I. Hardware",rep:"NP",region:"Standerton",volumes:{"QD Enamel 1L":1135,"QD Enamel 5L":1307,"High Gloss 5L":685,"Roof 5L":851,"Thinner 5L":1691,"High Gloss 1L":728,"Varnish 1L":748,"Thinner 750ml":218,"Varnish 5L":141,"Decor 5L":39,"Decor 20L":316},lastPrices:{"High Gloss 5L":250.0,"Varnish 1L":90.0,"Thinner 750ml":264.5,"Thinner 5L":132.25,"QD Enamel 1L":72.0,"QD Enamel 5L":275.0,"High Gloss 1L":68.0,"Varnish 5L":280.0,"Roof 5L":103.5,"Decor 5L":138.0,"Decor 20L":380.65}},
+  {id:"KS019/3",name:"S.I.Hardware",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KS019/7",name:"S.I.Hardware",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KS019/1",name:"S.I.Hardware",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KS019/4",name:"S.I.Hardware",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KS019/6",name:"S.I.Hardware  Kgapane",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KS019/5",name:"S.I.Hardware  Polokwane",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KS003",name:"S.M. Hardware",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KS019/2",name:"SASELAMANI STORES",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KQ012",name:"Sembro Hardware T A Concrete &",rep:"NP",region:"Nelspruit",volumes:{},lastPrices:{}},
+  {id:"KS018",name:"Shikundu Trading Store",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KR008",name:"Shingwedzi B.M.CC",rep:"NP",region:"Standerton",volumes:{"Decor 20L":80,"High Gloss 1L":22,"High Gloss 5L":20,"Roof 5L":116,"Varnish 1L":24,"Thinner 750ml":15,"Thinner 5L":20,"QD Enamel 1L":24},lastPrices:{"Decor 20L":300.0,"High Gloss 1L":82.5,"High Gloss 5L":257.23,"Roof 5L":109.25,"Varnish 1L":95.0,"Thinner 750ml":305.75,"Thinner 5L":135.0,"QD Enamel 1L":87.5}},
+  {id:"KQ008",name:"Silver Solution TA QUICK SAVE",rep:"NP",region:"Standerton",volumes:{"Decor 20L":21,"High Gloss 1L":18,"High Gloss 5L":12,"Roof 5L":39,"Roof 20L":7,"Varnish 1L":19,"Thinner 750ml":2,"QD Enamel 5L":1},lastPrices:{"Decor 20L":300.0,"High Gloss 1L":82.5,"High Gloss 5L":300.0,"Roof 5L":110.0,"Roof 20L":550.0,"Varnish 1L":95.0,"Thinner 750ml":280.66,"QD Enamel 5L":310.0}},
+  {id:"KS129",name:"Siza Bantu Mkhwenyana Hardware",rep:"NP",region:"Middelburg",volumes:{"Decor 20L":74,"Decor 5L":19,"High Gloss 5L":32,"High Gloss 1L":123,"Roof 5L":290,"Varnish 1L":78,"Varnish 5L":14,"Thinner 750ml":11,"QD Enamel 1L":54,"QD Enamel 5L":26},lastPrices:{"Decor 20L":265.0,"High Gloss 1L":70.0,"High Gloss 5L":250.0,"Roof 5L":150.0,"Varnish 1L":86.0,"Varnish 5L":300.0,"Decor 5L":135.0,"Thinner 750ml":275.0,"QD Enamel 1L":75.0,"QD Enamel 5L":280.0}},
+  {id:"KT129",name:"Siza Bantu Mkhwenyana Hardware",rep:"NP",region:"Middelburg",volumes:{},lastPrices:{}},
+  {id:"KS011",name:"Star Glass & Hardware",rep:"NP",region:"Standerton",volumes:{"High Gloss 5L":255,"High Gloss 1L":243,"Decor 20L":19,"Decor 5L":25,"Roof 5L":308,"Thinner 5L":285,"QD Enamel 1L":379,"QD Enamel 5L":349,"Varnish 1L":250,"Thinner 750ml":82},lastPrices:{"Decor 20L":285.0,"Decor 5L":82.0,"High Gloss 1L":68.0,"High Gloss 5L":255.0,"Roof 5L":103.5,"Thinner 5L":145.0,"QD Enamel 1L":75.0,"QD Enamel 5L":275.0,"Varnish 1L":85.0,"Thinner 750ml":264.5}},
+  {id:"KS128",name:"Steel City Hardware",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KT034",name:"TFS Hardware ( Qwa Qwa)",rep:"NP",region:"Nelspruit",volumes:{"Decor 20L":4,"High Gloss 1L":24,"QD Enamel 1L":29,"High Gloss 5L":3,"Roof 5L":180,"Varnish 1L":72,"QD Enamel 5L":30},lastPrices:{"Decor 20L":275.0,"High Gloss 1L":83.0,"High Gloss 5L":300.0,"Roof 5L":105.0,"Varnish 1L":105.0,"QD Enamel 1L":88.0,"QD Enamel 5L":310.0}},
+  {id:"KS011/1",name:"Tiger build Hardware",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KT019",name:"Trendleaders Trading & Inv. CC",rep:"NP",region:"Standerton",volumes:{"Decor 20L":88,"Varnish 1L":93,"QD Enamel 5L":186,"Roof 5L":68,"Decor 5L":2,"Roof 20L":36,"High Gloss 1L":72,"QD Enamel 1L":103,"High Gloss 5L":91,"Varnish 5L":59,"Thinner 750ml":21,"Thinner 5L":175},lastPrices:{"Roof 20L":796.95,"Decor 20L":255.0,"High Gloss 1L":68.0,"High Gloss 5L":255.0,"Varnish 1L":85.0,"Varnish 5L":305.0,"Thinner 750ml":250.0,"Thinner 5L":145.0,"QD Enamel 5L":275.0,"Decor 5L":80.0,"Roof 5L":103.5,"QD Enamel 1L":75.0}},
+  {id:"KR008/2",name:"WONDERBUILD HARDWARE",rep:"NP",region:"Standerton",volumes:{},lastPrices:{}},
+  {id:"KY007",name:"YMBM ENTERORISE T/A VALUE HARD",rep:"NP",region:"Nelspruit",volumes:{"High Gloss 1L":2,"Roof 20L":1},lastPrices:{"High Gloss 1L":98.2,"Roof 20L":675.0}},
+  {id:"KZ008/1",name:"Zonelite Enterprises Pty Ltd",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+  {id:"KZ008",name:"Zonelite Enterprises Pty Ltd",rep:"NP",region:"Witbank",volumes:{},lastPrices:{}},
+];
+
+/* Current-month volume booked per rep per product line + blended avg selling price.
+   Rebuilt by build_overview_data.py from Sales_Invoices_YTD.CSV — do not hand-edit. */
+const MONTHLY_OVERVIEW = {"months":["2026-03","2026-04","2026-05","2026-06","2026-07","2026-08","2026-09","2026-10","2026-11","2026-12"],"default":"2026-07","byMonth":{"2026-03":{"label":"March 2026","monthName":"March","seasonalFactor":null,"data":{"Decor 20L":{"repVolumes":{"AC":198,"AP":1166,"BV":1803,"NP":2070,"BM":21},"avgPrice":269.43},"Decor 5L":{"repVolumes":{"AC":56,"AP":165,"BV":241,"NP":506,"BM":24},"avgPrice":96.52},"High Gloss 1L":{"repVolumes":{"AC":205,"AP":678,"BV":8655,"NP":2245,"BM":32},"avgPrice":63.54},"High Gloss 5L":{"repVolumes":{"AC":130,"AP":507,"BV":7831,"NP":2159,"BM":28},"avgPrice":226.56},"QD Enamel 1L":{"repVolumes":{"AC":43,"AP":371,"BV":2024,"NP":1448,"BM":17},"avgPrice":75.39},"QD Enamel 5L":{"repVolumes":{"AC":61,"AP":337,"BV":3032,"NP":1643,"BM":14},"avgPrice":271.5},"Roof 20L":{"repVolumes":{"AC":34,"AP":132,"BV":130,"NP":245,"BM":0},"avgPrice":526.91},"Roof 5L":{"repVolumes":{"AC":47,"AP":888,"BV":1414,"NP":1843,"BM":1},"avgPrice":103.76},"Thinner 5L":{"repVolumes":{"AC":70,"AP":353,"BV":865,"NP":1581,"BM":0},"avgPrice":122.85},"Thinner 750ml":{"repVolumes":{"AC":22,"AP":55,"BV":101,"NP":267,"BM":0},"avgPrice":242.37},"Varnish 1L":{"repVolumes":{"AC":105,"AP":358,"BV":4705,"NP":1571,"BM":35},"avgPrice":80.22},"Varnish 5L":{"repVolumes":{"AC":34,"AP":62,"BV":1115,"NP":286,"BM":20},"avgPrice":296.03}}},"2026-04":{"label":"April 2026","monthName":"April","seasonalFactor":null,"data":{"Decor 20L":{"repVolumes":{"AC":503,"AP":1464,"BV":3835,"NP":4311,"BM":9},"avgPrice":268.05},"Decor 5L":{"repVolumes":{"AC":94,"AP":174,"BV":521,"NP":682,"BM":1},"avgPrice":103.2},"High Gloss 1L":{"repVolumes":{"AC":441,"AP":1375,"BV":4606,"NP":2097,"BM":5},"avgPrice":70.74},"High Gloss 5L":{"repVolumes":{"AC":786,"AP":949,"BV":3852,"NP":2232,"BM":0},"avgPrice":244.92},"QD Enamel 1L":{"repVolumes":{"AC":65,"AP":580,"BV":1256,"NP":2276,"BM":0},"avgPrice":79.06},"QD Enamel 5L":{"repVolumes":{"AC":31,"AP":962,"BV":1710,"NP":2964,"BM":0},"avgPrice":283.25},"Roof 20L":{"repVolumes":{"AC":50,"AP":159,"BV":319,"NP":228,"BM":0},"avgPrice":576.26},"Roof 5L":{"repVolumes":{"AC":197,"AP":1189,"BV":2219,"NP":3599,"BM":0},"avgPrice":105.63},"Thinner 5L":{"repVolumes":{"AC":32,"AP":752,"BV":909,"NP":1818,"BM":0},"avgPrice":123.59},"Thinner 750ml":{"repVolumes":{"AC":5,"AP":181,"BV":188,"NP":288,"BM":0},"avgPrice":254.73},"Varnish 1L":{"repVolumes":{"AC":81,"AP":751,"BV":1653,"NP":1455,"BM":0},"avgPrice":87.5},"Varnish 5L":{"repVolumes":{"AC":22,"AP":168,"BV":713,"NP":302,"BM":0},"avgPrice":295.39}}},"2026-05":{"label":"May 2026","monthName":"May","seasonalFactor":null,"data":{"Decor 20L":{"repVolumes":{"AC":371,"AP":311,"BV":1044,"NP":2038,"BM":3},"avgPrice":307.32},"Decor 5L":{"repVolumes":{"AC":72,"AP":34,"BV":324,"NP":747,"BM":0},"avgPrice":112.2},"High Gloss 1L":{"repVolumes":{"AC":216,"AP":461,"BV":2694,"NP":1830,"BM":3},"avgPrice":76.38},"High Gloss 5L":{"repVolumes":{"AC":153,"AP":247,"BV":1529,"NP":1518,"BM":0},"avgPrice":278.86},"QD Enamel 1L":{"repVolumes":{"AC":36,"AP":200,"BV":1412,"NP":1720,"BM":0},"avgPrice":82.21},"QD Enamel 5L":{"repVolumes":{"AC":44,"AP":123,"BV":1586,"NP":1895,"BM":0},"avgPrice":292.94},"Roof 20L":{"repVolumes":{"AC":26,"AP":45,"BV":173,"NP":81,"BM":0},"avgPrice":629.69},"Roof 5L":{"repVolumes":{"AC":25,"AP":341,"BV":1607,"NP":1412,"BM":0},"avgPrice":117.83},"Thinner 5L":{"repVolumes":{"AC":12,"AP":447,"BV":896,"NP":1363,"BM":0},"avgPrice":140.67},"Thinner 750ml":{"repVolumes":{"AC":0,"AP":46,"BV":133,"NP":153,"BM":0},"avgPrice":285.53},"Varnish 1L":{"repVolumes":{"AC":111,"AP":364,"BV":1830,"NP":1096,"BM":6},"avgPrice":93.86},"Varnish 5L":{"repVolumes":{"AC":27,"AP":21,"BV":191,"NP":346,"BM":3},"avgPrice":311.24}}},"2026-06":{"label":"June 2026","monthName":"June","seasonalFactor":0.82,"data":{"Decor 20L":{"repVolumes":{"AC":33,"AP":381,"BV":1128,"NP":1265,"BM":2},"avgPrice":295.67},"Decor 5L":{"repVolumes":{"AC":56,"AP":56,"BV":259,"NP":278,"BM":0},"avgPrice":109.47},"High Gloss 1L":{"repVolumes":{"AC":99,"AP":491,"BV":2601,"NP":1754,"BM":4},"avgPrice":75.19},"High Gloss 5L":{"repVolumes":{"AC":62,"AP":310,"BV":1594,"NP":1202,"BM":0},"avgPrice":259.96},"QD Enamel 1L":{"repVolumes":{"AC":42,"AP":154,"BV":1627,"NP":1145,"BM":0},"avgPrice":79.02},"QD Enamel 5L":{"repVolumes":{"AC":13,"AP":254,"BV":2133,"NP":1268,"BM":0},"avgPrice":288.11},"Roof 20L":{"repVolumes":{"AC":43,"AP":60,"BV":197,"NP":346,"BM":1},"avgPrice":533.03},"Roof 5L":{"repVolumes":{"AC":27,"AP":149,"BV":982,"NP":1004,"BM":0},"avgPrice":118.04},"Thinner 5L":{"repVolumes":{"AC":0,"AP":149,"BV":689,"NP":933,"BM":5},"avgPrice":143.82},"Thinner 750ml":{"repVolumes":{"AC":1,"AP":44,"BV":124,"NP":92,"BM":0},"avgPrice":278.62},"Varnish 1L":{"repVolumes":{"AC":50,"AP":194,"BV":1504,"NP":667,"BM":2},"avgPrice":90.38},"Varnish 5L":{"repVolumes":{"AC":21,"AP":35,"BV":172,"NP":151,"BM":0},"avgPrice":307.5}}},"2026-07":{"label":"July 2026","monthName":"July","seasonalFactor":0.82,"data":{"Decor 20L":{"repVolumes":{"AC":50,"AP":23,"BV":277,"NP":449,"BM":0},"avgPrice":264.79},"Decor 5L":{"repVolumes":{"AC":0,"AP":15,"BV":26,"NP":50,"BM":0},"avgPrice":107.39},"High Gloss 1L":{"repVolumes":{"AC":0,"AP":10,"BV":200,"NP":523,"BM":0},"avgPrice":72.4},"High Gloss 5L":{"repVolumes":{"AC":0,"AP":14,"BV":189,"NP":284,"BM":0},"avgPrice":272.14},"QD Enamel 1L":{"repVolumes":{"AC":0,"AP":10,"BV":157,"NP":513,"BM":0},"avgPrice":76.68},"QD Enamel 5L":{"repVolumes":{"AC":0,"AP":5,"BV":249,"NP":693,"BM":0},"avgPrice":276.13},"Roof 20L":{"repVolumes":{"AC":0,"AP":0,"BV":21,"NP":2,"BM":0},"avgPrice":589.78},"Roof 5L":{"repVolumes":{"AC":0,"AP":35,"BV":42,"NP":138,"BM":0},"avgPrice":110.36},"Thinner 5L":{"repVolumes":{"AC":0,"AP":50,"BV":105,"NP":213,"BM":0},"avgPrice":143.01},"Thinner 750ml":{"repVolumes":{"AC":0,"AP":6,"BV":5,"NP":13,"BM":0},"avgPrice":292.42},"Varnish 1L":{"repVolumes":{"AC":0,"AP":0,"BV":119,"NP":223,"BM":0},"avgPrice":94.88},"Varnish 5L":{"repVolumes":{"AC":0,"AP":2,"BV":3,"NP":100,"BM":0},"avgPrice":294.06}}},"2026-08":{"label":"August 2026","monthName":"August","seasonalFactor":0.92,"data":{"Decor 20L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Decor 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"High Gloss 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"High Gloss 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"QD Enamel 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"QD Enamel 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Roof 20L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Roof 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Thinner 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Thinner 750ml":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Varnish 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Varnish 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null}}},"2026-09":{"label":"September 2026","monthName":"September","seasonalFactor":1.07,"data":{"Decor 20L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Decor 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"High Gloss 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"High Gloss 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"QD Enamel 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"QD Enamel 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Roof 20L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Roof 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Thinner 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Thinner 750ml":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Varnish 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Varnish 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null}}},"2026-10":{"label":"October 2026","monthName":"October","seasonalFactor":1.33,"data":{"Decor 20L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Decor 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"High Gloss 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"High Gloss 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"QD Enamel 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"QD Enamel 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Roof 20L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Roof 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Thinner 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Thinner 750ml":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Varnish 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Varnish 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null}}},"2026-11":{"label":"November 2026","monthName":"November","seasonalFactor":1.42,"data":{"Decor 20L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Decor 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"High Gloss 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"High Gloss 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"QD Enamel 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"QD Enamel 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Roof 20L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Roof 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Thinner 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Thinner 750ml":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Varnish 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Varnish 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null}}},"2026-12":{"label":"December 2026","monthName":"December","seasonalFactor":1.17,"data":{"Decor 20L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Decor 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"High Gloss 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"High Gloss 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"QD Enamel 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"QD Enamel 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Roof 20L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Roof 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Thinner 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Thinner 750ml":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Varnish 1L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null},"Varnish 5L":{"repVolumes":{"AC":0,"AP":0,"BV":0,"NP":0,"BM":0},"avgPrice":null}}}}};
+
+const REP_COLORS = {AC:'var(--_violet)',AP:'var(--_terra)',BV:'var(--_teal)',NP:'var(--_coral)',BM:'var(--_pink)'};
+
+/* ── INIT ── */
+function init(){
+  document.getElementById('footer-date').textContent = 'Generated '+new Date().toLocaleDateString('en-ZA',{day:'numeric',month:'long',year:'numeric'});
+  document.getElementById('footer-count').textContent = CLIENTS.length+' clients';
+  document.getElementById('client-count-hdr').textContent = CLIENTS.length+' clients loaded';
+
+  const repSel = document.getElementById('ctrl-rep');
+  [...new Set(CLIENTS.map(c=>c.rep))].sort().forEach(r=>{
+    const o=document.createElement('option');o.value=r;o.textContent=(REP_NAMES[r]||r)+' ('+r+')';repSel.appendChild(o);
+  });
+  rebuildRegionFilter();
+  rebuildClientFilter();
+  render();
+}
+
+function rebuildRegionFilter(){
+  const repVal=document.getElementById('ctrl-rep').value;
+  const sel=document.getElementById('ctrl-region');
+  const prev=sel.value;
+  sel.innerHTML='<option value="">All Regions</option>';
+  const subset=repVal?CLIENTS.filter(c=>c.rep===repVal):CLIENTS;
+  [...new Set(subset.map(c=>c.region))].sort().forEach(r=>{
+    const o=document.createElement('option');o.value=r;o.textContent=r;
+    if(r===prev)o.selected=true;
+    sel.appendChild(o);
+  });
+}
+
+function rebuildClientFilter(){
+  const repVal=document.getElementById('ctrl-rep').value;
+  const regVal=document.getElementById('ctrl-region').value;
+  const sel=document.getElementById('ctrl-client');
+  const prev=sel.value;
+  sel.innerHTML='<option value="">— Select Customer —</option>';
+  let sub=CLIENTS;
+  if(repVal) sub=sub.filter(c=>c.rep===repVal);
+  if(regVal) sub=sub.filter(c=>c.region===regVal);
+  sub.forEach(c=>{
+    const o=document.createElement('option');o.value=c.id;o.textContent=c.name+' ('+c.id+')';
+    if(c.id===prev)o.selected=true;
+    sel.appendChild(o);
+  });
+}
+
+function onRepChange(){
+  document.getElementById('ctrl-region').value='';
+  document.getElementById('ctrl-client').value='';
+  calcClient=null;
+  rebuildRegionFilter();
+  rebuildClientFilter();
+  render();
+}
+function onRegionChange(){
+  document.getElementById('ctrl-client').value='';
+  calcClient=null;
+  rebuildClientFilter();
+  render();
+}
+function onClientChange(){
+  const cid=document.getElementById('ctrl-client').value;
+  calcClient=cid?CLIENTS.find(c=>c.id===cid):null;
+  const badge=document.getElementById('selected-badge');
+  const badgeName=document.getElementById('selected-badge-name');
+  if(calcClient){badge.style.display='flex';badgeName.textContent=calcClient.name;}
+  else{badge.style.display='none';}
+  render();
+}
+
+let activeTab = 'overview';
+function setTab(tab){
+  activeTab = tab;
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active', b.dataset.tab===tab));
+  document.getElementById('filters-bar').style.display = tab==='lookup' ? 'flex' : 'none';
+  render();
+}
+
+function render(){
+  if(activeTab==='overview'){
+    document.getElementById('main-content').innerHTML = renderOverview();
+    return;
+  }
+  document.getElementById('main-content').innerHTML = calcClient ? renderPriceTable() : renderNoClient();
+}
+
+/* ── OVERVIEW — VOLUME DISCOUNT TRACKER ── */
+let overviewMonthIdx = null;
+function currentMonthIdx(){
+  if(overviewMonthIdx===null){
+    overviewMonthIdx = Math.max(0, MONTHLY_OVERVIEW.months.indexOf(MONTHLY_OVERVIEW.default));
+  }
+  return overviewMonthIdx;
+}
+function shiftMonth(delta){
+  const n = MONTHLY_OVERVIEW.months.length;
+  overviewMonthIdx = Math.min(n-1, Math.max(0, currentMonthIdx()+delta));
+  render();
+}
+
+function renderOverview(){
+  const t1prods = TIERS[0].products;
+  const cats = [...new Set(t1prods.map(p=>p.cat))];
+  const idx = currentMonthIdx();
+  const monthKey = MONTHLY_OVERVIEW.months[idx];
+  const entry = MONTHLY_OVERVIEW.byMonth[monthKey];
+  const atStart = idx<=0, atEnd = idx>=MONTHLY_OVERVIEW.months.length-1;
+  const factorLabel = entry.seasonalFactor!=null ? ` &middot; seasonal factor ${entry.seasonalFactor}` : ' &middot; no seasonal factor defined';
+
+  let html = `<div class="ov-legend">
+    ${Object.keys(REP_NAMES).map(r=>`<div class="ov-legend-item"><span class="ov-legend-dot" style="background:${REP_COLORS[r]}"></span>${REP_NAMES[r]}</div>`).join('')}
+    <div class="ov-month-nav">
+      <button class="ov-month-btn" onclick="shiftMonth(-1)" ${atStart?'disabled':''} aria-label="Previous month">&#8249;</button>
+      <span class="ov-month-label">${entry.label}<span class="ov-month-factor">${factorLabel}</span></span>
+      <button class="ov-month-btn" onclick="shiftMonth(1)" ${atEnd?'disabled':''} aria-label="Next month">&#8250;</button>
+    </div>
+  </div>`;
+
+  cats.forEach(cat=>{
+    html += `<div class="section-title ov-cat">${cat}</div>`;
+    t1prods.filter(p=>p.cat===cat).forEach(p=>{ html += renderOverviewRow(p, entry); });
+  });
+
+  html += `<div class="ov-footnote">
+    Bars show ${entry.label}'s volume booked, stacked by rep, against this product's monthly volume-discount tiers${entry.seasonalFactor!=null?` (baseline target &times; ${entry.seasonalFactor} seasonal factor)`:' (no seasonal factor defined for this month — showing baseline, unadjusted targets)'}.
+    Dashed markers show the quantity needed to reach each tier, with that tier's target price in brackets. The flag above the end of the bar is the
+    blended average selling price achieved across all reps so far this month.
+  </div>`;
+  return html;
+}
+
+function renderOverviewRow(p, entry){
+  const volKey = tierNameToVolKey(p.name);
+  const t2p = TIERS[1].products.find(x=>x.name===p.name);
+  const t3p = TIERS[2].products.find(x=>x.name===p.name);
+  const ov = entry.data[volKey] || {repVolumes:{},avgPrice:null};
+  const repVols = ov.repVolumes||{};
+  const total = Object.values(repVols).reduce((s,v)=>s+v,0);
+  const factor = entry.seasonalFactor!=null ? entry.seasonalFactor : 1;
+  const t1q = Math.round(p.qty*factor), t2q = t2p?Math.round(t2p.qty*factor):null, t3q = t3p?Math.round(t3p.qty*factor):null;
+  const topQty = t3q || t1q;
+  const scaleMax = Math.max(topQty*1.15, total*1.05, 1);
+  const pct = q => Math.min(100, q/scaleMax*100);
+
+  let segLeft = 0, segsHtml = '';
+  Object.keys(REP_NAMES).forEach(rep=>{
+    const q = repVols[rep]||0;
+    if(q<=0) return;
+    segsHtml += `<div class="ov-seg" style="left:${pct(segLeft)}%;width:${(pct(segLeft+q)-pct(segLeft)).toFixed(3)}%;background:${REP_COLORS[rep]}" title="${REP_NAMES[rep]}: ${fmtQty(q)} units"></div>`;
+    segLeft += q;
+  });
+
+  const markers = [
+    {q:t1q, price:p.price,               label:'T1'},
+    {q:t2q, price:t2p ? t2p.price : null, label:'T2'},
+    {q:t3q, price:t3p ? t3p.price : null, label:'T3'},
+  ].filter(m=>m.q!=null);
+
+  const markersHtml = markers.map((m,i)=>`
+    <div class="ov-marker-line" style="left:${pct(m.q)}%"></div>
+    <div class="ov-marker-label${i%2?' ov-marker-label--low':''}" style="left:${pct(m.q)}%"><b>${fmtQty(m.q)}</b>${m.label} (${fmt(m.price)})</div>
+  `).join('');
+
+  const flagHtml = total>0
+    ? `<div class="ov-avg-flag" style="left:${Math.min(pct(total),94).toFixed(2)}%">
+         <span class="ov-avg-price">${ov.avgPrice!=null?fmt(ov.avgPrice):'—'}</span>
+         <span class="ov-avg-caption">avg price</span>
+       </div>`
+    : `<div class="ov-nodata">No sales booked this month</div>`;
+
+  return `<div class="ov-row">
+    <div class="ov-label">
+      <div class="ov-label-name">${p.name}</div>
+      <div class="ov-label-sub">${fmtQty(total)} units booked</div>
+    </div>
+    <div class="ov-track-wrap">
+      ${flagHtml}
+      <div class="ov-track">${segsHtml}${markersHtml}</div>
+    </div>
+  </div>`;
+}
+
+/* ── NO CLIENT ── */
+function renderNoClient(){
+  const rep=document.getElementById('ctrl-rep').value;
+  const reg=document.getElementById('ctrl-region').value;
+  let sub=CLIENTS;
+  if(rep) sub=sub.filter(c=>c.rep===rep);
+  if(reg) sub=sub.filter(c=>c.region===reg);
+  return `<div class="no-client">
+    <div class="no-client-icon">&#x1F4CB;</div>
+    <div class="no-client-title">Select a Customer</div>
+    <div class="no-client-sub">${sub.length} customer${sub.length!==1?'s':''} available${rep?' for '+(REP_NAMES[rep]||rep):''}${reg?' in '+reg:''}.<br>Use the filters above to find a customer and see their pricing vs the tier structure.</div>
+  </div>`;
+}
+
+/* ── MAIN PRICE TABLE ── */
+function renderPriceTable(){
+  const c = calcClient;
+  const t1prods = TIERS[0].products;
+  const cats = [...new Set(t1prods.map(p=>p.cat))];
+
+  /* Summary counts */
+  let qualT3=0,qualT2=0,qualT1=0,belowT1=0,hasData=0;
+  t1prods.forEach(p=>{
+    const vk=tierNameToVolKey(p.name);
+    const lp=c.lastPrices&&c.lastPrices[vk]?c.lastPrices[vk]:null;
+    if(lp) hasData++;
+    const t1=p; const t2=TIERS[1].products.find(x=>x.name===p.name); const t3=TIERS[2].products.find(x=>x.name===p.name);
+    const vol=(c.volumes&&c.volumes[vk])||0;
+    const q3=vol; /* volumes already 3-month total */
+    if(t3&&q3>=t3.qty) qualT3++;
+    else if(t2&&q3>=t2.qty) qualT2++;
+    else if(q3>=t1.qty) qualT1++;
+    else belowT1++;
+  });
+
+  /* avg 3M last price across products with data */
+  const avgLastPrice = hasData>0
+    ? Object.values(c.lastPrices||{}).reduce((s,v)=>s+v,0)/Object.values(c.lastPrices||{}).length
+    : null;
+
+  let html = `
+  <!-- Customer strip -->
+  <div class="client-strip">
+    <div class="cs-card accent">
+      <div class="cs-label">Customer</div>
+      <div class="cs-value neutral" style="font-size:16px;line-height:1.25;padding-top:2px">${c.name}</div>
+      <div class="cs-sub">${REP_NAMES[c.rep]||c.rep} &middot; ${c.region||'—'} &middot; ${c.id}</div>
+    </div>
+    <div class="cs-card">
+      <div class="cs-label">Products at Tier 3</div>
+      <div class="cs-value" style="color:var(--color-success-fg)">${qualT3}</div>
+      <div class="cs-sub">Best price</div>
+    </div>
+    <div class="cs-card">
+      <div class="cs-label">Products at Tier 2</div>
+      <div class="cs-value" style="color:var(--_y400)">${qualT2}</div>
+      <div class="cs-sub">Mid pricing</div>
+    </div>
+    <div class="cs-card">
+      <div class="cs-label">Below Tier 1</div>
+      <div class="cs-value" style="color:var(--color-danger-fg)">${belowT1}</div>
+      <div class="cs-sub">No rebate yet</div>
+    </div>
+    <div class="cs-card">
+      <div class="cs-label">Products with price data</div>
+      <div class="cs-value neutral">${hasData}</div>
+      <div class="cs-sub">of ${t1prods.length} products</div>
+    </div>
+  </div>
+
+  <!-- Price table -->
+  <div class="price-table-wrap">
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th style="width:220px">Product</th>
+          <th class="right col-client" style="width:160px">
+            <div class="th-tier">
+              <span class="th-tier-name">Avg Price (3M)</span>
+              <span class="th-tier-qty">${c.name}</span>
+            </div>
+          </th>
+          <th class="right col-t1" style="width:145px">
+            <div class="th-tier">
+              <span class="th-tier-name">Tier 1</span>
+              <span class="th-tier-qty">Entry threshold</span>
+            </div>
+          </th>
+          <th class="center" style="width:80px;color:var(--color-text-tertiary);font-size:10px">T1&rarr;T2</th>
+          <th class="right col-t2" style="width:145px">
+            <div class="th-tier">
+              <span class="th-tier-name">Tier 2</span>
+              <span class="th-tier-qty">Mid-volume</span>
+            </div>
+          </th>
+          <th class="center" style="width:80px;color:var(--color-text-tertiary);font-size:10px">T2&rarr;T3</th>
+          <th class="right col-t3" style="width:145px">
+            <div class="th-tier">
+              <span class="th-tier-name">Tier 3</span>
+              <span class="th-tier-qty">High volume</span>
+            </div>
+          </th>
+          <th class="center" style="width:90px;color:var(--color-text-tertiary);font-size:10px">T1&rarr;T3</th>
+        </tr>
+      </thead>
+      <tbody>`;
+
+  cats.forEach(cat=>{
+    const catProds = t1prods.filter(p=>p.cat===cat);
+    html += `<tr><td colspan="8" class="pt-category-row" style="padding:8px 16px;background:var(--color-surface-elevated);font-family:var(--font-display);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-secondary)">${cat}</td></tr>`;
+
+    catProds.forEach(p=>{
+      const vk  = tierNameToVolKey(p.name);
+      const t2p = TIERS[1].products.find(x=>x.name===p.name);
+      const t3p = TIERS[2].products.find(x=>x.name===p.name);
+      const lp  = c.lastPrices&&c.lastPrices[vk] ? c.lastPrices[vk] : null;
+
+      /* discount steps */
+      const d12 = t2p ? ((p.price-t2p.price)/p.price*100) : null;
+      const d23 = t2p&&t3p ? ((t2p.price-t3p.price)/t2p.price*100) : null;
+      const d13 = t3p ? ((p.price-t3p.price)/p.price*100) : null;
+
+      /* client price vs T1 */
+      const diff  = lp!=null ? lp - p.price : null;
+      const diffP = diff!=null ? Math.abs(diff/p.price*100).toFixed(1) : null;
+      const arrow = diff==null?null : diff>0.005?'&#x25B2;':diff<-0.005?'&#x25BC;':'=';
+      const diffCls = diff==null?'':diff>0.005?'above':diff<-0.005?'below':'equal';
+      const diffLabel = diff==null?''
+        : diff>0.005  ? '+'+diffP+'% above T1'
+        : diff<-0.005 ? diffP+'% below T1'
+        : 'At T1 price';
+
+      /* vol-based tier qualification */
+      const vol = (c.volumes&&c.volumes[vk])||0;
+      let bestTier=0;
+      if(t3p&&vol>=t3p.qty) bestTier=3;
+      else if(t2p&&vol>=t2p.qty) bestTier=2;
+      else if(vol>=p.qty) bestTier=1;
+
+      const clientCell = lp!=null
+        ? `<td class="right${bestTier>=1?' best-col':''}">
+            <div class="cp-main">${fmt(lp)}</div>
+            <div class="cp-diff ${diffCls}">${arrow?arrow+' ':''} ${diffLabel}</div>
+           </td>`
+        : `<td class="right"><span class="cp-nodata">No invoice data</span></td>`;
+
+      const t1Cell = `<td class="right">
+        <div class="price-main">${fmt(p.price)}</div>
+        <div class="price-qty">${fmtQty(p.qty)} units / 3M</div>
+      </td>`;
+
+      const t2Cell = t2p
+        ? `<td class="right${bestTier>=2?' best-col':''}">
+            <div class="price-main">${fmt(t2p.price)}</div>
+            <div class="price-qty">${fmtQty(t2p.qty)} units / 3M</div>
+           </td>`
+        : `<td class="right" style="color:var(--color-text-tertiary)">—</td>`;
+
+      const t3Cell = t3p
+        ? `<td class="right${bestTier>=3?' best-col':''}">
+            <div class="price-main">${fmt(t3p.price)}</div>
+            <div class="price-qty">${fmtQty(t3p.qty)} units / 3M</div>
+           </td>`
+        : `<td class="right" style="color:var(--color-text-tertiary)">—</td>`;
+
+      const discCell = (disc,cls)=>disc!=null
+        ? `<td class="center"><span style="font-family:var(--font-display);font-size:12px;font-weight:800;color:var(--color-success-fg)">&#x2193; ${disc.toFixed(1)}%</span></td>`
+        : `<td></td>`;
+
+      const totalCell = d13!=null
+        ? `<td class="center"><span style="font-family:var(--font-display);font-size:12px;font-weight:800;color:var(--color-warning-fg)">&#x2193; ${d13.toFixed(1)}%</span></td>`
+        : `<td></td>`;
+
+      html += `<tr>
+        <td><div class="prod-name">${p.name}</div></td>
+        ${clientCell}
+        ${t1Cell}
+        ${discCell(d12)}
+        ${t2Cell}
+        ${discCell(d23)}
+        ${t3Cell}
+        ${totalCell}
+      </tr>`;
+    });
+  });
+
+  html += `</tbody></table></div>
+  <div style="font-size:11px;color:var(--color-text-secondary);padding-bottom:0.5rem">
+    <strong>Avg Price (3M)</strong> = last invoice price recorded per product in the YTD period &middot;
+    <span style="color:var(--color-danger-fg)">&#x25B2; above T1</span> = customer paying above tier rate &middot;
+    <span style="color:var(--color-success-fg)">&#x25BC; below T1</span> = customer on discount &middot;
+    Green highlight = customer qualifies for that tier by volume
+  </div>`;
+
+  return html;
+}
+
+/* ── THEME ── */
+const OLY_THEMES=['theme-light','theme-dark','theme-brand','theme-navy'];
+function olyTheme(t,btn){
+  document.documentElement.classList.remove(...OLY_THEMES);
+  document.documentElement.classList.add(t);
+  localStorage.setItem('oly-theme',t);
+  document.querySelectorAll('.theme-bar button').forEach(b=>b.classList.toggle('active',b===btn));
+}
+
+window.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
