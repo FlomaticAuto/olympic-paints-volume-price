@@ -415,8 +415,9 @@ table.ic-lines tr:last-child td{border-bottom:none}
   <div class="filter-divider"></div>
   <div class="filter-group">
     <span class="filter-label">Product</span>
-    <input class="filter-select ic-store-input" id="ic-product" list="ic-product-list" placeholder="Type to search products&hellip;" oninput="icRender()">
-    <datalist id="ic-product-list"></datalist>
+    <select class="filter-select" id="ic-product" onchange="icRender()">
+      <option value="">All Products</option>
+    </select>
   </div>
   <div class="filter-divider"></div>
   <div class="filter-group">
@@ -512,6 +513,45 @@ const TIERS = [
    data keyed by the tier product name Just Works without a rename pass. */
 function tierNameToVolKey(name){
   return name;
+}
+
+/* JS port of classify_product() in rebuild_clients.py — maps a raw invoice SKU
+   description to one of the 18 volume-discount roll-up groups (TIERS[0].products
+   names), so the Invoice Check product filter can match on rolled-up group
+   rather than exact SKU text. Keep in sync with the Python version. */
+const QD_TOKEN_RE = 'Q[\\. ]?D\\.?';
+const _WHITE_CREAM_RE = /\bWHITE\b|\bCREAM\b/i;
+const _BLACK_RE = /\bBLACK\b/i;
+const _COPAL_RE = /COPAL/i;
+function _decorKey(p, size){ return _WHITE_CREAM_RE.test(p) ? `Decor White/Cream ${size}` : `Decor Colours ${size}`; }
+function _highGlossKey(p, size){ return (_WHITE_CREAM_RE.test(p) || _BLACK_RE.test(p)) ? `High Gloss Enamel W/B ${size}` : `High Gloss Enamel Colours ${size}`; }
+function _varnishKey(p, size){ return _COPAL_RE.test(p) ? `Varnish Copal ${size}` : `Varnish Colours ${size}`; }
+const PROD_MAP = [
+  [/20L.*(DECOR|MASTER DECOR|PVA)/i,        p => /MASTER/i.test(p) ? null : _decorKey(p, '20L')],
+  [/5L.*(DECOR|MASTER DECOR|PVA)/i,         p => /MASTER/i.test(p) ? null : _decorKey(p, '5L')],
+  [/1L.*HIGH.?GLOSS/i,                      p => _highGlossKey(p, '1L')],
+  [/5L.*HIGH.?GLOSS/i,                      p => _highGlossKey(p, '5L')],
+  [new RegExp(`1L.*(${QD_TOKEN_RE}|QUICK.?DRY)`, 'i'), () => 'Q.D Enamel Colours 1L'],
+  [new RegExp(`5L.*(${QD_TOKEN_RE}|QUICK.?DRY)`, 'i'), () => 'Q.D Enamel Colours 5L'],
+  [/750.*(THINNERS|THINNER|LACQUER)/i,      () => 'Lacquer Thinners 12×750ML'],
+  [/5L.*(THINNERS|THINNER|LACQUER)/i,       () => 'Lacquer Thinners 5L'],
+  [/20L.*(\bROOF\b|STOEP|ALKYD)/i,          () => 'Universal Roof Colours 20L'],
+  [/5L.*(\bROOF\b|STOEP|ALKYD)/i,           () => 'Universal Roof Colours 5L'],
+  [/1L.*VARNISH/i,                          p => _varnishKey(p, '1L')],
+  [/5L.*VARNISH/i,                          p => _varnishKey(p, '5L')],
+  [/HIGH.?GLOSS.*1L/i,                      p => _highGlossKey(p, '1L')],
+  [/HIGH.?GLOSS.*5L/i,                      p => _highGlossKey(p, '5L')],
+  [new RegExp(`(${QD_TOKEN_RE}|QUICK.?DRY).*1L`, 'i'), () => 'Q.D Enamel Colours 1L'],
+  [new RegExp(`(${QD_TOKEN_RE}|QUICK.?DRY).*5L`, 'i'), () => 'Q.D Enamel Colours 5L'],
+];
+function classifyProduct(prodname){
+  for(const [pattern, keyFn] of PROD_MAP){
+    if(pattern.test(prodname)){
+      const key = keyFn(prodname);
+      if(key!=null) return key;
+    }
+  }
+  return null;
 }
 
 function fmt(n){return 'R '+Number(n).toLocaleString('en-ZA',{minimumFractionDigits:2,maximumFractionDigits:2})}
@@ -1472,9 +1512,9 @@ function icInit(){
   [...IC_CUSTOMERS].sort((a,b)=>a.name.localeCompare(b.name)).forEach(c=>{
     const o=document.createElement('option');o.value=c.name;dl.appendChild(o);
   });
-  const pdl=document.getElementById('ic-product-list');
-  [...IC_PRODUCTS].sort((a,b)=>a.localeCompare(b)).forEach(p=>{
-    const o=document.createElement('option');o.value=p;pdl.appendChild(o);
+  const prodSel=document.getElementById('ic-product');
+  TIERS[0].products.forEach(p=>{
+    const o=document.createElement('option');o.value=p.name;o.textContent=p.name;prodSel.appendChild(o);
   });
   const f=document.getElementById('ic-from'), t=document.getElementById('ic-to');
   f.min=t.min=IC_META.window[0]; f.max=t.max=IC_META.window[1];
@@ -1508,7 +1548,7 @@ function icRender(){
   if(activeTab!=='invoices') return;
   const rep=document.getElementById('ic-rep').value;
   const q=document.getElementById('ic-store').value.trim().toLowerCase();
-  const prodQ=document.getElementById('ic-product').value.trim().toLowerCase();
+  const prodQ=document.getElementById('ic-product').value;
   const from=document.getElementById('ic-from').value, to=document.getElementById('ic-to').value;
   /* exact name/account match (e.g. via the lookup handoff or datalist pick) pins that
      customer; otherwise fall back to substring search */
@@ -1527,7 +1567,7 @@ function icRender(){
       if(rep&&inv[4]!==rep) return false;
       if(from&&inv[2]<from) return false;
       if(to&&inv[2]>to) return false;
-      if(prodQ&&!inv[9].some(l=>IC_PRODUCTS[l[0]].toLowerCase().includes(prodQ))) return false;
+      if(prodQ&&!inv[9].some(l=>classifyProduct(IC_PRODUCTS[l[0]])===prodQ)) return false;
       return true;
     });
     if(!rows.length) continue;
