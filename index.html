@@ -414,6 +414,12 @@ table.ic-lines tr:last-child td{border-bottom:none}
   </div>
   <div class="filter-divider"></div>
   <div class="filter-group">
+    <span class="filter-label">Product</span>
+    <input class="filter-select ic-store-input" id="ic-product" list="ic-product-list" placeholder="Type to search products&hellip;" oninput="icRender()">
+    <datalist id="ic-product-list"></datalist>
+  </div>
+  <div class="filter-divider"></div>
+  <div class="filter-group">
     <span class="filter-label">From</span>
     <input class="filter-select" type="date" id="ic-from" onchange="icRender()">
     <span class="filter-label">To</span>
@@ -1466,6 +1472,10 @@ function icInit(){
   [...IC_CUSTOMERS].sort((a,b)=>a.name.localeCompare(b.name)).forEach(c=>{
     const o=document.createElement('option');o.value=c.name;dl.appendChild(o);
   });
+  const pdl=document.getElementById('ic-product-list');
+  [...IC_PRODUCTS].sort((a,b)=>a.localeCompare(b)).forEach(p=>{
+    const o=document.createElement('option');o.value=p;pdl.appendChild(o);
+  });
   const f=document.getElementById('ic-from'), t=document.getElementById('ic-to');
   f.min=t.min=IC_META.window[0]; f.max=t.max=IC_META.window[1];
 }
@@ -1473,6 +1483,7 @@ function icInit(){
 function icClear(){
   document.getElementById('ic-rep').value='';
   document.getElementById('ic-store').value='';
+  document.getElementById('ic-product').value='';
   document.getElementById('ic-from').value='';
   document.getElementById('ic-to').value='';
   icRender();
@@ -1487,6 +1498,7 @@ function goToInvoiceCheck(){
      otherwise counter/internal sales would vanish behind the filter */
   const hasDocsForRep=icCust&&icCust.idx.some(i=>IC_INVOICES[i][4]===calcClient.rep);
   document.getElementById('ic-rep').value=hasDocsForRep?calcClient.rep:'';
+  document.getElementById('ic-product').value='';
   document.getElementById('ic-from').value='';
   document.getElementById('ic-to').value='';
   setTab('invoices');
@@ -1496,6 +1508,7 @@ function icRender(){
   if(activeTab!=='invoices') return;
   const rep=document.getElementById('ic-rep').value;
   const q=document.getElementById('ic-store').value.trim().toLowerCase();
+  const prodQ=document.getElementById('ic-product').value.trim().toLowerCase();
   const from=document.getElementById('ic-from').value, to=document.getElementById('ic-to').value;
   /* exact name/account match (e.g. via the lookup handoff or datalist pick) pins that
      customer; otherwise fall back to substring search */
@@ -1514,6 +1527,7 @@ function icRender(){
       if(rep&&inv[4]!==rep) return false;
       if(from&&inv[2]<from) return false;
       if(to&&inv[2]>to) return false;
+      if(prodQ&&!inv[9].some(l=>IC_PRODUCTS[l[0]].toLowerCase().includes(prodQ))) return false;
       return true;
     });
     if(!rows.length) continue;
