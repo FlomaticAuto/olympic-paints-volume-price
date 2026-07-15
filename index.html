@@ -1050,6 +1050,7 @@ function render(){
 
 /* ── OVERVIEW — VOLUME DISCOUNT TRACKER ── */
 let overviewMonthIdx = null;
+let overviewProductFilter = '';
 function currentMonthIdx(){
   if(overviewMonthIdx===null){
     overviewMonthIdx = Math.max(0, MONTHLY_OVERVIEW.months.indexOf(MONTHLY_OVERVIEW.default));
@@ -1059,6 +1060,10 @@ function currentMonthIdx(){
 function shiftMonth(delta){
   const n = MONTHLY_OVERVIEW.months.length;
   overviewMonthIdx = Math.min(n-1, Math.max(0, currentMonthIdx()+delta));
+  render();
+}
+function onOverviewProductChange(){
+  overviewProductFilter = document.getElementById('ov-product-filter').value;
   render();
 }
 
@@ -1071,8 +1076,17 @@ function renderOverview(){
   const atStart = idx<=0, atEnd = idx>=MONTHLY_OVERVIEW.months.length-1;
   const factorLabel = entry.seasonalFactor!=null ? ` &middot; seasonal factor ${entry.seasonalFactor}` : ' &middot; no seasonal factor defined';
 
+  const productOptions = t1prods.map(p=>`<option value="${p.name}" ${overviewProductFilter===p.name?'selected':''}>${p.name}</option>`).join('');
+
   let html = `<div class="ov-legend">
     ${Object.keys(REP_NAMES).map(r=>`<div class="ov-legend-item"><span class="ov-legend-dot" style="background:${REP_COLORS[r]}"></span>${REP_NAMES[r]}</div>`).join('')}
+    <div class="filter-group">
+      <span class="filter-label">Product</span>
+      <select class="filter-select" id="ov-product-filter" onchange="onOverviewProductChange()">
+        <option value="">All Products</option>
+        ${productOptions}
+      </select>
+    </div>
     <div class="ov-month-nav">
       <button class="ov-month-btn" onclick="shiftMonth(-1)" ${atStart?'disabled':''} aria-label="Previous month">&#8249;</button>
       <span class="ov-month-label">${entry.label}<span class="ov-month-factor">${factorLabel}</span></span>
@@ -1081,8 +1095,10 @@ function renderOverview(){
   </div>`;
 
   cats.forEach(cat=>{
+    const catProds = t1prods.filter(p=>p.cat===cat && (!overviewProductFilter || p.name===overviewProductFilter));
+    if(catProds.length===0) return;
     html += `<div class="section-title ov-cat">${cat}</div>`;
-    t1prods.filter(p=>p.cat===cat).forEach(p=>{ html += renderOverviewRow(p, entry); });
+    catProds.forEach(p=>{ html += renderOverviewRow(p, entry); });
   });
 
   html += `<div class="ov-footnote">
